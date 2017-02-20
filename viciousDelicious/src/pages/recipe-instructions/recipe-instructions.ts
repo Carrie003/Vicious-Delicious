@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import {RecipesPage} from "../recipes/recipes";
+
 
 /*
   Generated class for the RecipeInstructions page.
@@ -36,7 +38,7 @@ export class RecipeInstructionsPage {
     {
       title: "Step 5",
       description: "If ready, rinse and drain the pearls three times.",
-      image: "assets/img/BT3.gif"
+      image: "assets/img/BT5.gif"
     },
     {
       title: "Step 6",
@@ -55,7 +57,13 @@ export class RecipeInstructionsPage {
     }
   ]
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  }
+
+  GoToRecipes(){
+    this.navCtrl.push(RecipesPage);
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RecipeInstructionsPage');
