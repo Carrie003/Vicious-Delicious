@@ -43,17 +43,17 @@ export class RecipeInstructionsPage {
     {
       title: "Step 6",
       description: "Move pearls to a bowl and add sugar or honey.",
-      image: "assets/img/BT3.gif"
+      image: "assets/img/BT6.gif"
     },
     {
       title: "Step 7",
       description: "Make black or milk tea.",
-      image: "assets/img/BT3.gif"
+      image: "assets/img/BT7.gif"
     },
     {
       title: "Step 8",
       description: "Add bubbles and ice to your liking.",
-      image: "assets/img/BT3.gif"
+      image: "assets/img/BT8.gif"
     }
   ]
 
