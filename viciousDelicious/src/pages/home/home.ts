@@ -8,5 +8,11 @@ import {RecipesPage} from "../recipes/recipes";
   templateUrl: 'home.html'
 })
 export class HomePage {
+  constructor(public navCtrl: NavController) {
 
+  }
+
+  GoToRecipes(){
+    this.navCtrl.push(RecipesPage);
+  }
 }

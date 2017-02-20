@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
+import {DetailPagePage} from "../detail-page/detail-page";
 /*
   Generated class for the Recipes page.
 
@@ -12,5 +12,12 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'recipes.html'
 })
 export class RecipesPage {
+  constructor(public navCtrl: NavController) {
+
+  }
+
+  GoToDetail(){
+    this.navCtrl.push(DetailPagePage);
+  }
 
 }
