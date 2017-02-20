@@ -47,5 +47,8 @@
       "locator": "ios"
     }
   ],
-  "description": "viciousDelicious: An Ionic project"
+  "description": "viciousDelicious: An Ionic project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "ISC"
 }
