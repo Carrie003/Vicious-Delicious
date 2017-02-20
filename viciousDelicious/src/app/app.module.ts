@@ -2,13 +2,15 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { RecipeInstructions} from '../pages/home/recipe-instructions';
+import { RecipeInstructions} from '../pages/recipe-instructions';
+import { Recipes} from '../pages/recipes';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    RecipeInstructions
+    RecipeInstructions,
+    Recipes
   ],
   imports: [
     IonicModule.forRoot(MyApp)
