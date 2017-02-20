@@ -16,5 +16,42 @@
 
 
 <ion-content padding>
-  <button ion-button full (click)="GoToDetail()"> Bubble Tea <img src="BubbleTeaCover.jpg" height="100" width="100"></button>
+  <ion-card>
+
+    <img src="assets/img/bubbleTeaCover.jpg"/>
+
+    <ion-card-content>
+      <ion-card-title>
+        Bubble Tea
+      </ion-card-title>
+      <p>
+        This tea-based drink invented in the 1980s. It's normally served with tapioca pearls, milk, and ice.
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-left>
+          <ion-icon name='star'></ion-icon>
+          Favorite
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <!--<button ion-button full (click)="GoToRecipesInstructions()">Start Cooking!-->
+        <!--</button>-->
+
+        <button ion-button clear small color="danger" icon-left (click)="GoToDetail()">
+          <ion-icon name='cafe'></ion-icon>
+          More
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-left>
+          <ion-icon name='share-alt'></ion-icon>
+          Share
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
 </ion-content>

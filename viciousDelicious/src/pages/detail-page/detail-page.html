@@ -7,15 +7,22 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>DetailPage</ion-title>
+    <ion-title>Detail Page</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-  <ion-img src="../pages/recipes/BubbleTeaCover.jpg"></ion-img>
+<ion-content class="bubble-tea-card-background-page">
+
+  <ion-card>
+    <img src="assets/img/bubbleTeaCover.jpg"/>
+    <div class="card-title">Bubble Tea</div>
+    <div class="card-subtitle">Quick & Simple Drink</div>
+  </ion-card>
   <p>
-    <button ion-button full (click)="GoToRecipesInstructions()">BubbleTeaInstructions</button>
+    <button ion-button item-right color="danger" clear (click)="GoToRecipesInstructions()">
+      Start Cooking
+    </button>
   </p>
 </ion-content>

@@ -21,17 +21,37 @@ export class RecipeInstructionsPage {
     {
       title: "Step 2",
       description: "Add tapioca pearls.",
-      image: "assets/img/BT1.gif"
+      image: "assets/img/BT2.gif"
     },
     {
       title: "Step 3",
       description: "Wait till pearls are floating and let them get soft for about 3-4 minutes.",
-      image: "assets/img/BT1.gif"
+      image: "assets/img/BT3.gif"
     },
     {
       title: "Step 4",
-      description: "Check if pearls have been cooked thorugh by eating one.",
-      image: "assets/img/BT1.gif"
+      description: "Check if pearls have been cooked thoroughly by eating one.",
+      image: "assets/img/BT4.gif"
+    },
+    {
+      title: "Step 5",
+      description: "If ready, rinse and drain the pearls three times.",
+      image: "assets/img/BT3.gif"
+    },
+    {
+      title: "Step 6",
+      description: "Move pearls to a bowl and add sugar or honey.",
+      image: "assets/img/BT3.gif"
+    },
+    {
+      title: "Step 7",
+      description: "Make black or milk tea.",
+      image: "assets/img/BT3.gif"
+    },
+    {
+      title: "Step 8",
+      description: "Add bubbles and ice to your liking.",
+      image: "assets/img/BT3.gif"
     }
   ]
 
