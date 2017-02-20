@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { RecipeInstructionsPage } from '../recipe-instructions/recipe-instructions';
+
 
 /*
   Generated class for the DetailPage page.
@@ -17,6 +19,9 @@ export class DetailPagePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailPagePage');
+  }
+  GoToRecipesInstructions(){
+    this.navCtrl.push(RecipeInstructionsPage);
   }
 
 }

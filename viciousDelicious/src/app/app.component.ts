@@ -3,9 +3,9 @@ import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { HomePage } from '../pages/home/home';
-import { RecipeInstrucitonsPage } from '../pages/home/recipe-instructions/recipe-instructions';
-import {RecipesPage} from '../pages/home/recipes/recipes';
-import {DetailPagePage} from '../pages/home/detail-page/detail-page';
+import { RecipeInstructionsPage } from '../pages/home/recipe-instructions/recipe-instructions';
+import { RecipesPage } from '../pages/home/recipes/recipes';
+import { DetailPagePage } from '../pages/home/detail-page/detail-page';
 
 @Component({
   templateUrl: 'app.html'
