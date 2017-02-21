@@ -23,11 +23,39 @@ export class Recipe2instructionsPage {
   slides =[
     {
       title: "Step 1",
-      description: ""
+      description:"Add oil to the frying pan.",
+      video:"assets/img/2-0.mp4"
     },
     {
       title: "Step 2",
-      description: ""
+      description: "Fry the egg(s).",
+      video: "assets/img/2-1.mp4"
+    },
+
+    {
+      title: "Step 3",
+      description: "Chop up the spinach.",
+      video: "assets/img/2-2.mp4"
+    },
+    {
+      title: "Step 4",
+      description: "",
+      video: "assets/img/2-3.mp4"
+    },
+    {
+      title: "Step 5",
+      description: "",
+      video: "assets/img/2-4.mp4"
+    },
+    {
+      title: "Step 6",
+      description: "",
+      video: "assets/img/2-5.mp4"
+    },
+    {
+      title: "Step 7",
+      description: "",
+      video: "assets/img/2-6.mp4"
     }
   ]
 

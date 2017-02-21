@@ -22,7 +22,7 @@
           <button ion-button color="primary">Skip</button>
         </ion-buttons>
       </ion-toolbar>
-      <img [src]="slide.image" class="slide-image"/>
+      <video autoplay loop [src]="slide.video" class="slide-image"> </video>
       <h2 class="slide-title" [innerHTML]="slide.title"></h2>
       <p [innerHTML]="slide.description"></p>
     </ion-slide>
@@ -30,7 +30,7 @@
     <ion-slide>
       <ion-toolbar>
       </ion-toolbar>
-      <img src="assets/img/recipe2Cover.jpeg" class="slide-image"/>
+      <img src="assets/img/recipe2Cover.jpg" class="slide-image"/>
       <h2 class="slide-title">Congratulations! You just made Scrambled Eggs with Spinach!</h2>
 
       <button ion-button large clear (click)="GoToRecipes()" icon-right color="primary">
