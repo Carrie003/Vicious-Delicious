@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import {RecipesPage} from "../recipes/recipes";
 
 /*
   Generated class for the Recipe2instructions page.
@@ -19,4 +20,18 @@ export class Recipe2instructionsPage {
     console.log('ionViewDidLoad Recipe2instructionsPage');
   }
 
+  slides =[
+    {
+      title: "Step 1",
+      description: ""
+    },
+    {
+      title: "Step 2",
+      description: ""
+    }
+  ]
+
+  GoToRecipes(){
+    this.navCtrl.push(RecipesPage);
+  }
 }
