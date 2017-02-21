@@ -39,22 +39,22 @@ export class Recipe2instructionsPage {
     },
     {
       title: "Step 4",
-      description: "",
+      description: "Add the spinach into the frying pan.",
       video: "assets/img/2-3.mp4"
     },
     {
       title: "Step 5",
-      description: "",
+      description: "Keep frying until the spinach is done.",
       video: "assets/img/2-4.mp4"
     },
     {
       title: "Step 6",
-      description: "",
+      description: "Add salt.",
       video: "assets/img/2-5.mp4"
     },
     {
       title: "Step 7",
-      description: "",
+      description: "Turn off the heat but keep stir-frying.",
       video: "assets/img/2-6.mp4"
     }
   ]
