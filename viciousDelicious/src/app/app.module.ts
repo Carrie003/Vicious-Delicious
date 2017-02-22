@@ -7,6 +7,8 @@ import { RecipesPage } from '../pages/recipes/recipes';
 import { DetailPagePage } from '../pages/detail-page/detail-page';
 import { Recipe2Page} from '../pages/recipe2/recipe2';
 import { Recipe2instructionsPage} from '../pages/recipe2instructions/recipe2instructions';
+import {Recipe3Page} from "../pages/recipe3/recipe3";
+import {Recipe3instructionsPage} from "../pages/recipe3instructions/recipe3instructions";
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { Recipe2instructionsPage} from '../pages/recipe2instructions/recipe2inst
     DetailPagePage,
     Recipe2Page,
     Recipe2instructionsPage,
+    Recipe3Page,
+    Recipe3instructionsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -29,7 +33,9 @@ import { Recipe2instructionsPage} from '../pages/recipe2instructions/recipe2inst
     RecipesPage,
     DetailPagePage,
     Recipe2Page,
-    Recipe2instructionsPage
+    Recipe2instructionsPage,
+    Recipe3Page,
+    Recipe3instructionsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
