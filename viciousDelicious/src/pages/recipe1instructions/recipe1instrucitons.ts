@@ -11,7 +11,7 @@ import {RecipesPage} from "../recipes/recipes";
 */
 @Component({
   selector: 'page-recipe-instructions',
-  templateUrl: 'recipe-instructions.html'
+  templateUrl: 'recipe1instructions.html'
 })
 export class RecipeInstructionsPage {
   slides = [
