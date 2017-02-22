@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {DetailPagePage} from "../detail-page/detail-page";
 import {Recipe2Page} from "../recipe2/recipe2";
+import {Recipe3Page} from "../recipe3/recipe3";
 /*
   Generated class for the Recipes page.
 
@@ -25,4 +26,7 @@ export class RecipesPage {
     this.navCtrl.push(Recipe2Page);
   }
 
+  GoToRecipe3(){
+    this.navCtrl.push(Recipe3Page);
+  }
 }
