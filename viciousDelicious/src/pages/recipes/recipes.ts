@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {DetailPagePage} from "../detail-page/detail-page";
+import {DetailPagePage} from "../recipe1/recipe1";
 import {Recipe2Page} from "../recipe2/recipe2";
 /*
   Generated class for the Recipes page.

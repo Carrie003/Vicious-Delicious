@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { RecipeInstructionsPage } from '../recipe-instructions/recipe-instructions';
+import { RecipeInstructionsPage } from '../recipe1instructions/recipe1instrucitons';
 
 
 /*
@@ -11,7 +11,7 @@ import { RecipeInstructionsPage } from '../recipe-instructions/recipe-instructio
 */
 @Component({
   selector: 'page-detail-page',
-  templateUrl: 'detail-page.html'
+  templateUrl: 'recipe1.html'
 })
 export class DetailPagePage {
 
