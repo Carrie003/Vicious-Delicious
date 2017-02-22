@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48b4f9a8-f4d2-4831-9845-4345df6e1192" name="Default" comment="Vdi">
+    <list default="true" id="48b4f9a8-f4d2-4831-9845-4345df6e1192" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/viciousDelicious/src/assets/img/recipe2Cover.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viciousDelicious/src/pages/recipe2instructions/recipe2instructions.html" afterPath="$PROJECT_DIR$/viciousDelicious/src/pages/recipe2instructions/recipe2instructions.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viciousDelicious/src/pages/recipe2instructions/recipe2instructions.ts" afterPath="$PROJECT_DIR$/viciousDelicious/src/pages/recipe2instructions/recipe2instructions.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,8 +24,8 @@
       <file leaf-file-name="recipe-instructions.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipe-instructions/recipe-instructions.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+            <state relative-caret-position="300">
+              <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -35,8 +34,8 @@
       <file leaf-file-name="recipe-instructions.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipe-instructions/recipe-instructions.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="19" column="42" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="19" selection-end-column="42" />
+            <state relative-caret-position="255">
+              <caret line="19" column="42" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="19" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -45,8 +44,8 @@
       <file leaf-file-name="recipe2instructions.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipe2instructions/recipe2instructions.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+            <state relative-caret-position="415">
+              <caret line="56" column="59" lean-forward="false" selection-start-line="56" selection-start-column="59" selection-end-line="56" selection-end-column="59" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -67,8 +66,8 @@
       <file leaf-file-name="recipes.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipes/recipes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="65" column="6" lean-forward="true" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="33" />
+            <state relative-caret-position="975">
+              <caret line="65" column="6" lean-forward="false" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -84,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recipe2.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="recipe2.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipe2/recipe2.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="43" column="19" lean-forward="true" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+              <caret line="30" column="52" lean-forward="false" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -108,17 +107,17 @@
         <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipes/recipes.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recipe2instructions.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="recipe2instructions.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipe2instructions/recipe2instructions.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+            <state relative-caret-position="435">
+              <caret line="29" column="15" lean-forward="false" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -144,8 +143,8 @@
         <option value="$PROJECT_DIR$/viciousDelicious/src/pages/recipe2/recipe2.html" />
         <option value="$PROJECT_DIR$/viciousDelicious/src/pages/recipe2/recipe2.scss" />
         <option value="$PROJECT_DIR$/viciousDelicious/src/pages/recipe2instructions/recipe2instructions.scss" />
-        <option value="$PROJECT_DIR$/viciousDelicious/src/pages/recipe2instructions/recipe2instructions.ts" />
         <option value="$PROJECT_DIR$/viciousDelicious/src/pages/recipe2instructions/recipe2instructions.html" />
+        <option value="$PROJECT_DIR$/viciousDelicious/src/pages/recipe2instructions/recipe2instructions.ts" />
       </list>
     </option>
   </component>
@@ -159,8 +158,8 @@
     <handled-path value="$PROJECT_DIR$/viciousDelicious/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="98" />
-    <option name="y" value="106" />
+    <option name="x" value="230" />
+    <option name="y" value="29" />
     <option name="width" value="1021" />
     <option name="height" value="662" />
   </component>
@@ -180,7 +179,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -246,32 +244,6 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vicious-Delicious" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vicious-Delicious" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="viciousDelicious" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -288,28 +260,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vicious-Delicious" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vicious-Delicious" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="viciousDelicious" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="theme" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -332,36 +282,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recipes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vicious-Delicious" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vicious-Delicious" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="viciousDelicious" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recipe-instructions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -435,81 +355,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vicious-Delicious" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vicious-Delicious" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="viciousDelicious" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="detail-page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vicious-Delicious" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vicious-Delicious" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="viciousDelicious" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vicious-Delicious" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vicious-Delicious" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="viciousDelicious" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -533,6 +383,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -546,6 +397,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/viciousDelicious/src/assets/img" />
       <recent name="$PROJECT_DIR$/viciousDelicious/www/assets/img" />
       <recent name="$PROJECT_DIR$/viciousDelicious/src/pages/recipes" />
     </key>
@@ -564,8 +416,8 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/viciousDelicious/src/pages/detail-page/detail-page.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/viciousDelicious/src/pages/recipe-instructions/recipe-instructions.scss</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/viciousDelicious/package.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/viciousDelicious/src/app/app.module.ts</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -573,6 +425,8 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/viciousDelicious/src/assets/img/drop.avi</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/viciousDelicious/src/assets/img/jpg.png</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -755,7 +609,8 @@
       <workItem from="1487568743156" duration="2568000" />
       <workItem from="1487572846290" duration="246000" />
       <workItem from="1487622000376" duration="817000" />
-      <workItem from="1487640384206" duration="5945000" />
+      <workItem from="1487640384206" duration="6543000" />
+      <workItem from="1487794844933" duration="938000" />
     </task>
     <task id="LOCAL-00001" summary="buttons created; more implementation needed">
       <created>1487548185599</created>
@@ -806,33 +661,47 @@
       <option name="project" value="LOCAL" />
       <updated>1487701222796</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="mp4 added.&#10;-Still need to modify the size of videos &amp; some videos.">
+      <created>1487706851281</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1487706851281</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Description added.">
+      <created>1487707199463</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1487707199463</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21731000" />
+    <option name="totallyTimeSpent" value="23267000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="98" y="106" width="1021" height="662" extended-state="0" />
+    <frame x="230" y="29" width="1021" height="662" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24975514" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32715008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33052278" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33052278" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32715008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -848,7 +717,9 @@
     <MESSAGE value="Push" />
     <MESSAGE value="The second recipe added. Cooking steps will be added tomorrow." />
     <MESSAGE value="Minor updates on the second recipe" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor updates on the second recipe" />
+    <MESSAGE value="mp4 added.&#10;-Still need to modify the size of videos &amp; some videos." />
+    <MESSAGE value="Description added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Description added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -892,7 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -980,7 +850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1066,7 +935,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1078,33 +946,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipes/BubbleTeaCover.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipes/BubbleTeaCover.jpg" />
     <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/home/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipes/recipe2Cover.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipes/recipe2Cover.jpeg" />
     <entry file="file://$PROJECT_DIR$/viciousDelicious/www/build/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-417">
           <caret line="25687" column="12" lean-forward="false" selection-start-line="25687" selection-start-column="12" selection-end-line="25687" selection-end-column="12" />
           <folding>
-            <marker date="1487706718000" expanded="true" signature="4674225:4674253" ph="[...]" />
-            <marker date="1487706718000" expanded="true" signature="4674225:4674241" ph="{...}" />
-            <marker date="1487706718000" expanded="true" signature="4674234:4674239" ph="/*...*/" />
-            <marker date="1487706718000" expanded="true" signature="4674243:4674251" ph="/*...*/" />
+            <marker date="1487794902000" expanded="true" signature="4674626:4674654" ph="[...]" />
+            <marker date="1487794902000" expanded="true" signature="4674626:4674642" ph="{...}" />
+            <marker date="1487794902000" expanded="true" signature="4674635:4674640" ph="/*...*/" />
+            <marker date="1487794902000" expanded="true" signature="4674644:4674652" ph="/*...*/" />
           </folding>
         </state>
       </provider>
@@ -1143,9 +1002,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1153,7 +1009,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1171,7 +1026,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="21" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1179,30 +1033,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-285">
           <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipe-instructions/recipe-instructions.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipe2/recipe2.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        <state relative-caret-position="300">
+          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipes/recipes.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="65" column="6" lean-forward="true" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="33" />
+        <state relative-caret-position="975">
+          <caret line="65" column="6" lean-forward="false" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -1215,18 +1060,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipe2/recipe2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="43" column="19" lean-forward="true" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipe-instructions/recipe-instructions.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="19" column="42" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="19" selection-end-column="42" />
+        <state relative-caret-position="255">
+          <caret line="19" column="42" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="19" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -1234,7 +1071,7 @@
     <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipes/recipes.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1247,20 +1084,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipe2instructions/recipe2instructions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="15" lean-forward="false" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipe2instructions/recipe2instructions.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+        <state relative-caret-position="415">
+          <caret line="56" column="59" lean-forward="false" selection-start-line="56" selection-start-column="59" selection-end-line="56" selection-end-column="59" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipe2instructions/recipe2instructions.html">
+    <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipe2/recipe2.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+        <state relative-caret-position="240">
+          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viciousDelicious/src/pages/recipe2/recipe2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="30" column="52" lean-forward="false" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
           <folding />
         </state>
       </provider>
