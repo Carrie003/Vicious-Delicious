@@ -2,11 +2,14 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { RecipeInstructionsPage } from '../pages/recipe-instructions/recipe-instructions';
 import { RecipesPage } from '../pages/recipes/recipes';
-import { DetailPagePage } from '../pages/detail-page/detail-page';
+
+import { Recipe1Page } from '../pages/recipe1/recipe1';
+import { Recipe1InstructionsPage } from '../pages/recipe1instructions/recipe1instructions';
+
 import { Recipe2Page} from '../pages/recipe2/recipe2';
 import { Recipe2instructionsPage} from '../pages/recipe2instructions/recipe2instructions';
+
 import {Recipe3Page} from "../pages/recipe3/recipe3";
 import {Recipe3instructionsPage} from "../pages/recipe3instructions/recipe3instructions";
 
@@ -14,9 +17,9 @@ import {Recipe3instructionsPage} from "../pages/recipe3instructions/recipe3instr
   declarations: [
     MyApp,
     HomePage,
-    RecipeInstructionsPage,
     RecipesPage,
-    DetailPagePage,
+    Recipe1Page,
+    Recipe1InstructionsPage,
     Recipe2Page,
     Recipe2instructionsPage,
     Recipe3Page,
@@ -29,9 +32,10 @@ import {Recipe3instructionsPage} from "../pages/recipe3instructions/recipe3instr
   entryComponents: [
     MyApp,
     HomePage,
-    RecipeInstructionsPage,
     RecipesPage,
-    DetailPagePage,
+    Recipe1Page,
+    Recipe1InstructionsPage,
+    Recipe2Page,
     Recipe2Page,
     Recipe2instructionsPage,
     Recipe3Page,

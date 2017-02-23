@@ -23,7 +23,7 @@ export class Recipe3Page {
 
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RecipeInstructionsPage');
+    console.log('ionViewDidLoad Recipe1InstructionsPage');
   }
 
 

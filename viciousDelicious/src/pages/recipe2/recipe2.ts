@@ -25,7 +25,7 @@ export class Recipe2Page {
 
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RecipeInstructionsPage');
+    console.log('ionViewDidLoad Recipe1InstructionsPage');
   }
 
 
