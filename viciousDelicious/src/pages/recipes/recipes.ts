@@ -19,7 +19,7 @@ export class RecipesPage {
   }
 
   /* TODO:
-  Create a function for going to page so we don't have so many page-specific methods.
+  Create a function for going to page to reduce page-specific methods (if we will have a lot of recipes, and that this recipes.html will list all of the recipes).
    */
 
   GoToDetail(){
@@ -33,5 +33,4 @@ export class RecipesPage {
   GoToRecipeEggToast() {
     this.navCtrl.push(RecipeEggtoastPage);
   }
-
 }

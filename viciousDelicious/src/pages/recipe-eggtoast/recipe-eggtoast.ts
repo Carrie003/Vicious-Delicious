@@ -16,4 +16,11 @@ export class RecipeEggtoastPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad DetailPagePage');
+  }
+  GoToRecipesEggToastInstructions(){
+    this.navCtrl.push(RecipeEggtoastInstructionsPage);
+  }
+
 }

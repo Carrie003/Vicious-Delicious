@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import {RecipesPage} from "../recipes/recipes";
 
 /*
   Generated class for the RecipeEggtoastInstructions page.
@@ -16,11 +17,11 @@ export class RecipeEggtoastInstructionsPage {
     {
       title: "Cuisine Information",
       description: "An egg on top of a slice of toast lends towards a delicious breakfast!",
-      image : "http://cdn.firstwefeast.com/assets/2014/09/1-crack.gif"
+      image : "http://2.bp.blogspot.com/-3lYpn1xoY2I/TyutvQW5C-I/AAAAAAAABtI/G85bp9aVx0I/s1600/DSC03193-1.JPG"
     },
     {
       title: "Step 1",
-      description: "EGGS.",
+      description: "EGGS. Note: this gif is not of me (yet)",
       image: "http://cdn.firstwefeast.com/assets/2014/09/1-crack.gif"
     },
     {
@@ -39,6 +40,9 @@ export class RecipeEggtoastInstructionsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RecipeEggtoastInstructionsPage');
+  }
+  GoToRecipesInstructions(){
+    this.navCtrl.push(RecipesPage);
   }
 
 }
