@@ -30,7 +30,7 @@ export class RecipesPage {
     this.navCtrl.push(Recipe2Page);
   }
 
-  GoToRecipePage() {
+  GoToRecipeEggToast() {
     this.navCtrl.push(RecipeEggtoastPage);
   }
 
