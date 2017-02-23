@@ -4,9 +4,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { RecipesPage } from '../pages/recipes/recipes';
 
-import { Recipe1Page} from '../pages/recipe1/recipe';
+import { Recipe1Page } from '../pages/recipe1/recipe1';
 import { Recipe1InstructionsPage } from '../pages/recipe1instructions/recipe1instructions';
-
 
 import { Recipe2Page} from '../pages/recipe2/recipe2';
 import { Recipe2instructionsPage} from '../pages/recipe2instructions/recipe2instructions';

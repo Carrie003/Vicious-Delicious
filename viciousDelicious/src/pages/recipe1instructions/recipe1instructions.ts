@@ -13,7 +13,7 @@ import {RecipesPage} from "../recipes/recipes";
   selector: 'page-recipe-instructions',
   templateUrl: 'recipe1instructions.html'
 })
-export class RecipeInstructionsPage {
+export class Recipe1InstructionsPage {
   slides = [
     {
       title: "Step 1",
@@ -66,7 +66,7 @@ export class RecipeInstructionsPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RecipeInstructionsPage');
+    console.log('ionViewDidLoad Recipe1InstructionsPage');
   }
 
 }

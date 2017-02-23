@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { RecipeInstructionsPage } from '../recipe1instructions/recipe1instrucitons';
-
+import { Recipe1InstructionsPage } from '../recipe1instructions/recipe1instructions';
 
 /*
   Generated class for the DetailPage page.
@@ -13,7 +12,7 @@ import { RecipeInstructionsPage } from '../recipe1instructions/recipe1instrucito
   selector: 'page-detail-page',
   templateUrl: 'recipe1.html'
 })
-export class DetailPagePage {
+export class Recipe1Page {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
@@ -21,7 +20,7 @@ export class DetailPagePage {
     console.log('ionViewDidLoad DetailPagePage');
   }
   GoToRecipesInstructions(){
-    this.navCtrl.push(RecipeInstructionsPage);
+    this.navCtrl.push(Recipe1InstructionsPage);
   }
 
 }
