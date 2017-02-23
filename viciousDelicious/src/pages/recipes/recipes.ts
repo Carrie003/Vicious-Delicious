@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {DetailPagePage} from "../detail-page/detail-page";
+import {Recipe1Page} from "../recipe1/recipe1";
 import {Recipe2Page} from "../recipe2/recipe2";
 import {RecipeEggtoastPage} from "../recipe-eggtoast/recipe-eggtoast";
 /*
@@ -23,7 +23,7 @@ export class RecipesPage {
    */
 
   GoToDetail(){
-    this.navCtrl.push(DetailPagePage);
+    this.navCtrl.push(Recipe1Page);
   }
 
   GoToRecipe2(){
