@@ -5,7 +5,7 @@ import { HomePage } from '../pages/home/home';
 import { RecipesPage } from '../pages/recipes/recipes';
 
 import { Recipe1Page } from '../pages/recipe1/recipe1';
-import { Recipe1InstructionsPage } from '../pages/recipe1instructions/recipe1instructions';
+import { Recipe1Instructions } from '../pages/recipe1instructions/recipe1instructions';
 
 import { Recipe2Page} from '../pages/recipe2/recipe2';
 import { Recipe2instructionsPage} from '../pages/recipe2instructions/recipe2instructions';
@@ -19,7 +19,7 @@ import {Recipe3instructionsPage} from "../pages/recipe3instructions/recipe3instr
     HomePage,
     RecipesPage,
     Recipe1Page,
-    Recipe1InstructionsPage,
+    Recipe1Instructions,
     Recipe2Page,
     Recipe2instructionsPage,
     Recipe3Page,
@@ -34,7 +34,7 @@ import {Recipe3instructionsPage} from "../pages/recipe3instructions/recipe3instr
     HomePage,
     RecipesPage,
     Recipe1Page,
-    Recipe1InstructionsPage,
+    Recipe1Instructions,
     Recipe2Page,
     Recipe2Page,
     Recipe2instructionsPage,
