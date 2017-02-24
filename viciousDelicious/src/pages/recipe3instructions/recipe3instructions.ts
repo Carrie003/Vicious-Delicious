@@ -23,18 +23,18 @@ export class Recipe3instructionsPage {
     {
       title: "Step 1",
       description:"a",
-      video:"assets/video/drop.avi"
+      video:"assets/video/big-buck-bunny_trailer.webm"
     },
     {
       title: "Step 2",
       description: "b",
-      video: "assets/video/drop.avi"
+      video: "assets/video/big-buck-bunny_trailer.webm"
     },
 
     {
       title: "Step 3",
       description: "b",
-      video: "assets/video/drop.avi"
+      video: "assets/video/big-buck-bunny_trailer.webm"
     }
   ];
 
