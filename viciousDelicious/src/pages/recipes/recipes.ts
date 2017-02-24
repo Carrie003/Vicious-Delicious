@@ -48,13 +48,47 @@ var recipes =[
     subtitle: "Quick & Simple Drink",
     image:"assets/img/bubbleTeaCover.jpg",
     ingredients: {"Milk Tea (cup)": 1, "Tapioca Pearls": "N/A", "Water(cup)": 1, "Honey or Sugar": "N/A"},
-    steps: {"Boil a pot of water.":"assets/video/BT1.gif", "Add tapioca pearls.":"assets/video/BT2.gif",
-      "Wait till pearls are floating and let them get soft for about 3-4 minutes.":"assets/video/BT3.gif",
-      "Check if pearls have been cooked thoroughly by eating one.":"assets/video/BT4.gif",
-      "If ready, rinse and drain the pearls three times.": "assets/video/BT5.gif",
-      "Move pearls to a bowl and add sugar or honey.":"assets/video/BT6.gif",
-      "Make black or milk tea.":"assets/video/BT7.gif","Add bubbles and ice to your liking.":"assets/video/BT8.gif"
-    }
+    slides : [
+      {
+        title: "Step 1",
+        description: "Boil a pot of water.",
+        image : "assets/video/BT1.gif"
+      },
+      {
+        title: "Step 2",
+        description: "Add tapioca pearls.",
+        image: "assets/video/BT2.gif"
+      },
+      {
+        title: "Step 3",
+        description: "Wait till pearls are floating and let them get soft for about 3-4 minutes.",
+        image: "assets/video/BT3.gif"
+      },
+      {
+        title: "Step 4",
+        description: "Check if pearls have been cooked thoroughly by eating one.",
+        image: "assets/video/BT4.gif"
+      },
+      {
+        title: "Step 5",
+        description: "If ready, rinse and drain the pearls three times.",
+        image: "assets/video/BT5.gif"
+      },
+      {
+        title: "Step 6",
+        description: "Move pearls to a bowl and add sugar or honey.",
+        image: "assets/video/BT6.gif"
+      },
+      {
+        title: "Step 7",
+        description: "Make black or milk tea.",
+        image: "assets/video/BT7.gif"
+      },
+      {
+        title: "Step 8",
+        description: "Add bubbles and ice to your liking.",
+        image: "assets/video/BT8.gif"
+      }
   }
 
 
