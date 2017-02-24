@@ -23,18 +23,18 @@ export class Recipe3instructionsPage {
     {
       title: "Step 1",
       description:"a",
-      video:"assets/img/drop.avi"
+      video:"assets/video/drop.avi"
     },
     {
       title: "Step 2",
       description: "b",
-      video: "assets/img/drop.avi"
+      video: "assets/video/drop.avi"
     },
 
     {
       title: "Step 3",
       description: "b",
-      video: "assets/img/drop.avi"
+      video: "assets/video/drop.avi"
     }
   ];
 
