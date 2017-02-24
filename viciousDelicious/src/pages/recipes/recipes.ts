@@ -39,3 +39,26 @@ export class RecipesPage {
     this.navCtrl.push(RecipeEggtoastPage);
   }
 }
+
+
+
+var recipes =[
+  {
+    name: "Bubble Tea",
+    subtitle: "Quick & Simple Drink",
+    image:"assets/img/bubbleTeaCover.jpg",
+    ingredients: {"Milk Tea (cup)": 1, "Tapioca Pearls": "N/A", "Water(cup)": 1, "Honey or Sugar": "N/A"},
+    steps: {"Boil a pot of water.":"assets/video/BT1.gif", "Add tapioca pearls.":"assets/video/BT2.gif",
+      "Wait till pearls are floating and let them get soft for about 3-4 minutes.":"assets/video/BT3.gif",
+      "Check if pearls have been cooked thoroughly by eating one.":"assets/video/BT4.gif",
+      "If ready, rinse and drain the pearls three times.": "assets/video/BT5.gif",
+      "Move pearls to a bowl and add sugar or honey.":"assets/video/BT6.gif",
+      "Make black or milk tea.":"assets/video/BT7.gif","Add bubbles and ice to your liking.":"assets/video/BT8.gif"
+    }
+  }
+
+
+];
+
+
+
