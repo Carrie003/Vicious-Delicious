@@ -2,25 +2,33 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { RecipeInstructionsPage } from '../pages/recipe-instructions/recipe-instructions';
 import { RecipesPage } from '../pages/recipes/recipes';
-import { DetailPagePage } from '../pages/detail-page/detail-page';
+
+import { Recipe1Page } from '../pages/recipe1/recipe1';
+import { Recipe1Instructions } from '../pages/recipe1instructions/recipe1instructions';
+
 import { Recipe2Page} from '../pages/recipe2/recipe2';
 import { Recipe2instructionsPage} from '../pages/recipe2instructions/recipe2instructions';
+
 import {Recipe3Page} from "../pages/recipe3/recipe3";
-import {Recipe3instructionsPage} from "../pages/recipe3instructions/recipe3instructions";
+import {Recipe3instructionsPage} from "../pages/recipe3instructions/recipe3instructions"
+
+import {RecipeEggtoastPage} from "../pages/recipe-eggtoast/recipe-eggtoast";
+import {RecipeEggtoastInstructionsPage} from "../pages/recipe-eggtoast-instructions/recipe-eggtoast-instructions";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    RecipeInstructionsPage,
     RecipesPage,
-    DetailPagePage,
+    Recipe1Page,
+    Recipe1Instructions,
     Recipe2Page,
     Recipe2instructionsPage,
     Recipe3Page,
-    Recipe3instructionsPage
+    Recipe3instructionsPage,
+    RecipeEggtoastPage,
+    RecipeEggtoastInstructionsPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -29,13 +37,16 @@ import {Recipe3instructionsPage} from "../pages/recipe3instructions/recipe3instr
   entryComponents: [
     MyApp,
     HomePage,
-    RecipeInstructionsPage,
     RecipesPage,
-    DetailPagePage,
+    Recipe1Page,
+    Recipe1Instructions,
+    Recipe2Page,
     Recipe2Page,
     Recipe2instructionsPage,
     Recipe3Page,
-    Recipe3instructionsPage
+    Recipe3instructionsPage,
+    RecipeEggtoastPage,
+    RecipeEggtoastInstructionsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
