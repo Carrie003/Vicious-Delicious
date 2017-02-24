@@ -54,9 +54,47 @@
     </ion-row>
   </ion-card>
 
+  <!--- START OF EGG TOAST CARD --->
+    <ion-card>
+
+    <img src="http://farm2.static.flickr.com/1393/4608297518_8952951baa.jpg"/>
+
+    <ion-card-content>
+      <ion-card-title>
+        Fried Egg on Toast
+      </ion-card-title>
+      <p>
+        This simple dish is often referred to as <i>Laputa pan</i> (Laputa bread) after its appearance in the Ghibli movie, Laputa: Castle in The Sky.
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-left>
+          <ion-icon name='star'></ion-icon>
+          Favorite
+        </button>
+      </ion-col>
+      <ion-col text-center>
+
+  <button ion-button clear small color="danger" icon-left (click)="GoToRecipeEggToast()">
+    <ion-icon name='cafe'></ion-icon>
+    More
+  </button>
+  </ion-col>
+  <ion-col text-right>
+    <button ion-button clear small color="danger" icon-left>
+      <ion-icon name='share-alt'></ion-icon>
+      Share
+    </button>
+  </ion-col>
+  </ion-row>
+  </ion-card>
+  <!--- END OF EGG TOAST CARD --->
 
 
- <ion-card>
+
+<ion-card>
 
   <img src="assets/img/recipe2Cover.jpg"/>
 
@@ -94,45 +132,6 @@
     </ion-col>
   </ion-row>
 
- </ion-card>
+</ion-card>
 
-  <ion-card>
-
-    <img src="assets/img/jpg.png"/>
-
-
-    <ion-card-content>
-      <ion-card-title>
-        food
-      </ion-card-title>
-      <p>
-        a
-      </p>
-    </ion-card-content>
-
-    <ion-row no-padding>
-      <ion-col>
-        <button ion-button clear small color="danger" icon-left>
-          <ion-icon name='star'></ion-icon>
-          Favorite
-        </button>
-      </ion-col>
-      <ion-col text-center>
-        <!--<button ion-button full (click)="GoToRecipesInstructions()">Start Cooking!-->
-        <!--</button>-->
-
-        <button ion-button clear small color="danger" icon-left (click)="GoToRecipe3()">
-          <ion-icon name='cafe'></ion-icon>
-          More
-        </button>
-      </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="danger" icon-left>
-          <ion-icon name='share-alt'></ion-icon>
-          Share
-        </button>
-      </ion-col>
-    </ion-row>
-
-  </ion-card>
 </ion-content>

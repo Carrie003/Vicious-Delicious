@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<module version="4">
-  <component name="NewModuleRootManager">
-=======
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
@@ -10,9 +6,9 @@
       <excludeFolder url="file://$MODULE_DIR$/platforms" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/viciousDelicious/platforms" />
     </content>
     <orderEntry type="inheritedJdk" />
->>>>>>> origin/master
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

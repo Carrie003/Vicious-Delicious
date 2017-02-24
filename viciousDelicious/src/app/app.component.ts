@@ -11,6 +11,9 @@ import { Recipe1Page } from '../pages/home/recipe1/recipe1';
 import { Recipe2Page } from '../pages/home/recipe2/recipes';
 import { Recipe2InstructionsPage} from '../page/home/recipe2instructions/recipe2instructions';
 
+import { RecipeEggtoastPage } from "../pages/recipe-eggtoast/recipe-eggtoast";
+import { RecipeEggtoastInstructionsPage } from "../pages/recipe-eggtoast-instructions/recipe-eggtoast-instructions";
+
 @Component({
   templateUrl: 'app.html'
 })
