@@ -1,0 +1,52 @@
+<!--
+  Generated template for the RecipeCollection page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Recipes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let recipe of collection">
+
+    <img [src]="recipe.img" />
+
+    <ion-card-content>
+      <ion-card-title [innerHTML]="recipe.title">
+      </ion-card-title>
+      <p [innerHTML]="recipe.subtitle1">
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-left>
+          <ion-icon name='star'></ion-icon>
+          Favorite
+        </button>
+      </ion-col>
+
+      <ion-col text-center>
+
+
+
+        <button ion-button clear small color="danger" icon-left (click)="GoToInstruction(recipe)">
+          <ion-icon name='cafe'></ion-icon>
+          How to cook
+        </button>
+      </ion-col>
+
+
+      </ion-row>
+
+  </ion-card>
+
+
+</ion-content>

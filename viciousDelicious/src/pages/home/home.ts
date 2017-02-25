@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
-import {RecipesPage} from "../recipes/recipes";
 import {RecipeCollectionPage} from "../recipe-collection/recipe-collection";
 
 @Component({
