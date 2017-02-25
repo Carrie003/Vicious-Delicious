@@ -6,6 +6,7 @@ import { HomePage } from '../pages/home/home';
 //import { RecipeInstructionsPage } from '../pages/home/recipe1instructions/recipe1instructions';
 
 
+
 @Component({
   templateUrl: 'app.html'
 })
