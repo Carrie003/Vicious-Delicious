@@ -2,33 +2,15 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { RecipesPage } from '../pages/recipes/recipes';
-
-import { Recipe1Page } from '../pages/recipe1/recipe1';
-import { Recipe1Instructions } from '../pages/recipe1instructions/recipe1instructions';
-
-import { Recipe2Page} from '../pages/recipe2/recipe2';
-import { Recipe2instructionsPage} from '../pages/recipe2instructions/recipe2instructions';
-
-import {Recipe3Page} from "../pages/recipe3/recipe3";
-import {Recipe3instructionsPage} from "../pages/recipe3instructions/recipe3instructions"
-
-import {RecipeEggtoastPage} from "../pages/recipe-eggtoast/recipe-eggtoast";
-import {RecipeEggtoastInstructionsPage} from "../pages/recipe-eggtoast-instructions/recipe-eggtoast-instructions";
+import {RecipeCollectionPage} from "../pages/recipe-collection/recipe-collection";
+import {InstructionPage} from "../pages/instruction/instruction";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    RecipesPage,
-    Recipe1Page,
-    Recipe1Instructions,
-    Recipe2Page,
-    Recipe2instructionsPage,
-    Recipe3Page,
-    Recipe3instructionsPage,
-    RecipeEggtoastPage,
-    RecipeEggtoastInstructionsPage,
+    RecipeCollectionPage,
+    InstructionPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -37,16 +19,8 @@ import {RecipeEggtoastInstructionsPage} from "../pages/recipe-eggtoast-instructi
   entryComponents: [
     MyApp,
     HomePage,
-    RecipesPage,
-    Recipe1Page,
-    Recipe1Instructions,
-    Recipe2Page,
-    Recipe2Page,
-    Recipe2instructionsPage,
-    Recipe3Page,
-    Recipe3instructionsPage,
-    RecipeEggtoastPage,
-    RecipeEggtoastInstructionsPage
+    RecipeCollectionPage,
+    InstructionPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

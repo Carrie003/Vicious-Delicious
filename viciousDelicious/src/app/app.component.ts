@@ -3,16 +3,8 @@ import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { HomePage } from '../pages/home/home';
-import { RecipeInstructionsPage } from '../pages/home/recipe1instructions/recipe1instructions';
+//import { RecipeInstructionsPage } from '../pages/home/recipe1instructions/recipe1instructions';
 
-import { RecipesPage } from '../pages/home/recipes/recipes';
-
-import { Recipe1Page } from '../pages/home/recipe1/recipe1';
-import { Recipe2Page } from '../pages/home/recipe2/recipes';
-import { Recipe2InstructionsPage} from '../page/home/recipe2instructions/recipe2instructions';
-
-import { RecipeEggtoastPage } from "../pages/recipe-eggtoast/recipe-eggtoast";
-import { RecipeEggtoastInstructionsPage } from "../pages/recipe-eggtoast-instructions/recipe-eggtoast-instructions";
 
 @Component({
   templateUrl: 'app.html'
