@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {InstructionPage} from "../instruction/instruction";
+import {DetailPage} from "../detail/detail";
 
 /*
   Generated class for the RecipeCollection page.
@@ -25,9 +25,8 @@ export class RecipeCollectionPage {
 
   collection = RecipeCollection;
 
-  GoToInstruction(recipe){
-    this.navCtrl.push(InstructionPage,{param1:recipe});
-    //localStorage.setItem("RecipeInfo",recipe);
+  GoToDetail(recipe){
+    this.navCtrl.push(DetailPage,{param1:recipe});
   }
 }
 
@@ -71,8 +70,8 @@ var RecipeCollection=[
     title:"Milk Tea",
     subtitle1:"This tea-based drink invented in the 1980s. It's normally served with tapioca pearls, milk, and ice.",
     subtitle2:"Quick & Simple Drink",
-    ingredients:{"Tapioca Pearls":0,"Water":0,"Sugar":0
-    },
+    ingredients:[{name:"Tapioca Pearls",amount:0},{name:"Water",amount:0},{name:"Sugar",amount:0}
+    ],
     slides:[
       {
         title: "Step 1",
@@ -120,8 +119,8 @@ var RecipeCollection=[
     title:"Scrambled Eggs with Spinach",
     subtitle1:"These amazingly flavorful baked eggs with spinach are the easiest way to impress your guests.",
     subtitle2:"Homemade dish",
-    ingredients:{"Eggs":0,"Spinach":0,"Salt":0,"Pepper":0,"Oil":0
-    },
+    ingredients:[{name:"Eggs",amount:0},{name:"Spinach",amount:0},{name:"Salt",amount:0},{name:"Pepper",amount:0},{name:"Oil",amount:0}
+    ],
     slides:[
       {
         title: "Step 1",
@@ -165,8 +164,8 @@ var RecipeCollection=[
     title:"Fried Egg on Toast",
     subtitle1:"This simple dish is often referred to as Laputa pan (Laputa bread) after its appearance in the Ghibli movie, Laputa: Castle in The Sky.",
     subtitle2:"Homemade dish",
-    ingredients:{"Eggs":0,"Toast":0
-    },
+    ingredients:[{name:"Eggs",amount:0},{name:"Toast",amount:0}
+    ],
     slides:[
       {
         title: "Cuisine Information",
