@@ -125,42 +125,42 @@ var RecipeCollection=[
       {
         title: "Step 1",
         description:"Add oil to the frying pan.",
-        video:"assets/img/2-0.mp4"
+        video:"http://i.giphy.com/xTiN0M0I2mfRcqhzxu.gif"
       },
       {
         title: "Step 2",
         description: "Fry the egg(s).",
-        video: "assets/img/2-1.mp4"
+        video: "http://i.giphy.com/xTiN0rSZdDVANELiOQ.gif"
       },
 
       {
         title: "Step 3",
         description: "Chop up the spinach.",
-        video: "assets/img/2-2.mp4"
+        video: "http://i.giphy.com/xTiN0j0FIdpkt03mZq.gif"
       },
       {
         title: "Step 4",
         description: "Add the spinach into the frying pan.",
-        video: "assets/img/2-3.mp4"
+        video: "http://i.giphy.com/xTiN0wnSIoWrBNlNUA.gif"
       },
       {
         title: "Step 5",
         description: "Keep frying until the spinach is done.",
-        video: "assets/img/2-4.mp4"
+        video: "http://i.giphy.com/3o84Ueeb0qYGnEl8uA.gif"
       },
       {
         title: "Step 6",
         description: "Add salt.",
-        video: "assets/img/2-5.mp4"
+        video: "http://i.giphy.com/xTiN0FGXnGiSOvmkpy.gif"
       },
       {
         title: "Step 7",
         description: "Turn off the heat but keep stir-frying.",
-        video: "assets/img/2-6.mp4"
+        video: "http://i.giphy.com/3o84U28bwb8PUNX2Jq.gif"
       }
     ]
   },
-  { img:"http://68.media.tumblr.com/4a752ae142e375e94552c192500052f9/tumblr_nn2zldxHsL1uq9b1ao3_1280.jpg",
+  { img:"http://gdurl.com/Vbwo",
     title:"Fried Egg on Toast",
     subtitle1:"This simple dish is often referred to as Laputa pan (Laputa bread) after its appearance in the Ghibli movie, Laputa: Castle in The Sky.",
     subtitle2:"Homemade dish",
