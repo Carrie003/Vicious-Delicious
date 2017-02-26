@@ -76,42 +76,42 @@ var RecipeCollection=[
       {
         title: "Step 1",
         description: "Boil a pot of water.",
-        video : "assets/video/BT1.gif"
+        video : "assets/img/BT1.gif"
       },
       {
         title: "Step 2",
         description: "Add tapioca pearls.",
-        video: "assets/video/BT2.gif"
+        video: "assets/img/BT2.gif"
       },
       {
         title: "Step 3",
         description: "Wait till pearls are floating and let them get soft for about 3-4 minutes.",
-        video: "assets/video/BT3.gif"
+        video: "assets/img/BT3.gif"
       },
       {
         title: "Step 4",
         description: "Check if pearls have been cooked thoroughly by eating one.",
-        video: "assets/video/BT4.gif"
+        video: "assets/img/BT4.gif"
       },
       {
         title: "Step 5",
         description: "If ready, rinse and drain the pearls three times.",
-        video: "assets/video/BT5.gif"
+        video: "assets/img/BT5.gif"
       },
       {
         title: "Step 6",
         description: "Move pearls to a bowl and add sugar or honey.",
-        video: "assets/video/BT6.gif"
+        video: "assets/img/BT6.gif"
       },
       {
         title: "Step 7",
         description: "Make black or milk tea.",
-        video: "assets/video/BT7.gif"
+        video: "assets/img/BT7.gif"
       },
       {
         title: "Step 8",
         description: "Add bubbles and ice to your liking.",
-        video: "assets/video/BT8.gif"
+        video: "assets/img/BT8.gif"
       }
     ]
   },
