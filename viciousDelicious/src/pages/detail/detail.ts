@@ -55,8 +55,7 @@ export class DetailPage {
         console.log('Checkbox data:', data);
         this.testCheckboxOpen = false;
       }
-      }
-    )
+      })
 
     add.present().then(()=>{
       this.testCheckboxOpen = true;
