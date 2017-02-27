@@ -66,6 +66,7 @@ var ingredlist={
 };
 
 var RecipeCollection=[
+  /*Recipe Bubble Tea*/
   { img:"assets/img/bubbleTeaCover.jpg",
     title:"Milk Tea",
     subtitle1:"This tea-based drink invented in the 1980s. It's normally served with tapioca pearls, milk, and ice.",
@@ -115,6 +116,7 @@ var RecipeCollection=[
       }
     ]
   },
+  /*Recipe Scrambled Eggs with Spinach*/
   { img:"assets/img/recipe2Cover.jpg",
     title:"Scrambled Eggs with Spinach",
     subtitle1:"These amazingly flavorful baked eggs with spinach are the easiest way to impress your guests.",
@@ -160,6 +162,7 @@ var RecipeCollection=[
       }
     ]
   },
+  /*Recipe Fried Egg on Toast*/
   { img:"http://gdurl.com/Vbwo",
     title:"Fried Egg on Toast",
     subtitle1:"This simple dish is often referred to as Laputa pan (Laputa bread) after its appearance in the Ghibli movie, Laputa: Castle in The Sky.",
@@ -188,7 +191,43 @@ var RecipeCollection=[
         video: "http://cdn.firstwefeast.com/assets/2014/09/1-crack.gif"
       }
     ]
+  },
+  /*Recipe Ttebokki*/
+  {
+    img:"assets/img/Tteok-bokki.jpg",
+    title:"Tteok-bokki",
+    subtitle1:"This delicious Korean dish consists of rice and fish cakes with spicy red chili sauce called gochu-jang.",
+    subtitle2:"Spicy stir fried rice cakes",
+    ingredients:[{name:"Rice cakes",amount:0},{name:"Gochu-jang",amount:0}, {name:"Fish cakes",amount:0},],
+    slides:[
+      {
+        title: "Step 1",
+        description: "Boil a pot of water",
+        video: "http://i.giphy.com/oP7oYal35XCFy.gif"
+      },
+      {
+        title: "Step 2",
+        description: "Add in rice cakes and wait until boiled.",
+        video: "http://i.giphy.com/oP7oYal35XCFy.gif"
+      },
+      {
+        title: "Step 3",
+        description: "Add in fish cakes and cook through.",
+        video: "http://i.giphy.com/xTiN0JEgiZVq5Gf9dK.gif"
+      },
+      {
+        title: "Step 4",
+        description: "Add in gochuchan sauce to your liking. Remember: it's spicy.",
+        video: "http://i.giphy.com/xTiN0hpY8qRFGjLFtu.gif"
+      },
+      {
+        title: "Step 5",
+        description: "Plate and serve while hot!",
+        video: "http://i.giphy.com/3o84U8MxCaI57HXcU8.gif"
+      },
+    ]
   }
+
 
 ];
 
