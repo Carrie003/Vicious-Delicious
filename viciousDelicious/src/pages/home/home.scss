@@ -2,6 +2,10 @@ page-home {
 
 }
 
+ion-navbar {
+  position: center;
+}
+
 body {
   cursor: url('http://ionicframework.com/img/finger.png'), auto;
 }
@@ -10,33 +14,20 @@ body {
   background-color:#ffffff;
 }
 
-#bgvid {
-
-  position: fixed;
-
+.bg-vid {
+  position: absolute;
   top: 50%;
-
   left: 50%;
-
   min-width: 100%;
-
   min-height: 100%;
-
   width: auto;
-
-  height: auto;
-
+  height: 100%;;
   z-index: -100;
-
   -webkit-transform: translateX(-50%) translateY(-50%);
   -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
-
   transform: translateX(-50%) translateY(-50%);
-
-  background: url(http://video.webmfiles.org/big-buck-bunny_trailer.webm) no-repeat;
-
+  background: url(http://www.w3schools.com/tags/movie.mp4) no-repeat;
   background-size: cover;
-
 }
