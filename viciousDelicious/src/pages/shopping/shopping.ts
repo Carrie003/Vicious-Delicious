@@ -14,7 +14,10 @@ import {data} from "../data/data";
 })
 export class ShoppingPage {
 
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public cart: data) {}
+
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ShoppingPage');

@@ -7,7 +7,7 @@ export class data{
   shoppinglist: Array<Object>;
 
   constructor(){
-    this.shoppinglist = ['a','b'];
+    this.shoppinglist = [{"name":"a","amount":2},{"name":"b","amount":1}];
   }
 
   addToList(ingredient){

@@ -13,6 +13,11 @@
 </ion-header>
 
 <ion-content padding>
-  The shopping cart is empty.
-  {{cart.getList()}}
+  <ion-card *ngFor="let list of cart.getList()">
+    <ion-card-content>
+      <ion-card-title [innerHTML]="list.name">
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

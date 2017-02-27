@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-import {InstructionPage} from "../instruction/instruction";
+import { NavController, NavParams, Alert } from 'ionic-angular';
+import { InstructionPage } from "../instruction/instruction";
 
 /*
   Generated class for the Detail page.
@@ -27,5 +27,18 @@ export class DetailPage {
 
   }
 
+
+/*
+  addToCart(){
+    let alert = Alert.create(
+      {title:"a",
+        message:"Enter the ingredients you want to add",
+        buttons: [{text: "Confirm"}]
+      }
+    );
+    this.navCtrl.present(alert);
+  }
+
+*/
 
 }
