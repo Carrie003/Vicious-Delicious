@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams} from 'ionic-angular';
 import {data} from "../data/data";
+import {Input, DoCheck, OnChanges, OnInit} from 'angular2/core';
 
 /*
   Generated class for the Shopping page.
@@ -14,15 +15,17 @@ import {data} from "../data/data";
 })
 export class ShoppingPage {
 
-
   constructor(public navCtrl: NavController, public navParams: NavParams, public cart: data) {}
-
 
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ShoppingPage');
   }
 
+
+  remove(ingredient){
+    this.cart.removeFromList(ingredient);
+  }
 
 
 

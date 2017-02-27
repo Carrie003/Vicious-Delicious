@@ -13,11 +13,15 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card *ngFor="let list of cart.getList()">
+  <ion-card *ngFor="let list of cart.getList(); let i of index; trackBy:identify">
     <ion-card-content>
+      <ion-checkbox color="royal" (click) = remove(list)></ion-checkbox>
       <ion-card-title [innerHTML]="list.name">
       </ion-card-title>
+      <ion-card-content [innerHTML] ="list.amount"></ion-card-content>
     </ion-card-content>
+
   </ion-card>
 
+  
 </ion-content>

@@ -31,40 +31,6 @@ export class RecipeCollectionPage {
 }
 
 
-
-var ingredlist={
-  "Tapioca Pearls":{
-    amount:0, unit:""
-  },
-  "Water":{
-    amount:0,unit:"g"
-  },
-  "Sugar":{
-    amount:0,unit:"g"
-  },
-  "Milk Tea":{
-    amount:0,unit:"g"
-  },
-  "Eggs":{
-    amount:0,unit:""
-  },
-  "Spinach":{
-    amount:0,unit:""
-  },
-  "Salt":{
-    amount:0,unit:"g"
-  },
-  "Pepper":{
-    amount:0,unit:""
-  },
-  "Oil":{
-    amount:0,unit:"g"
-  },
-  "Toast":{
-    amount:0,unit:""
-  }
-};
-
 var RecipeCollection=[
   /*Recipe Bubble Tea*/
   { img:"assets/img/bubbleTeaCover.jpg",
