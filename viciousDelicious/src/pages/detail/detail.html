@@ -34,7 +34,7 @@
         <ion-item *ngFor="let ingredient of recipeInfo.ingredients">
           <ion-label [innerHTML]="ingredient.name"></ion-label>
 
-          <ion-checkbox color="royal" id="ingredient.name"></ion-checkbox>
+          <ion-checkbox color="royal" id="ingredient.name" (click) = "checked(ingredient.name)" value = false></ion-checkbox>
         </ion-item>
 
       </ion-list>
@@ -46,7 +46,7 @@
     <button ion-button item-right color="danger" clear (click)="GoToInstructions(recipeInfo)">
       Start Cooking
     </button>
-    <button ion-button small round ng-click="addToCart()">Add to Cart</button>
+    <button ion-button small round (click)="addToCart()">Add to Cart</button>
   </p>
 
 </ion-content>

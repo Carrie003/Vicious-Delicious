@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { InstructionPage } from "../instruction/instruction";
+import { data } from "../data/data";
 
 /*
   Generated class for the Detail page.
@@ -14,7 +15,7 @@ import { InstructionPage } from "../instruction/instruction";
 })
 export class DetailPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, public cart:data, public alertCtrl: AlertController) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailPage');
@@ -28,38 +29,42 @@ export class DetailPage {
   }
 
 
-
-  testCheckboxOpen: boolean;
+  temporary=[];
+  message = "";
 
   addToCart(){
     let add = this.alertCtrl.create();
-    add.setTitle("Choose the ingredients you want to add?");
-
-    add.addInput({
-      type:'checkbox',
-      label:"A",
-      value:"a"
-    });
-
-    add.addInput({
-      type:'checkbox',
-      label: "B",
-      value: "b"
-    });
+    add.setTitle("Adding these ingredients?");
+    for (let i of this.temporary){
+      this.message += i;
+      this.message += "; ";
+    };
+    add.setMessage(this.message);
 
     add.addButton("Cancel");
 
     add.addButton({
       text: "Confirm",
-      handler: data => {
-        console.log('Checkbox data:', data);
-        this.testCheckboxOpen = false;
-      }
+      handler: () =>{
+        for (let i of this.temporary) {
+          this.cart.addToList(i);
+          };
+        }
       })
 
-    add.present().then(()=>{
-      this.testCheckboxOpen = true;
-    });
+    add.present().then();
+  }
+
+  checked(ingredientName){
+
+    this.temporary.push(ingredientName);
+    /*if (ingredient.value == false) {
+      this.temporary.push(ingredient);
+      ingredient.value == true;
+    }else{
+      this.temporary.splice(this.temporary.indexOf(ingredient),1);
+      ingredient.value == false;
+    }*/
   }
 
 }
