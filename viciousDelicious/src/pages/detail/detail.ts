@@ -28,38 +28,41 @@ export class DetailPage {
   }
 
 
-
-  testCheckboxOpen: boolean;
+  temporary=[];
+  message = "";
 
   addToCart(){
     let add = this.alertCtrl.create();
-    add.setTitle("Choose the ingredients you want to add?");
+    add.setTitle("Adding these ingredients?");
+    for (let i of this.temporary){
+      this.message += i;
+      this.message += "; ";
+    };
+    add.setMessage(this.message);
 
-    add.addInput({
-      type:'checkbox',
-      label:"A",
-      value:"a"
-    });
 
-    add.addInput({
-      type:'checkbox',
-      label: "B",
-      value: "b"
-    });
+
+
 
     add.addButton("Cancel");
 
     add.addButton({
-      text: "Confirm",
-      handler: data => {
-        console.log('Checkbox data:', data);
-        this.testCheckboxOpen = false;
-      }
+      text: "Confirm"
       })
 
-    add.present().then(()=>{
-      this.testCheckboxOpen = true;
-    });
+    add.present().then();
+  }
+
+  checked(ingredientName){
+
+    this.temporary.push(ingredientName);
+    /*if (ingredient.value == false) {
+      this.temporary.push(ingredient);
+      ingredient.value == true;
+    }else{
+      this.temporary.splice(this.temporary.indexOf(ingredient),1);
+      ingredient.value == false;
+    }*/
   }
 
 }
