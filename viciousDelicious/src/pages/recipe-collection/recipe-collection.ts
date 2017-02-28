@@ -203,7 +203,7 @@ var RecipeCollection=[
       {
         title: "Step 1",
         description: "Boil a pot of water",
-        video: "http://i.giphy.com/oP7oYal35XCFy.gif"
+        video: "assets/img/BT1.gif"
       },
       {
         title: "Step 2",
