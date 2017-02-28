@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { InstructionPage } from "../instruction/instruction";
+import { data } from "../data/data";
 
 /*
   Generated class for the Detail page.
@@ -14,7 +15,7 @@ import { InstructionPage } from "../instruction/instruction";
 })
 export class DetailPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, public cart:data, public alertCtrl: AlertController) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailPage');
@@ -40,14 +41,15 @@ export class DetailPage {
     };
     add.setMessage(this.message);
 
-
-
-
-
     add.addButton("Cancel");
 
     add.addButton({
-      text: "Confirm"
+      text: "Confirm",
+      handler: () =>{
+        for (let i of this.temporary) {
+          this.cart.addToList(i);
+          };
+        }
       })
 
     add.present().then();

@@ -10,29 +10,39 @@ export class data{
   constructor(){
     this.shoppinglist=[
     {"name":"Tapioca Pearls",
-    "amount":11, "unit":""},
+    "amount":0},
       {"name": "Water",
-      "amount": 0, "unit": "g"},
+      "amount": 0},
       {"name": "Sugar",
-      "amount": 0, "unit": "g"},
+      "amount": 0},
       {"name": "Milk Tea",
-      "amount": 0, "unit": "g"},
+      "amount": 0},
       {"name": "Eggs",
-      "amount":0, "unit":""},
+      "amount":0},
       {"name": "Spinach",
-      "amount": 0, "unit":""},
+      "amount": 0},
       {"name": "Salt",
-      "amount": 0, "unit":""},
+      "amount": 0},
       {"name": "Pepper",
-      "amount": 0, "unit":""},
+      "amount": 0},
       {"name": "Oil",
-      "amount": 0, "unit":""}
+      "amount": 0}
     ]
   }
 
 
-  addToList(ingredientDict){
-    this.shoppinglist.push(ingredientDict);
+  addToList(ingredientName){
+    var found = false;
+
+    for (let ingredientList of this.shoppinglist){
+      if (ingredientList["name"] == ingredientName){
+        ingredientList["amount"] ++;
+        found = true;
+      }
+    }
+    if (found == false){
+      this.shoppinglist.push({"name":ingredientName, "amount":1});
+    }
   }
 
   removeFromList(ingredientDict){
