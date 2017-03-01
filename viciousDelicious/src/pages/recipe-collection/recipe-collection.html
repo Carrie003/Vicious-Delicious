@@ -16,7 +16,7 @@
 <ion-content padding>
   <ion-card *ngFor="let recipe of collection">
 
-    <img [src]="recipe.img" />
+    <img [src]="recipe.img" on-click = "GoToDetail(recipe)" />
 
     <ion-card-content>
       <ion-card-title [innerHTML]="recipe.title">
