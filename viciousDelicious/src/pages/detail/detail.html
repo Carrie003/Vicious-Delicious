@@ -34,7 +34,7 @@
         <ion-item *ngFor="let ingredient of recipeInfo.ingredients">
           <ion-label [innerHTML]="ingredient.name"></ion-label>
 
-          <ion-checkbox color="royal" id="ingredient.name" (click) = "checked(ingredient.name)" value = false></ion-checkbox>
+          <ion-checkbox color="royal" [id]="ingredient.name" (click) = "checked(ingredient.name)" ></ion-checkbox>
         </ion-item>
 
       </ion-list>
