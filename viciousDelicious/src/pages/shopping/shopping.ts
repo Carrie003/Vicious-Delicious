@@ -17,7 +17,7 @@ export class ShoppingPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public cart: data) {}
 
-  temporaryList = [];
+  //temporaryList = [];
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ShoppingPage');
@@ -28,7 +28,5 @@ export class ShoppingPage {
   remove(ingredient){
     this.cart.removeFromList(ingredient);
   }
-
-
 
 }

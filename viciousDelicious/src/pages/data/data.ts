@@ -5,29 +5,39 @@
 export class data{
 
   shoppinglist: Array<Object>;
-
+  displaylist: Array<Object>;
 
   constructor(){
     this.shoppinglist=[
-    {"name":"Tapioca Pearls",
-    "amount":0},
+      {"name":"Tapioca Pearls",
+        "amount":0,
+        "clicked":false},
       {"name": "Water",
-      "amount": 0},
+      "amount": 0,
+        "clicked":false},
       {"name": "Sugar",
-      "amount": 0},
+      "amount": 0,
+        "clicked":false},
       {"name": "Milk Tea",
-      "amount": 0},
+      "amount": 0,
+        "clicked":false},
       {"name": "Eggs",
-      "amount":0},
+      "amount":0,
+        "clicked":false},
       {"name": "Spinach",
-      "amount": 0},
+      "amount": 0,
+        "clicked":false},
       {"name": "Salt",
-      "amount": 0},
+      "amount": 0,
+        "clicked":false},
       {"name": "Pepper",
-      "amount": 0},
+      "amount": 0,
+        "clicked":false},
       {"name": "Oil",
-      "amount": 0}
+      "amount": 0,
+        "clicked":false}
     ]
+    this.displaylist=[];
   }
 
 
@@ -56,6 +66,18 @@ export class data{
 
   getList(){
     return this.shoppinglist;
+  }
+
+  setDisplayList(){
+    for(let item in this.shoppinglist){
+      if(item["amount"]!=0){
+        this.displaylist.push(item);
+      }
+    }
+  }
+
+  getDisplayList(){
+    return this.displaylist;
   }
 
 
