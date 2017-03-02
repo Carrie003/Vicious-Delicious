@@ -198,7 +198,7 @@ var RecipeCollection=[
     title:"Pinol",
     subtitle1:"A Honduran staple in the mornings, pinol is a warm, thick drink made from finely, roasted, grounded corn mixed with milk and sugar",
     subtitle2:"Sweet, warm, thick corny drink!",
-    ingredients:[{name:"Eggs",amount:0},{name:"Toast",amount:0}
+    ingredients:[{name:"Pinol",amount:0},{name:"Milk",amount:0},{name:"Sugar",amount:0},
     ],
     slides:[
       {
@@ -224,7 +224,7 @@ var RecipeCollection=[
       },
       {
         title: "Step 5",
-        description: "Stir in pinol mix to the milk.",
+        description: "Stir in pinol mix to the milk and add 1/3 cup of sugar.",
         video: "http://i.giphy.com/3ohzdEFIx94nrjZNYc.gif"
       },
       {
@@ -234,7 +234,7 @@ var RecipeCollection=[
       },
       {
         title: "Step 7",
-        description: "Pour it into a mug and enjoy it while its warm!",
+        description: "Pour it into a mug, add more sugar to your liking, and enjoy it while its warm!",
         video: "http://i.giphy.com/xUPGcCDVlEiJxhNt7O.gif"
       },
 
