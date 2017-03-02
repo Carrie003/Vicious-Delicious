@@ -214,7 +214,7 @@ var RecipeCollection=[
 
       {
         title: "Step 3",
-        description: "Add mill to a pot.",
+        description: "Add milk to a pot.",
         video: "http://i.giphy.com/AJ69kbE15iFy0.gif"
       },
       {
