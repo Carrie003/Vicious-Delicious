@@ -137,11 +137,6 @@ var RecipeCollection=[
     ],
     slides:[
       {
-        title: "Cuisine Information",
-        description: "An egg on top of a slice of toast lends towards a delicious breakfast!",
-        video : "http://2.bp.blogspot.com/-3lYpn1xoY2I/TyutvQW5C-I/AAAAAAAABtI/G85bp9aVx0I/s1600/DSC03193-1.JPG"
-      },
-      {
         title: "Step 1",
         description: "Fry the eggs and flip them; while cooking the eggs, also pop the bread in the toaster.",
         video: "https://media.giphy.com/media/3ohzdH5EvKIQIMlfNe/giphy.gif"
