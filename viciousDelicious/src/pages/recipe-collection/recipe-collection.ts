@@ -143,18 +143,18 @@ var RecipeCollection=[
       },
       {
         title: "Step 1",
-        description: "EGGS. Note: this gif is not of me (yet)",
-        video: "http://cdn.firstwefeast.com/assets/2014/09/1-crack.gif"
+        description: "Fry the eggs and flip them; while cooking the eggs, also pop the bread in the toaster.",
+        video: "https://media.giphy.com/media/3ohzdH5EvKIQIMlfNe/giphy.gif"
+      },
+      {
+        title: "Step 2",
+        description: "Cook your eggs to your preference.",
+        video: "https://media.giphy.com/media/3ohzdS9zRaX4AGYfJu/giphy.gif"
       },
       {
         title: "Step 3",
-        description: "Place delicately sliced egg on top of warm toast.",
-        video: "http://cdn.firstwefeast.com/assets/2014/09/1-crack.gif"
-      },
-      {
-        title: "Step 4",
-        description: "This is step 4 and you are making eggs and toast.",
-        video: "http://cdn.firstwefeast.com/assets/2014/09/1-crack.gif"
+        description: "Place delicately crafted egg on top of warm toast.",
+        video: "https://media.giphy.com/media/xUPGckQHybNfQOIxZS/giphy.gif"
       }
     ]
   },
