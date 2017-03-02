@@ -192,7 +192,54 @@ var RecipeCollection=[
         video: "http://i.giphy.com/3o84U8MxCaI57HXcU8.gif"
       },
     ]
-  }
+  },
+  /*Recipe Pinol*/
+  { img:"assets/img/Pinol.jpg",
+    title:"Pinol",
+    subtitle1:"A Honduran staple in the mornings, pinol is a warm, thick drink made from finely, roasted, grounded corn mixed with milk and sugar",
+    subtitle2:"Sweet, warm, thick corny drink!",
+    ingredients:[{name:"Eggs",amount:0},{name:"Toast",amount:0}
+    ],
+    slides:[
+      {
+        title: "Step 1",
+        description: "Add about a cup of dry pinol intol a bowl. ",
+        video : "http://i.giphy.com/tVQvJtDcqmQuY.gif"
+      },
+      {
+        title: "Step 2",
+        description: "Add about a two cups of water for every cup of powder pinol.",
+        video: "http://i.giphy.com/3ohzdPtH5Lsjt1P1mg.gif"
+      },
+
+      {
+        title: "Step 3",
+        description: "Place delicately sliced egg on top of warm toast.",
+        video: "http://i.giphy.com/AJ69kbE15iFy0.gif"
+      },
+      {
+        title: "Step 4",
+        description: "Using a strainer, strain the pinol with water and dissolve the powder all the way through using water as necessarly.",
+        video: "http://i.giphy.com/xUPGcstc8ZpepZOxKU.gif"
+      },
+      {
+        title: "Step 5",
+        description: "Stir in pinol mix to the milk.",
+        video: "http://i.giphy.com/3ohzdEFIx94nrjZNYc.gif"
+      },
+      {
+        title: "Step 6",
+        description: "Keep mixing until it starts to thicken. Note: do not stop mixing, it can burn very easily if left unattended.",
+        video: "http://i.giphy.com/xUPGcs7VHmYjZSO2t2.gif"
+      },
+      {
+        title: "Step 7",
+        description: "Pour it into a mug and enjoy it while its warm!",
+        video: "http://i.giphy.com/xUPGcCDVlEiJxhNt7O.gif"
+      },
+
+    ]
+  },
 
 
 ];

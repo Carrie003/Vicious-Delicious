@@ -22,9 +22,6 @@ export class ShoppingPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ShoppingPage');
   }
-
-
-
   remove(ingredient){
     this.cart.removeFromList(ingredient);
   }
