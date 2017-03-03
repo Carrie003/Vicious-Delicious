@@ -35,8 +35,26 @@ export class data{
         "clicked":false},
       {"name": "Oil",
       "amount": 0,
+        "clicked":false},
+      {"name": "Toast",
+        "amount": 0,
+        "clicked":false},
+      {"name": "Rice cakes",
+        "amount": 0,
+        "clicked":false},
+      {"name": "Gochu-jang",
+        "amount": 0,
+        "clicked":false},
+      {"name": "Fish cakes",
+        "amount": 0,
+        "clicked":false},
+      {"name": "Pinol",
+        "amount": 0,
+        "clicked":false},
+      {"name": "Milk",
+        "amount": 0,
         "clicked":false}
-    ]
+    ];
     this.displaylist=[];
   }
 
@@ -51,15 +69,19 @@ export class data{
       }
     }
     if (found == false){
-      this.shoppinglist.push({"name":ingredientName, "amount":1});
+      this.shoppinglist.push({"name":ingredientName, "amount":1, "clicked":true});
     }
   }
 
   removeFromList(ingredientDict){
     for (var i=0; i<this.shoppinglist.length; i++){
       if (this.shoppinglist[i]==ingredientDict){
-        this.shoppinglist.splice(i,1);
+        if(this.shoppinglist[i]["amount"]>0){
+          this.shoppinglist[i]["amount"]--;
+        }
+        break;
       }
+
     }
   }
 
