@@ -168,7 +168,7 @@ var RecipeCollection=[
       },
       {
         title: "Step 2",
-        description: "Add in rice cakes and wait until boiled.",
+        description: "Add in rice cakes and boil them, then rinse.",
         video: "http://i.giphy.com/oP7oYal35XCFy.gif"
       },
       {
