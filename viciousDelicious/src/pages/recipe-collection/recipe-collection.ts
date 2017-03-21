@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {DetailPage} from "../detail/detail";
 
+
 /*
   Generated class for the RecipeCollection page.
 
@@ -17,17 +18,38 @@ import {DetailPage} from "../detail/detail";
 
 export class RecipeCollectionPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  collection = [];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    for (let i = 0; i < 3; i++){
+      this.collection.push(RecipeCollection[i]);
+    }
+  }
+
+
+  doInfinite(infiniteScroll){
+    setTimeout(()=>{
+      for (let i = 0; i < RecipeCollection.length - this.collection.length; i++){
+        this.collection.push(RecipeCollection[i+this.collection.length]);
+      }
+      infiniteScroll.complete();
+    }, 500);
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RecipeCollectionPage');
   }
 
-  collection = RecipeCollection;
+  //collection = RecipeCollection;
+
+
+
 
   GoToDetail(recipe){
     this.navCtrl.push(DetailPage,{param1:recipe});
   }
+
+
 }
 
 

@@ -14,30 +14,24 @@
 
 
 <ion-content padding>
-  <ion-card *ngFor="let recipe of collection">
 
-    <img [src]="recipe.img" on-click = "GoToDetail(recipe)" />
 
-    <ion-card-content>
-      <ion-card-title [innerHTML]="recipe.title">
-      </ion-card-title>
-      <p [innerHTML]="recipe.subtitle1">
-      </p>
-    </ion-card-content>
+      <ion-card *ngFor="let recipe of collection">
+        <img [src]="recipe.img" on-click = "GoToDetail(recipe)" />
 
-    <!--<ion-row no-padding>-->
+      <ion-card-content>
+        <ion-card-title [innerHTML]="recipe.title">
+        </ion-card-title>
+        <p [innerHTML]="recipe.subtitle1">
+        </p>
+      </ion-card-content>
 
-      <!--<ion-col text-center>-->
-        <!--<button ion-button clear small color="danger" icon-left>-->
-          <!--<ion-icon name='star'></ion-icon>-->
-          <!--Favorite-->
-        <!--</button>-->
-        <!---->
-      <!--</ion-col>-->
-      <!---->
-      <!--</ion-row>-->
+      </ion-card>
 
-  </ion-card>
-
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)" ng-if="hasMoreData">
+    <ion-infinite-scroll-content
+      loadingSpinner = "bubbles">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 
 </ion-content>
