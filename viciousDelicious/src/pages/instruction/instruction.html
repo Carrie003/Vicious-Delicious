@@ -13,18 +13,22 @@
 </ion-header>
 
 
-<ion-content class="Instructions">
+<ion-content class="bgpic">
 
   <ion-slides pager>
-    <ion-slide *ngFor="let slide of slides">
+    <ion-slide *ngFor="let slide of slides" >
       <img [src]="slide.video" class="slide-image">
+      <ion-content class="slide">
       <h2 class="slide-title" [innerHTML]="slide.title"></h2>
-      <p [innerHTML]="slide.description"></p>
+      <p [innerHTML]="slide.description" ></p>
+      </ion-content>>
     </ion-slide>
 
     <ion-slide>
       <img [src]="recipeInfo.img" class="slide-image"/>
-      <h2 class="slide-title" [innerHTML]="message"></h2>
+      <ion-content class="slide">
+      <p class="slide-title" [innerHTML]="message"></p>
+      </ion-content>
     </ion-slide>
 
   </ion-slides>

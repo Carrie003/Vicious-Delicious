@@ -38,10 +38,14 @@ export class DetailPage {
   addToCart(){
     let add = this.alertCtrl.create();
     add.setTitle("Adding these ingredients?");
-    for (let i of this.temporary){
-      this.message += i;
-      this.message += "; ";
-    };
+    if(this.temporary.length==0){
+      this.message = "Please select some ingredients;";
+    }else{
+      for (let i of this.temporary){
+        this.message += i;
+        this.message += "; ";
+      }
+    }
     add.setMessage(this.message);
 
     add.addButton({
