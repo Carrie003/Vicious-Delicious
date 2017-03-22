@@ -11,7 +11,12 @@ body {
 }
 
 .scroll-content{
-  background-color:#ffffff;
+  //background-color:#ffffff;
+}
+
+#homebg{
+  background: url("https://media.giphy.com/media/3o85g3loeiLcF26OZy/giphy.gif") center 60px fixed;
+  background-size: 400px 530px;
 }
 
 .bg-vid {
@@ -30,4 +35,20 @@ body {
   transform: translateX(-50%) translateY(-50%);
   background: url(http://www.w3schools.com/tags/movie.mp4) no-repeat;
   background-size: cover;
+}
+
+#recButton {
+  background-color: transparent;
+  border:  2px solid black;
+  width: 300px;
+  top: 80px;
+
+}
+
+#shoButton{
+  background-color: transparent;
+  border:  2px solid black;
+  width: 300px;
+  top: 160px;
+
 }
