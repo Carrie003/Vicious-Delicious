@@ -13,16 +13,16 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="bgpic">
 
 
       <ion-card *ngFor="let recipe of collection">
         <img [src]="recipe.img" on-click = "GoToDetail(recipe)" />
 
-      <ion-card-content>
+      <ion-card-content class="CardContent">
         <ion-card-title [innerHTML]="recipe.title">
         </ion-card-title>
-        <p [innerHTML]="recipe.subtitle1">
+        <p [innerHTML]="recipe.subtitle1" class="Subtitle">
         </p>
       </ion-card-content>
 

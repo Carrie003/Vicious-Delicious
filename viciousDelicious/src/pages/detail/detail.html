@@ -13,7 +13,7 @@
 </ion-header>
 
 
-<ion-content class="background-page">
+<ion-content class="bgpic">
 
 
   <ion-card>
@@ -24,17 +24,17 @@
   </ion-card>
 
 
-  <ion-card>
+  <ion-card class="IngredCard">
     <ion-card-header>
       Ingredients
     </ion-card-header>
     <ion-card-content>
 
       <ion-list>
-        <ion-item *ngFor="let ingredient of recipeInfo.ingredients">
+        <ion-item *ngFor="let ingredient of recipeInfo.ingredients" class="IngredCard">
           <ion-label [innerHTML]="ingredient.name"></ion-label>
 
-          <ion-checkbox color="royal" [id]="ingredient.name" (click) = "checked(ingredient.name)" ></ion-checkbox>
+          <ion-checkbox [id]="ingredient.name" (click) = "checked(ingredient.name)" ></ion-checkbox>
         </ion-item>
 
       </ion-list>
@@ -43,10 +43,10 @@
 
 
   <p>
-    <button ion-button item-right color="danger" clear (click)="GoToInstructions(recipeInfo)">
+    <button ion-button item-right (click)="GoToInstructions(recipeInfo)" class="DetailButton">
       Start Cooking
     </button>
-    <button ion-button small round (click)="addToCart()">Add to Cart</button>
+    <button ion-button (click)="addToCart()" class="DetailButton">Add to Cart</button>
   </p>
 
 </ion-content>

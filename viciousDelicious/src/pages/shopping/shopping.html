@@ -12,7 +12,7 @@
 
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="bgpic">
   <ion-card *ngFor="let list of cart.displaylist; let i of index; trackBy:identify">
     <ion-card-content>
       <button color="danger" (click) = remove(list)>Click Here to Minus One</button>
