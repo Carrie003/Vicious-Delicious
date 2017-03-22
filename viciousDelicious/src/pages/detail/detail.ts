@@ -76,6 +76,7 @@ export class DetailPage {
   }
 
   checked(ingredientName){
+    var find = false;
     for (let item of this.cart.shoppinglist){
       if (item["name"]==ingredientName){
         if (item["clicked"] == false) {
@@ -93,7 +94,12 @@ export class DetailPage {
           this.temporary=temporary1;
           item["clicked"] = false;
         }
+        find = true;
       }
+    }
+    if(!find){
+      this.cart.shoppinglist.push({"name":ingredientName, "amount":0, "clicked":true});
+      this.temporary.push(ingredientName);
     }
   };
 

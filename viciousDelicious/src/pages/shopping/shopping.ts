@@ -15,15 +15,27 @@ import {Input, DoCheck, OnChanges, OnInit} from 'angular2/core';
 })
 export class ShoppingPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public cart: data) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, public cart: data) {
 
-  //temporaryList = [];
+  }
 
+  //temporaryList = temporaryList;
   ionViewDidLoad() {
     console.log('ionViewDidLoad ShoppingPage');
   }
+
+
   remove(ingredient){
     this.cart.removeFromList(ingredient);
   }
 
 }
+
+
+//var displayList=[];
+//for (let dict of this.cart.shoppinglist){
+//  if (dict["amount"]>0){
+//    displayList.push(dict);
+//  }
+//}
+

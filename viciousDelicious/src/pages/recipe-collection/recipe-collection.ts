@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {DetailPage} from "../detail/detail";
 
+
 /*
   Generated class for the RecipeCollection page.
 
@@ -17,23 +18,44 @@ import {DetailPage} from "../detail/detail";
 
 export class RecipeCollectionPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  collection = [];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    for (let i = 0; i < 3; i++){
+      this.collection.push(RecipeCollection[i]);
+    }
+  }
+
+
+  doInfinite(infiniteScroll){
+    setTimeout(()=>{
+      for (let i = 0; i < RecipeCollection.length - this.collection.length; i++){
+        this.collection.push(RecipeCollection[i+this.collection.length]);
+      }
+      infiniteScroll.complete();
+    }, 500);
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RecipeCollectionPage');
   }
 
-  collection = RecipeCollection;
+  //collection = RecipeCollection;
+
+
+
 
   GoToDetail(recipe){
     this.navCtrl.push(DetailPage,{param1:recipe});
   }
+
+
 }
 
 
 var RecipeCollection=[
   /*Recipe Bubble Tea*/
-  { img:"assets/img/bubbleTeaCover.jpg",
+  { img:"https://image.ibb.co/g0JebF/bubble_Tea_Cover.jpg",
     title:"Milk Tea",
     subtitle1:"This tea-based drink invented in the 1980s. It's normally served with tapioca pearls, milk, and ice.",
     subtitle2:"Quick & Simple Drink",
@@ -43,47 +65,47 @@ var RecipeCollection=[
       {
         title: "Step 1",
         description: "Boil a pot of water.",
-        video : "assets/img/BT1.gif"
+        video : "http://i.giphy.com/xUPGcBjNqz3Ec9B4v6.gif"
       },
       {
         title: "Step 2",
         description: "Add tapioca pearls.",
-        video: "assets/img/BT2.gif"
+        video: "http://i.giphy.com/3ohzdVXRZjIZzRaqrK.gif"
       },
       {
         title: "Step 3",
         description: "Wait till pearls are floating and let them get soft for about 3-4 minutes.",
-        video: "assets/img/BT3.gif"
+        video: "http://i.giphy.com/3ohze0kPJoElPOZ8Iw.gif"
       },
       {
         title: "Step 4",
         description: "Check if pearls have been cooked thoroughly by eating one.",
-        video: "assets/img/BT4.gif"
+        video: "http://i.giphy.com/3ohzdLxqyLoQ0RHkQw.gif"
       },
       {
         title: "Step 5",
         description: "If ready, rinse and drain the pearls three times.",
-        video: "assets/img/BT5.gif"
+        video: "http://i.giphy.com/3ohzdPEinyEot6dttK.gif"
       },
       {
         title: "Step 6",
         description: "Move pearls to a bowl and add sugar or honey.",
-        video: "assets/img/BT6.gif"
+        video: "http://i.giphy.com/xUPGcGnA72vMIz4uPu.gif"
       },
       {
         title: "Step 7",
         description: "Make black or milk tea.",
-        video: "assets/img/BT7.gif"
+        video: "http://i.giphy.com/3ohzdQfFYoLvihQI7K.gif"
       },
       {
         title: "Step 8",
         description: "Add bubbles and ice to your liking.",
-        video: "assets/img/BT8.gif"
+        video: "http://i.giphy.com/xUPGcDFp0dtAGHeDwA.gif"
       }
     ]
   },
   /*Recipe Scrambled Eggs with Spinach*/
-  { img:"assets/img/recipe2Cover.jpg",
+  { img:"https://image.ibb.co/dHiqiv/recipe2_Cover.jpg",
     title:"Scrambled Eggs with Spinach",
     subtitle1:"These amazingly flavorful baked eggs with spinach are the easiest way to impress your guests.",
     subtitle2:"Homemade dish",
@@ -155,7 +177,7 @@ var RecipeCollection=[
   },
   /*Recipe Ttebokki*/
   {
-    img:"assets/img/Tteok-bokki.jpg",
+    img:"https://image.ibb.co/ejZ7Va/Tteok_bokki.jpg",
     title:"Tteok-bokki",
     subtitle1:"This delicious Korean dish consists of rice and fish cakes with spicy red chili sauce called gochu-jang.",
     subtitle2:"Spicy stir fried rice cakes",
@@ -189,7 +211,7 @@ var RecipeCollection=[
     ]
   },
   /*Recipe Pinol*/
-  { img:"assets/img/Pinol.jpg",
+  { img:"https://image.ibb.co/k9qgqa/Pinol.jpg",
     title:"Pinol",
     subtitle1:"A Honduran staple in the mornings, pinol is a warm, thick drink made from finely, roasted, grounded corn mixed with milk and sugar",
     subtitle2:"Sweet, warm, thick corny drink!",
