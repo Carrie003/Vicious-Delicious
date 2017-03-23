@@ -25,19 +25,33 @@ page-detail {
     }
 
     .IngredCard{
-      background:url("http://img.michaels.com/L6/3/IOGLO/852866719/201341423/10151236.jpg?fit=inside%7C220:220");
+      background:url("http://www.texturex.com/albums/Paper-Textures/paper%20texture%20linen%20emboss%20card%20stock%20photo%20white%20light.jpg");
       background-size:cover;
     }
 
     .DetailButton{
-      background:url("http://img.michaels.com/L6/3/IOGLO/852866719/201341423/10151236.jpg?fit=inside%7C220:220");
+      //background-color:#0c60ee;
       border:  2px solid black;
       font-family: "Lucida Grande", Geneva, Verdana, Arial, Helvetica, sans-serif;
       color:black;
       left: 10%;
       width:80%;
+      border-radius: 10px;
     }
 
+    #cook{
+      background:url("https://cdn1.iconfinder.com/data/icons/food-solid-icons-volume-4-1/128/171-512.png") no-repeat;
+      background-size:contain;
+      background-position: right;
+      background-color: #b1cdfb;
+    }
+
+    #cart{
+      background:url("https://d30y9cdsu7xlg0.cloudfront.net/png/28468-200.png") no-repeat;
+      background-size:contain;
+      background-position: right;
+      background-color: #b1cdfb;
+    }
 
 
 }
