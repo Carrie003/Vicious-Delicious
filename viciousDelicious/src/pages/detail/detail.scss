@@ -29,21 +29,26 @@ page-detail {
       background-size:cover;
     }
 
-    .DetailButton{
+    //.DetailButton{
       //background-color:#0c60ee;
-      border:  2px solid black;
-      font-family: "Lucida Grande", Geneva, Verdana, Arial, Helvetica, sans-serif;
-      color:black;
-      left: 10%;
-      width:80%;
-      border-radius: 10px;
-    }
+    //  border:  2px solid black;
+
+
+      //left: 10%;
+      //width:80%;
+      //border-radius: 10px;
+    //}
 
     #cook{
       background:url("https://cdn1.iconfinder.com/data/icons/food-solid-icons-volume-4-1/128/171-512.png") no-repeat;
       background-size:contain;
       background-position: right;
       background-color: #b1cdfb;
+      font-family: "Lucida Grande", Geneva, Verdana, Arial, Helvetica, sans-serif;
+      color:black;
+      left: 10%;
+      border-radius: 10px;
+      width:80%;
     }
 
     #cart{
@@ -51,7 +56,12 @@ page-detail {
       background-size:contain;
       background-position: right;
       background-color: #b1cdfb;
+      font-family: "Lucida Grande", Geneva, Verdana, Arial, Helvetica, sans-serif;
+      color:black;
       cursor: pointer;
+      left: 10%;
+      border-radius: 10px;
+      width:80%;
     }
 
     .check{
