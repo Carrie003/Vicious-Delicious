@@ -13,6 +13,7 @@
 </ion-header>
 
 <ion-content padding class="bgpic">
+  <!---
   <ion-card *ngFor="let list of cart.displaylist; let i of index; trackBy:identify">
     <ion-card-content>
       <button color="danger" (click) = remove(list)>Click Here to Minus One</button>
@@ -22,6 +23,22 @@
     </ion-card-content>
 
   </ion-card>
+  --->
+
+  <ion-list>
+    <ion-item *ngFor="let groceryitem of cart.displaylist; let i of index; trackBy:identify">
+      <ion-label>
+        {{groceryitem.name}}
+      </ion-label>
+
+      <ion-item-options>
+        <button ion-button icon-only (click)="remove(groceryitem)" danger>
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item>
+  </ion-list>
+
 
 
 </ion-content>
