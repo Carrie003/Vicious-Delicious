@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {DetailPage} from "../detail/detail";
+import {ShoppingPage} from '../shopping/shopping';
+import { data } from "../data/data";
 
 
 /*
@@ -20,7 +22,7 @@ export class RecipeCollectionPage {
 
   collection = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public cart:data) {
     for (let i = 0; i < 3; i++){
       this.collection.push(RecipeCollection[i]);
     }
@@ -47,6 +49,11 @@ export class RecipeCollectionPage {
 
   GoToDetail(recipe){
     this.navCtrl.push(DetailPage,{param1:recipe});
+  }
+
+  GoToShoppingCart(){
+    this.navCtrl.push(ShoppingPage);
+    this.cart.setDisplayList();
   }
 
 

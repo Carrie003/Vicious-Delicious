@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {RecipeCollectionPage}from "../recipe-collection/recipe-collection"
+import {ShoppingPage} from '../shopping/shopping';
+import { data } from "../data/data";
 
 /*
   Generated class for the Instruction page.
@@ -14,7 +16,7 @@ import {RecipeCollectionPage}from "../recipe-collection/recipe-collection"
 })
 export class InstructionPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams,public cart:data) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad InstructionPage');
@@ -29,5 +31,9 @@ export class InstructionPage {
     this.navCtrl.push(RecipeCollectionPage);
   }
 
+  GoToShoppingCart(){
+    this.navCtrl.push(ShoppingPage);
+    this.cart.setDisplayList();
+  }
 }
 
