@@ -15,12 +15,13 @@ body {
 }
 
 #homebg{
-  background: url("https://media.giphy.com/media/3o85g3loeiLcF26OZy/giphy.gif") center 60px fixed;
-  background-size: 400px 530px;
+  background: url("https://media.giphy.com/media/3o85g3loeiLcF26OZy/giphy.gif") center center fixed no-repeat;
+  background-size: contain;
+  background-color: #2B94B1;
 }
 
 .bgpic{
-  background: url("https://s-media-cache-ak0.pinimg.com/236x/ef/96/dc/ef96dc08fee6e60d9e7383a4a3d8c63e.jpg") center center fixed;
+  background: url("https://s-media-cache-ak0.pinimg.com/originals/84/5f/56/845f564d0847b4e91e86c5ee230e93cf.jpg") center center fixed;
   background-size:cover;
 }
 
@@ -43,17 +44,18 @@ body {
 }
 
 #recButton {
+  position:absolute;
   background-color: transparent;
   border:  2px solid black;
-  width: 300px;
-  top: 80px;
-
+  width: 90%;
+  top: 30%;
 }
 
 #shoButton{
+  position:absolute;
   background-color: transparent;
   border:  2px solid black;
-  width: 300px;
-  top: 160px;
+  width: 90%;
+  top: 60%;
 
 }
