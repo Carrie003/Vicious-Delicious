@@ -15,8 +15,11 @@ page-instruction {
 
   .slide-image {
     max-height: 580%;
-    max-width: 120%;
-    margin: 20px 0;
+    max-width: 95%;
+    margin: 20px 10px;
+    border-radius: 10px;
+    border:  2px solid black;
+
   }
 
   b {
@@ -35,8 +38,13 @@ page-instruction {
   }
 
   .slide{
-    background:url("https://s-media-cache-ak0.pinimg.com/originals/73/4b/fb/734bfbe7d8643ce7618d46be9565ba10.jpg") -30px -40px;
-    background-size:110%;
+    background:url("http://www.texturex.com/albums/Paper-Textures/paper%20texture%20linen%20emboss%20card%20stock%20photo%20white%20light.jpg") no-repeat;
+    background-size:cover;
+    margin: 20px 10px;
+    border-radius: 10px;
+    border:  2px solid black;
+    max-height: 50%;
+    max-width: 95%;
   }
 }
 

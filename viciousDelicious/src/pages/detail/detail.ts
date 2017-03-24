@@ -69,6 +69,7 @@ export class DetailPage {
 
           var element = <HTMLInputElement> document.getElementById(i);
           element.click();
+          //element.setAttribute('checked', 'unchecked');
         }
 
         this.temporary=[];
