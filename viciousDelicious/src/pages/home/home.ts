@@ -22,4 +22,5 @@ export class HomePage {
     this.navCtrl.push(ShoppingPage);
     this.cart.setDisplayList();
   }
+
 }

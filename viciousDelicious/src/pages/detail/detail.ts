@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { InstructionPage } from "../instruction/instruction";
 import { data } from "../data/data";
+import {ShoppingPage} from '../shopping/shopping';
 
 /*
   Generated class for the Detail page.
@@ -28,6 +29,11 @@ export class DetailPage {
   GoToInstructions(recipe){
     this.navCtrl.push(InstructionPage,{param1:recipe});
 
+  }
+
+  GoToShoppingCart(){
+    this.navCtrl.push(ShoppingPage);
+    this.cart.setDisplayList();
   }
 
 
