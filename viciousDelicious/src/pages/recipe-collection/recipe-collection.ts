@@ -56,10 +56,10 @@ export class RecipeCollectionPage {
 var RecipeCollection=[
   /*Recipe Bubble Tea*/
   { img:"https://image.ibb.co/g0JebF/bubble_Tea_Cover.jpg",
-    title:"Milk Tea",
+    title:"Bubble Milk Tea",
     subtitle1:"This tea-based drink invented in the 1980s. It's normally served with tapioca pearls, milk, and ice.",
     subtitle2:"Quick & Simple Drink",
-    ingredients:[{name:"Tapioca Pearls",amount:0},{name:"Water",amount:0},{name:"Sugar",amount:0}
+    ingredients:[{name:"Tapioca Pearls",amount:0},{name:"Water",amount:0},{name:"Sugar or Honey",amount:0}, {name:"Milk Tea",amount:0}
     ],
     slides:[
       {
@@ -236,7 +236,7 @@ var RecipeCollection=[
       },
       {
         title: "Step 4",
-        description: "Using a strainer, strain the pinol with water and dissolve the powder all the way through using water as necessarly.",
+        description: "Using a strainer, strain the pinol with water and dissolve the powder all the way through using water as necessarily.",
         video: "http://i.giphy.com/xUPGcstc8ZpepZOxKU.gif"
       },
       {
@@ -251,7 +251,7 @@ var RecipeCollection=[
       },
       {
         title: "Step 7",
-        description: "Pour it into a mug, add more sugar to your liking, and enjoy it while its warm!",
+        description: "Pour it into a mug, add more sugar to your liking, and enjoy it while it's warm!",
         video: "http://i.giphy.com/xUPGcCDVlEiJxhNt7O.gif"
       },
 
