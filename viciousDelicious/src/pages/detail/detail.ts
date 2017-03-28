@@ -17,7 +17,7 @@ import {ShoppingPage} from '../shopping/shopping';
 export class DetailPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public cart:data, public alertCtrl: AlertController) {
-
+    //this.ingredients = <<< make { name: "eggs", selected: false } from recipeInfo >>>
   }
 
   ionViewDidLoad() {
@@ -25,6 +25,11 @@ export class DetailPage {
   }
 
   recipeInfo=this.navParams.get("param1");
+
+  ingredients = this.recipeInfo.ingredients.map(ingredientName => {
+    return {name: ingredientName, selected: false};
+  })
+
 
   GoToInstructions(recipe){
     this.navCtrl.push(InstructionPage,{param1:recipe});
@@ -37,18 +42,27 @@ export class DetailPage {
   }
 
 
-  temporary=[];
+  temporary = [];
   message = "";
+
 
 
   addToCart(){
     let add = this.alertCtrl.create();
     add.setTitle("Adding these ingredients?");
+
+    for (let i of this.ingredients){
+console.log("---------->", i.selected, i);
+      if (i.selected == true){
+        this.temporary.push(i);
+      }
+    }
+
     if(this.temporary.length==0){
       this.message = "Please select some ingredients;";
     }else{
       for (let i of this.temporary){
-        this.message += i;
+        this.message += i.name;
         this.message += "; ";
       }
     }
@@ -57,9 +71,8 @@ export class DetailPage {
     add.addButton({
       text: "Cancel",
       handler: () =>{
-        for (let i of this.temporary) {
-          var element =<HTMLInputElement> document.getElementById(i);
-          element.click();
+        for (let i of this.ingredients) {
+          i.selected = false;
         }
         this.temporary=[];
         this.message="";
@@ -72,10 +85,10 @@ export class DetailPage {
       handler: () =>{
         for (let i of this.temporary) {
           this.cart.addToList(i);
+        }
 
-          var element = <HTMLInputElement> document.getElementById(i);
-          element.click();
-          //element.setAttribute('checked', 'unchecked');
+        for (let i of this.ingredients) {
+          i.selected = false;
         }
 
         this.temporary=[];
@@ -86,6 +99,8 @@ export class DetailPage {
     add.present().then();
   }
 
+
+  /*
   checked(ingredientName){
     var find = false;
     for (let item of this.cart.shoppinglist){
@@ -94,8 +109,6 @@ export class DetailPage {
           this.temporary.push(ingredientName);
           item["clicked"] = true;
         } else {
-          //var n=this.temporary.indexOf(item["name"]);
-          //this.temporary.splice(n,1);
           var temporary1=[];
           for(let str of this.temporary){
             if (str!=ingredientName){
@@ -113,5 +126,8 @@ export class DetailPage {
       this.temporary.push(ingredientName);
     }
   };
+
+*/
+
 
 }

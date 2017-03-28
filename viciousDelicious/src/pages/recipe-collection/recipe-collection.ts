@@ -23,10 +23,14 @@ export class RecipeCollectionPage {
   collection = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public cart:data) {
+
     for (let i = 0; i < 3; i++){
       this.collection.push(RecipeCollection[i]);
     }
   }
+
+
+
 
 
   doInfinite(infiniteScroll){
@@ -37,14 +41,6 @@ export class RecipeCollectionPage {
       infiniteScroll.complete();
     }, 500);
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RecipeCollectionPage');
-  }
-
-  //collection = RecipeCollection;
-
-
 
 
   GoToDetail(recipe){
@@ -66,8 +62,10 @@ var RecipeCollection=[
     title:"Milk Tea",
     subtitle1:"This tea-based drink invented in the 1980s. It's normally served with tapioca pearls, milk, and ice.",
     subtitle2:"Quick & Simple Drink",
-    ingredients:[{name:"Tapioca Pearls",amount:0},{name:"Water",amount:0},{name:"Sugar",amount:0}
-    ],
+    ingredients:[
+      { name: "Tapioca Pearls", amount: 1 },
+      { name: "Water", amount: 1 },
+      { name: "Sugar", amount: 1 }],
     slides:[
       {
         title: "Step 1",
@@ -116,8 +114,7 @@ var RecipeCollection=[
     title:"Scrambled Eggs with Spinach",
     subtitle1:"These amazingly flavorful baked eggs with spinach are the easiest way to impress your guests.",
     subtitle2:"Homemade dish",
-    ingredients:[{name:"Eggs",amount:0},{name:"Spinach",amount:0},{name:"Salt",amount:0},{name:"Pepper",amount:0},{name:"Oil",amount:0}
-    ],
+    ingredients:["Eggs","Spinach","Salt","Pepper","Oil"],
     slides:[
       {
         title: "Step 1",
@@ -162,8 +159,7 @@ var RecipeCollection=[
     title:"Fried Egg on Toast",
     subtitle1:"This simple dish is often referred to as Laputa pan (Laputa bread) after its appearance in the Ghibli movie, Laputa: Castle in The Sky.",
     subtitle2:"Homemade dish",
-    ingredients:[{name:"Eggs",amount:0},{name:"Toast",amount:0}
-    ],
+    ingredients:["Eggs","Toast"],
     slides:[
       {
         title: "Step 1",
@@ -188,7 +184,7 @@ var RecipeCollection=[
     title:"Tteok-bokki",
     subtitle1:"This delicious Korean dish consists of rice and fish cakes with spicy red chili sauce called gochu-jang.",
     subtitle2:"Spicy stir fried rice cakes",
-    ingredients:[{name:"Rice cakes",amount:0},{name:"Gochu-jang",amount:0}, {name:"Fish cakes",amount:0},],
+    ingredients:["Rice cakes","Gochu-jang","Fish cakes"],
     slides:[
       {
         title: "Step 1",
@@ -222,8 +218,7 @@ var RecipeCollection=[
     title:"Pinol",
     subtitle1:"A Honduran staple in the mornings, pinol is a warm, thick drink made from finely, roasted, grounded corn mixed with milk and sugar",
     subtitle2:"Sweet, warm, thick corny drink!",
-    ingredients:[{name:"Pinol",amount:0},{name:"Milk",amount:0},{name:"Sugar",amount:0},
-    ],
+    ingredients:["Pinol","Milk","Sugar"],
     slides:[
       {
         title: "Step 1",

@@ -18,7 +18,8 @@
 
 
       <ion-card *ngFor="let recipe of collection" class="Card">
-        <img [src]="recipe.img" on-click = "GoToDetail(recipe)" />
+        <img  [src]="recipe.img" on-click = "GoToDetail(recipe)" />
+
 
       <ion-card-content class="CardContent">
         <ion-card-title [innerHTML]="recipe.title">
@@ -26,7 +27,6 @@
         <p [innerHTML]="recipe.subtitle1" class="Subtitle">
         </p>
       </ion-card-content>
-
       </ion-card>
 
   <ion-infinite-scroll (ionInfinite)="doInfinite($event)" ng-if="hasMoreData">
