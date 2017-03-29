@@ -1,5 +1,5 @@
 /**
- * Created by XinyuYang on 17/2/25.
+ * Generated to hold data that can be shared in all pages.
  */
 
 export class data{
@@ -39,10 +39,6 @@ export class data{
   }
 
 
-  //getList(){
-  //  return this.shoppinglist;
-  //}
-
   setDisplayList(){
     this.displaylist=[];
     for(var i=0; i<this.shoppinglist.length; i++){
@@ -52,9 +48,6 @@ export class data{
     }
   }
 
-  //getDisplayList(){
-  //  return this.displaylist;
-  //}
 
 
 
