@@ -19,7 +19,6 @@ export class ShoppingPage {
 
   }
 
-  //temporaryList = temporaryList;
   ionViewDidLoad() {
     console.log('ionViewDidLoad ShoppingPage');
   }
@@ -31,11 +30,4 @@ export class ShoppingPage {
 
 }
 
-
-//var displayList=[];
-//for (let dict of this.cart.shoppinglist){
-//  if (dict["amount"]>0){
-//    displayList.push(dict);
-//  }
-//}
 

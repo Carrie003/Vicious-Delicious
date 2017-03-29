@@ -17,7 +17,6 @@ import {ShoppingPage} from '../shopping/shopping';
 export class DetailPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public cart:data, public alertCtrl: AlertController) {
-
   }
 
   ionViewDidLoad() {
@@ -25,6 +24,15 @@ export class DetailPage {
   }
 
   recipeInfo=this.navParams.get("param1");
+
+  /**
+   * Creating a middle point between model and view, so certain information doesn't need to go to the server.
+   * Having a dictionary that has values that can indicate if certain ingredient(checkbox) is selected.
+   **/
+  ingredients = this.recipeInfo.ingredients.map(ingredientName => {
+    return {name: ingredientName, selected: false};
+  })
+
 
   GoToInstructions(recipe){
     this.navCtrl.push(InstructionPage,{param1:recipe});
@@ -37,18 +45,30 @@ export class DetailPage {
   }
 
 
-  temporary=[];
+  temporary = []; //A temporary list to hold the ingredients that are currently selected.
   message = "";
 
 
+
   addToCart(){
+  /**
+   * Adding the checked ingredients into the shopping list
+   **/
     let add = this.alertCtrl.create();
+    //The alarm popup to notify the user of the ingredients that are selected.
     add.setTitle("Adding these ingredients?");
+
+    for (let i of this.ingredients){
+      if (i.selected == true){
+        this.temporary.push(i);
+      }
+    }
+
     if(this.temporary.length==0){
       this.message = "Please select some ingredients;";
     }else{
       for (let i of this.temporary){
-        this.message += i;
+        this.message += i.name;
         this.message += "; ";
       }
     }
@@ -57,9 +77,8 @@ export class DetailPage {
     add.addButton({
       text: "Cancel",
       handler: () =>{
-        for (let i of this.temporary) {
-          var element =<HTMLInputElement> document.getElementById(i);
-          element.click();
+        for (let i of this.ingredients) {
+          i.selected = false;
         }
         this.temporary=[];
         this.message="";
@@ -72,10 +91,10 @@ export class DetailPage {
       handler: () =>{
         for (let i of this.temporary) {
           this.cart.addToList(i);
+        }
 
-          var element = <HTMLInputElement> document.getElementById(i);
-          element.click();
-          //element.setAttribute('checked', 'unchecked');
+        for (let i of this.ingredients) {
+          i.selected = false;
         }
 
         this.temporary=[];
@@ -86,32 +105,5 @@ export class DetailPage {
     add.present().then();
   }
 
-  checked(ingredientName){
-    var find = false;
-    for (let item of this.cart.shoppinglist){
-      if (item["name"]==ingredientName){
-        if (item["clicked"] == false) {
-          this.temporary.push(ingredientName);
-          item["clicked"] = true;
-        } else {
-          //var n=this.temporary.indexOf(item["name"]);
-          //this.temporary.splice(n,1);
-          var temporary1=[];
-          for(let str of this.temporary){
-            if (str!=ingredientName){
-              temporary1.push(str)
-            }
-          }
-          this.temporary=temporary1;
-          item["clicked"] = false;
-        }
-        find = true;
-      }
-    }
-    if(!find){
-      this.cart.shoppinglist.push({"name":ingredientName, "amount":0, "clicked":true});
-      this.temporary.push(ingredientName);
-    }
-  };
 
 }

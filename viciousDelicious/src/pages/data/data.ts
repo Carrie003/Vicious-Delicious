@@ -1,5 +1,5 @@
 /**
- * Created by XinyuYang on 17/2/25.
+ * Generated to hold data that can be shared in all pages.
  */
 
 export class data{
@@ -8,53 +8,7 @@ export class data{
   displaylist: Array<Object>;
 
   constructor(){
-    this.shoppinglist=[
-      //{"name":"Tapioca Pearls",
-      //  "amount":0,
-      //  "clicked":false},
-      //{"name": "Water",
-      //  "amount": 0,
-      //  "clicked":false},
-      //{"name": "Sugar",
-      //  "amount": 0,
-      //  "clicked":false},
-      //{"name": "Milk Tea",
-      //  "amount": 0,
-      //  "clicked":false},
-      //{"name": "Eggs",
-      //  "amount":0,
-      // "clicked":false},
-      //{"name": "Spinach",
-      //  "amount": 0,
-      //  "clicked":false},
-      //{"name": "Salt",
-      //  "amount": 0,
-      //  "clicked":false},
-      //{"name": "Pepper",
-      //  "amount": 0,
-      //  "clicked":false},
-      //{"name": "Oil",
-      // "amount": 0,
-      //  "clicked":false},
-      //{"name": "Toast",
-      //  "amount": 0,
-      //  "clicked":false},
-      //{"name": "Rice cakes",
-      //  "amount": 0,
-      //  "clicked":false},
-      //{"name": "Gochu-jang",
-      //  "amount": 0,
-      //  "clicked":false},
-      //{"name": "Fish cakes",
-      //  "amount": 0,
-      //  "clicked":false},
-      //{"name": "Pinol",
-      //  "amount": 0,
-      //  "clicked":false},
-      //{"name": "Milk",
-      //  "amount": 0,
-      //  "clicked":false}
-    ];
+    this.shoppinglist=[];
     this.displaylist=[];
   }
 
@@ -68,9 +22,7 @@ export class data{
         found = true;
       }
     }
-    //if (!found){
-    //  this.shoppinglist.push({"name":ingredientName, "amount":1, "clicked":true});
-    //}
+
   }
 
   removeFromList(ingredientDict){
@@ -87,10 +39,6 @@ export class data{
   }
 
 
-  //getList(){
-  //  return this.shoppinglist;
-  //}
-
   setDisplayList(){
     this.displaylist=[];
     for(var i=0; i<this.shoppinglist.length; i++){
@@ -100,9 +48,6 @@ export class data{
     }
   }
 
-  //getDisplayList(){
-  //  return this.displaylist;
-  //}
 
 
 
