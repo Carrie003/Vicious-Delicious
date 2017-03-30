@@ -35,7 +35,7 @@ export class data{
 
   removeFromList(ingredientDict){
     for (var i=0; i<this.shoppinglist.length; i++){
-      if (this.shoppinglist[i]==ingredientDict){
+      if (this.shoppinglist[i]["name"]==ingredientDict){
         if(this.shoppinglist[i]["amount"]>0){
           this.shoppinglist[i]["amount"]--;
           this.setDisplayList();

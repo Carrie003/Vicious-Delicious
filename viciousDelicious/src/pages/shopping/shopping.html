@@ -19,7 +19,7 @@
     <ion-item *ngFor="let groceryitem of cart.displaylist; let i of index; trackBy:identify">
       <ion-label>
         {{groceryitem.name}} x{{groceryitem.amount}}
-        <button color="danger" (click) = remove(list) class="out">Subtract</button>
+        <button color="danger" (click) = remove(groceryitem.name) class="out">Subtract</button>
       </ion-label>
       <ion-item-options>
         <button ion-button icon-only (click)="remove(groceryitem)" danger>
