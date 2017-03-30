@@ -17,19 +17,18 @@ export class data{
     var found = false;
     if (this.shoppinglist.length == 0) {
       this.shoppinglist.push({name: ingredientName, amount: 1})
+      found = true;
     } else {
       for (let ingredientList of this.shoppinglist) {
         if (ingredientList["name"] == ingredientName) {
           ingredientList["amount"]++;
           found = true;
         }
-        else{
-          this.shoppinglist.push({name: ingredientName, amount:1})
-        }
+      }
+      if (found == false){
+        this.shoppinglist.push({name:ingredientName, amount:1})
       }
     }
-
-    this.setDisplayList()
 
 
   }
