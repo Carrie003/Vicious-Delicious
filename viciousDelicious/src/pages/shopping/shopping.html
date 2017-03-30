@@ -13,17 +13,7 @@
 </ion-header>
 
 <ion-content padding class="bgpic">
-  <!---
-  <ion-card *ngFor="let list of cart.displaylist; let i of index; trackBy:identify" class="Shopping">
-    <ion-card-content>
-      <button color="danger" (click) = remove(list) class="out">Take out one from the cart</button>
-      <ion-card-title [innerHTML]="list.name">
-      </ion-card-title>
-      <ion-card-content [innerHTML] ="list.amount"></ion-card-content>
-    </ion-card-content>
 
-  </ion-card>
-  --->
 
   <ion-list>
     <ion-item *ngFor="let groceryitem of cart.displaylist; let i of index; trackBy:identify">

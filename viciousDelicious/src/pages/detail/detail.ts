@@ -90,7 +90,7 @@ export class DetailPage {
       text: "Confirm",
       handler: () =>{
         for (let i of this.temporary) {
-          this.cart.addToList(i);
+          this.cart.addToList(i.name);
         }
 
         for (let i of this.ingredients) {

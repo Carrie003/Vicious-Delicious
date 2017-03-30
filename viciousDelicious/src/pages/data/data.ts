@@ -13,15 +13,24 @@ export class data{
   }
 
 
-  addToList(ingredientName){
+  addToList(ingredientName) {
     var found = false;
-
-    for (let ingredientList of this.shoppinglist){
-      if (ingredientList["name"] == ingredientName){
-        ingredientList["amount"] ++;
-        found = true;
+    if (this.shoppinglist.length == 0) {
+      this.shoppinglist.push({name: ingredientName, amount: 1})
+    } else {
+      for (let ingredientList of this.shoppinglist) {
+        if (ingredientList["name"] == ingredientName) {
+          ingredientList["amount"]++;
+          found = true;
+        }
+        else{
+          this.shoppinglist.push({name: ingredientName, amount:1})
+        }
       }
     }
+
+    this.setDisplayList()
+
 
   }
 
