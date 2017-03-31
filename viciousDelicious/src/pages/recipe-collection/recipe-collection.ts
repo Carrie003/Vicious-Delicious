@@ -63,10 +63,7 @@ var RecipeCollection=[
     subtitle1:"This tea-based drink invented in the 1980s. It's normally served with tapioca pearls, milk, and ice.",
     subtitle2:"Quick & Simple Drink",
 
-    ingredients:[
-      { name: "Tapioca Pearls", amount: 1 },
-      { name: "Water", amount: 1 },
-      { name: "Sugar", amount: 1 }],
+    ingredients:["Tapioca Pearls", "Milk Tea", "Honey or Sugar", "Ice"],
 
 
     slides:[
