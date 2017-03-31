@@ -7,29 +7,19 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Shopping Cart</ion-title>
+    <ion-title>Shopping List</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 <ion-content padding class="bgpic">
-  <!---
-  <ion-card *ngFor="let list of cart.displaylist; let i of index; trackBy:identify" class="Shopping">
-    <ion-card-content>
-      <button color="danger" (click) = remove(list) class="out">Take out one from the cart</button>
-      <ion-card-title [innerHTML]="list.name">
-      </ion-card-title>
-      <ion-card-content [innerHTML] ="list.amount"></ion-card-content>
-    </ion-card-content>
 
-  </ion-card>
-  --->
 
   <ion-list>
     <ion-item *ngFor="let groceryitem of cart.displaylist; let i of index; trackBy:identify">
       <ion-label>
         {{groceryitem.name}} x{{groceryitem.amount}}
-        <button color="danger" (click) = remove(list) class="out">Subtract</button>
+        <button color="danger" (click) = remove(groceryitem.name) class="out">Subtract</button>
       </ion-label>
       <ion-item-options>
         <button ion-button icon-only (click)="remove(groceryitem)" danger>

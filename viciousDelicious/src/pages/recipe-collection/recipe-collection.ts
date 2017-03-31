@@ -68,6 +68,7 @@ var RecipeCollection=[
       { name: "Water", amount: 1 },
       { name: "Sugar", amount: 1 }],
 
+
     slides:[
       {
         title: "Step 1",
