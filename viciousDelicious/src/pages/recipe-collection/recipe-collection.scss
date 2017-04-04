@@ -18,15 +18,25 @@ page-recipe-collection {
     margin-bottom: 1.6rem;
   }
 
+  .LstButton{
+    background: url("https://cdn3.iconfinder.com/data/icons/ikooni-flat-online-shopping/128/shopping-08-512.png") no-repeat;
+    background-size:contain;
+    position: absolute;
+    top:45%;
+    left: 87%;
+    width: 40%;
+    height:40%;
+  }
 
+
+  .cardImage{
+    background: {
+      color: darkgrey;
+      repeat: no-repeat;
+      position: center;
+      size: cover;
+    }
+    height: 150px;
+  }
 }
 
-.LstButton{
-  background: url("https://cdn3.iconfinder.com/data/icons/ikooni-flat-online-shopping/128/shopping-08-512.png") no-repeat;
-  background-size:contain;
-  position: absolute;
-  top:45%;
-  left: 87%;
-  width: 40%;
-  height:40%;
-}

@@ -18,15 +18,14 @@
 
 
       <ion-card *ngFor="let recipe of collection" class="Card">
-        <img  [src]="recipe.img" on-click = "GoToDetail(recipe)" />
-
-
-      <ion-card-content class="CardContent">
-        <ion-card-title [innerHTML]="recipe.title">
-        </ion-card-title>
-        <p [innerHTML]="recipe.subtitle1" class="Subtitle">
-        </p>
-      </ion-card-content>
+        <div class="cardImage" [style.background-image]="'url(' + recipe.img + ')'" on-click = "GoToDetail(recipe)" >
+        </div>
+        <ion-card-content class="CardContent">
+          <ion-card-title [innerHTML]="recipe.title">
+          </ion-card-title>
+          <p [innerHTML]="recipe.subtitle1" class="Subtitle">
+          </p>
+        </ion-card-content>
       </ion-card>
 
       <div class="row">

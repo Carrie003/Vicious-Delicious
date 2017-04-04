@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import {NavController, NavParams, Platform} from 'ionic-angular';
 import {DetailPage} from "../detail/detail";
 import {ShoppingPage} from '../shopping/shopping';
 import { data } from "../data/data";
+import { LoadingController } from 'ionic-angular';
+import "rxjs/Rx";
+import { Http } from '@angular/http';
 
 
 /*
@@ -22,15 +25,12 @@ export class RecipeCollectionPage {
 
   collection = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public cart:data) {
+  constructor(private platform: Platform, public http: Http, public loading: LoadingController, public navCtrl: NavController, public navParams: NavParams, public cart:data) {
 
     for (let i = 0; i < 3; i++){
       this.collection.push(RecipeCollection[i]);
     }
   }
-
-
-
 
 
   doInfinite(infiniteScroll){
