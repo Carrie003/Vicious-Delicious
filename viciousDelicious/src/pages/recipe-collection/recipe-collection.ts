@@ -53,6 +53,13 @@ export class RecipeCollectionPage {
   }
 
 
+  hasMoreRecipes(){
+    if (this.collection.length == RecipeCollection.length){
+      return false;
+    }else{
+      return true;
+    }
+  }
 }
 
 
@@ -259,7 +266,6 @@ var RecipeCollection=[
 
     ]
   },
-
 
 ];
 
