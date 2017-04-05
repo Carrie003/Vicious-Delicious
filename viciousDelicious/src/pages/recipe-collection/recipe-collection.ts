@@ -60,6 +60,16 @@ export class RecipeCollectionPage {
       return true;
     }
   }
+
+  sortClicked = false;
+
+  sort(){
+    if (this.sortClicked == false) {
+      this.sortClicked = true;
+    }else{
+      this.sortClicked = false;
+    }
+  }
 }
 
 
@@ -269,7 +279,9 @@ var RecipeCollection=[
 
 ];
 
-RecipeCollection.sort(function(a, b) {
+
+
+RecipeCollection.sort(function (a, b) {
   var textA = a.title.toUpperCase();
   var textB = b.title.toUpperCase();
   return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;

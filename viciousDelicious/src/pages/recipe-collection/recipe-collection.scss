@@ -1,4 +1,17 @@
 page-recipe-collection {
+  .sortButton{
+    background: url(http://www.eatacd.com/images/EAC/Advanced-Search-Icon.gif) no-repeat;
+    background: {
+      repeat: no-repeat;
+      size:contain;
+    }
+    position: absolute;
+    top:50%;
+    left: 75%;
+    width: 35%;
+    height:35%;
+  }
+
   .CardContent{
     background:url("http://www.texturex.com/albums/Paper-Textures/paper%20texture%20linen%20emboss%20card%20stock%20photo%20white%20light.jpg");
     background-size:cover;
