@@ -1,4 +1,17 @@
 page-recipe-collection {
+  .sortButton{
+    background: url(http://www.eatacd.com/images/EAC/Advanced-Search-Icon.gif) no-repeat;
+    background: {
+      repeat: no-repeat;
+      size:contain;
+    }
+    position: absolute;
+    top:50%;
+    left: 75%;
+    width: 35%;
+    height:35%;
+  }
+
   .CardContent{
     background:url("http://www.texturex.com/albums/Paper-Textures/paper%20texture%20linen%20emboss%20card%20stock%20photo%20white%20light.jpg");
     background-size:cover;
@@ -17,7 +30,7 @@ page-recipe-collection {
     box-shadow: 0px 20px 30px 3px rgba(0, 0, 0, 0.55);
     margin-bottom: 1.6rem;
   }
-  
+
 
 
   .cardImage{
@@ -34,7 +47,9 @@ page-recipe-collection {
   $infinite-scroll-loading-color: white;
 }
 
-
+/*
+Shared button in all pages.
+*/
 .LstButton{
   background: url("https://cdn3.iconfinder.com/data/icons/ikooni-flat-online-shopping/128/shopping-08-512.png") no-repeat;
   background-size:contain;
