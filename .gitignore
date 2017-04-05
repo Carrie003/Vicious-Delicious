@@ -13,6 +13,7 @@ log.txt
 npm-debug.log*
 
 .idea/workspace.xml
+viciousDelicious/.idea/workspace.xml
 .sass-cache/
 .tmp/
 .versions/
@@ -32,4 +33,3 @@ $RECYCLE.BIN/
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
-viciousDelicious/src/pages/recipes/recipes.ts
