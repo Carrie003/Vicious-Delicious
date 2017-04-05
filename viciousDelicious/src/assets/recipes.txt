@@ -1,77 +1,13 @@
-import { Component } from '@angular/core';
-import {NavController, NavParams, Platform} from 'ionic-angular';
-import {DetailPage} from "../detail/detail";
-import {ShoppingPage} from '../shopping/shopping';
-import { data } from "../data/data";
-import { LoadingController } from 'ionic-angular';
-import "rxjs/Rx";
-import { Http } from '@angular/http';
 
-
-/*
-  Generated class for the RecipeCollection page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
-
-@Component({
-  selector: 'page-recipe-collection',
-  templateUrl: 'recipe-collection.html'
-})
-
-
-export class RecipeCollectionPage {
-
-  collection = [];
-
-  constructor(private platform: Platform, public http: Http, public loading: LoadingController, public navCtrl: NavController, public navParams: NavParams, public cart:data) {
-
-    for (let i = 0; i < 3; i++){
-      this.collection.push(RecipeCollection[i]);
-    }
-  }
-
-
-  doInfinite(infiniteScroll){
-    setTimeout(()=>{
-      for (let i = 0; i < RecipeCollection.length - this.collection.length; i++){
-        this.collection.push(RecipeCollection[i+this.collection.length]);
-      }
-      infiniteScroll.complete();
-    }, 500);
-  }
-
-
-  GoToDetail(recipe){
-    this.navCtrl.push(DetailPage,{param1:recipe});
-  }
-
-  GoToShoppingCart(){
-    this.navCtrl.push(ShoppingPage);
-    this.cart.setDisplayList();
-  }
-
-
-  hasMoreRecipes(){
-    if (this.collection.length == RecipeCollection.length){
-      return false;
-    }else{
-      return true;
-    }
-  }
-}
-
-
-var RecipeCollection=[
-  /*Recipe Bubble Tea*/
-  { img:"https://image.ibb.co/g0JebF/bubble_Tea_Cover.jpg",
+ { img:"https://image.ibb.co/g0JebF/bubble_Tea_Cover.jpg",
     title:"Bubble Milk Tea",
     subtitle1:"This tea-based drink invented in the 1980s. It's normally served with tapioca pearls, milk, and ice.",
     subtitle2:"Quick & Simple Drink",
 
-    ingredients:["Tapioca Pearls", "Milk Tea", "Honey or Sugar", "Ice"],
-
+    ingredients:[
+      { name: "Tapioca Pearls", amount: 1 },
+      { name: "Water", amount: 1 },
+      { name: "Sugar", amount: 1 }],
 
     slides:[
       {
@@ -116,7 +52,7 @@ var RecipeCollection=[
       }
     ]
   },
-  /*Recipe Scrambled Eggs with Spinach*/
+
   { img:"https://image.ibb.co/dHiqiv/recipe2_Cover.jpg",
     title:"Scrambled Eggs with Spinach",
     subtitle1:"These amazingly flavorful baked eggs with spinach are the easiest way to impress your guests.",
@@ -161,7 +97,7 @@ var RecipeCollection=[
       }
     ]
   },
-  /*Recipe Fried Egg on Toast*/
+
   { img:"http://gdurl.com/Vbwo",
     title:"Fried Egg on Toast",
     subtitle1:"This simple dish is often referred to as Laputa pan (Laputa bread) after its appearance in the Ghibli movie, Laputa: Castle in The Sky.",
@@ -185,7 +121,7 @@ var RecipeCollection=[
       }
     ]
   },
-  /*Recipe Ttebokki*/
+
   {
     img:"https://image.ibb.co/ejZ7Va/Tteok_bokki.jpg",
     title:"Tteok-bokki",
@@ -220,7 +156,7 @@ var RecipeCollection=[
       },
     ]
   },
-  /*Recipe Pinol*/
+
   { img:"https://image.ibb.co/k9qgqa/Pinol.jpg",
     title:"Pinol",
     subtitle1:"A Honduran staple in the mornings, pinol is a warm, thick drink made from finely, roasted, grounded corn mixed with milk and sugar",
@@ -266,21 +202,4 @@ var RecipeCollection=[
 
     ]
   },
-
-];
-
-RecipeCollection.sort(function(a, b) {
-  var textA = a.title.toUpperCase();
-  var textB = b.title.toUpperCase();
-  return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-});
-
-
-
-
-
-
-
-
-
 

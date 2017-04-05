@@ -49,3 +49,24 @@ gulp.task('git-check', function(done) {
   }
   done();
 });
+
+gulp.task('sass', function(){
+  return buildSass({
+    sassOptions: {
+      includePaths: [
+        'node_modules/ionic-angular',
+        'node_modules/ionicons/dist/scss',
+        'node_modules/font-awesome/scss'
+      ]
+    }
+  });
+});
+
+gulp.task('fonts', function(){
+  return copyFonts({
+    src: [
+      'node_modules/ionic-angular/fonts/**/*.+(ttf|woff|woff2)',
+      'node_modules/font-awesome/fonts/**/*.+(eot|ttf|woff|woff2|svg)'
+    ]
+  });
+});
