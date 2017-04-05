@@ -47,8 +47,25 @@ export class DetailPage {
 
   temporary = []; //A temporary list to hold the ingredients that are currently selected.
   message = "";
+  buttonName = "Select All";
+  selectedAll = false;
 
 
+  selectAll(){
+    if (this.selectedAll == false){
+      for (let i of this.ingredients) {
+        i.selected = true;
+        this.buttonName = "Unselect All";
+      }
+      this.selectedAll = true;
+    }else{
+      for (let i of this.ingredients){
+        i.selected = false;
+        this.buttonName = "Select All";
+      }
+      this.selectedAll = false;
+    }
+  }
 
   addToCart(){
   /**

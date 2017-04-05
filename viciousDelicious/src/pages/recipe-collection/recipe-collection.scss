@@ -17,7 +17,7 @@ page-recipe-collection {
     box-shadow: 0px 20px 30px 3px rgba(0, 0, 0, 0.55);
     margin-bottom: 1.6rem;
   }
-  
+
 
 
   .cardImage{
@@ -34,7 +34,9 @@ page-recipe-collection {
   $infinite-scroll-loading-color: white;
 }
 
-
+/*
+Shared button in all pages.
+*/
 .LstButton{
   background: url("https://cdn3.iconfinder.com/data/icons/ikooni-flat-online-shopping/128/shopping-08-512.png") no-repeat;
   background-size:contain;
