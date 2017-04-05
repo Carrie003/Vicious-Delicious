@@ -7,6 +7,7 @@ import {InstructionPage} from "../pages/instruction/instruction";
 import {ShoppingPage} from '../pages/shopping/shopping';
 import {data} from '../pages/data/data';
 import {DetailPage} from "../pages/detail/detail";
+import{Recipes} from "../providers/recipes"
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {DetailPage} from "../pages/detail/detail";
     InstructionPage,
     ShoppingPage,
     DetailPage
+
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -29,6 +31,6 @@ import {DetailPage} from "../pages/detail/detail";
     ShoppingPage,
     DetailPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},data]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},data,Recipes]
 })
 export class AppModule {}

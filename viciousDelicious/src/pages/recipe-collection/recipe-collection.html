@@ -17,7 +17,8 @@
 <ion-content padding class="bgpic">
 
 
-      <ion-card *ngFor="let recipe of collection" class="Card">
+
+      <ion-card *ngFor="let recipe of recipeService.shared" class="Card">
         <div class="cardImage" [style.background-image]="'url(' + recipe.img + ')'" on-click = "GoToDetail(recipe)" >
         </div>
         <ion-card-content class="CardContent" on-click = "GoToDetail(recipe)">
@@ -29,11 +30,11 @@
       </ion-card>
 
 
-  <ion-infinite-scroll (ionInfinite)="doInfinite($event)" ng-if="hasMoreData">
-    <ion-infinite-scroll-content *ngIf="hasMoreRecipes()"
-      >
-    </ion-infinite-scroll-content>
+  <!--<ion-infinite-scroll (ionInfinite)="doInfinite($event)" ng-if="hasMoreData">-->
+    <!--<ion-infinite-scroll-content *ngIf="hasMoreRecipes()"-->
+      <!--&gt;-->
+    <!--</ion-infinite-scroll-content>-->
 
-  </ion-infinite-scroll>
+  <!--</ion-infinite-scroll>-->
 
 </ion-content>
