@@ -54,6 +54,17 @@ export class RecipeCollectionPage {
   }*/
 
 
+  sortClicked = false;
+
+  sort(){
+    if (this.sortClicked == false){
+      this.sortClicked = true;
+    }else{
+      this.sortClicked = false;
+    }
+
+  }
+
   GoToDetail(recipe){
     this.navCtrl.push(DetailPage,{param1:recipe});
   }

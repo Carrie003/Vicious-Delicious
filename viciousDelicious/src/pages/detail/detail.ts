@@ -50,6 +50,32 @@ export class DetailPage {
   buttonName = "Select All";
   selectedAll = false;
 
+  allChosen = true;
+  allUnchosen = true;
+
+  clicked(){
+    this.allChosen = true;
+    this.allUnchosen = true;
+    for (let i of this.ingredients){
+      if (i.selected == false){
+        this.allChosen = false;
+      }
+      if (i.selected == true){
+        this.allUnchosen = false;
+      }
+    }
+
+    if (this.allChosen == true){
+      this.selectedAll = true;
+      this.buttonName = "Unselect All";
+    }
+
+    if (this.allUnchosen == true){
+      this. selectedAll = false;
+      this.buttonName = "Select All";
+    }
+
+  }
 
   selectAll(){
     if (this.selectedAll == false){
