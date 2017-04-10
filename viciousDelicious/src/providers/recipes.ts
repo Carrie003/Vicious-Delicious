@@ -25,7 +25,7 @@ export class Recipes {
     }
 
     return new Promise(resolve => {
-      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes')
+      this.http.get('http://141.140.193.179:3000/api/recipes')
         .map(res => res.json())
         .subscribe(shared => {
           this.shared = shared;

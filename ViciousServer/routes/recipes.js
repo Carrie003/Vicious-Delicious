@@ -6,7 +6,8 @@ var express = require('express');
 var router = express.Router();
 
 var monk = require('monk');
-var db = monk('viciousdelicious:cake50@ds155080.mlab.com:55080/heroku_xdjx3gtb');
+//var db = monk('localhost:27017/vidzy');
+var db = monk('141.140.193.179:27017/vidzy');
 
 router.get('/', function(req, res) {
     var collection = db.get('recipes');
