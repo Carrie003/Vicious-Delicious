@@ -16,16 +16,13 @@
 
   <ion-toolbar  *ngIf="sortClicked">
     <ion-segment>
-
-      <ion-segment-button>
-        lunch
-      </ion-segment-button>
-      <ion-segment-button>
-        dinner
-      </ion-segment-button>
-      <ion-segment-button>
+      <ion-segment-button  >
+        food
+      </ion-segment-button >
+      <ion-segment-button  >
         beverage
       </ion-segment-button>
+
     </ion-segment>
   </ion-toolbar>
 </ion-header>
@@ -33,9 +30,7 @@
 
 <ion-content padding class="bgpic">
 
-
-
-      <ion-card *ngFor="let recipe of recipeService.shared" class="Card">
+     <ion-card *ngFor="let recipe of recipeService.shared" class="Card">
         <div class="cardImage" [style.background-image]="'url(' + recipe.img + ')'" on-click = "GoToDetail(recipe)" >
         </div>
         <ion-card-content class="CardContent" on-click = "GoToDetail(recipe)">

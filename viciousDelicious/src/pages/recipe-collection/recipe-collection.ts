@@ -27,13 +27,13 @@ import { Recipes }from"../../providers/recipes"
 export class RecipeCollectionPage {
 
   collection=[];
-  testcollection:any;
+  //testcollection:any;
 
   constructor(private platform: Platform, public http: Http, public loading: LoadingController, public navCtrl: NavController, public navParams: NavParams, public cart:data, public recipeService:Recipes) {
 
     platform.ready().then(() => {
     this.recipeService.loadRecipes();
-    this.testcollection=recipeService.shared; // this does not work
+    //this.testcollection=recipeService.shared; // this does not work
     //console.log(JSON.stringify(this.testcollection));
     //console.log(this.testcollection);
     //console.log(recipeService.getSharedlst());
@@ -55,6 +55,11 @@ export class RecipeCollectionPage {
 
 
   sortClicked = false;
+
+  category(cate){
+    //this.recipeService.loadCategory(cate);
+    //this.recipeService.shared.push("a");
+  }
 
   sort(){
     if (this.sortClicked == false){
