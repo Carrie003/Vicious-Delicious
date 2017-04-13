@@ -33,3 +33,9 @@ $RECYCLE.BIN/
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
+
+viciousDelicious/src/pages/detail/detail.html
+
+viciousDelicious/src/providers/recipes.ts
+
+viciousDelicious/src/providers/recipes.ts
