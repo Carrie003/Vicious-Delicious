@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http , Headers} from '@angular/http';
 import 'rxjs/add/operator/map';
 
 /*
@@ -20,9 +20,9 @@ export class Recipes {
 
   loadRecipes(){
 
-    if (this.shared) {
-      return Promise.resolve(this.shared);
-    }
+    //if (this.shared) {
+    //  return Promise.resolve(this.shared);
+    //}
 
     return new Promise(resolve => {
       this.http.get('http://141.140.193.179:3000/api/recipes')
@@ -36,8 +36,24 @@ export class Recipes {
 
   }
 
-  getSharedlst(){
-    return JSON.stringify(this.shared);
+  createRecipe(recipe){
+
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+
+    this.http.post('https://viciousdelicious.herokuapp.com/api/recipes', JSON.stringify(recipe), {headers: headers})
+
+      .subscribe(res => {
+        console.log(res.json());
+      });
+
   }
 
+  deleteRecipe(id){
+
+    this.http.delete('https://viciousdelicious.herokuapp.com/api/recipes' + id).subscribe((res) => {
+      console.log(res.json());
+    });
+
+  }
 }
