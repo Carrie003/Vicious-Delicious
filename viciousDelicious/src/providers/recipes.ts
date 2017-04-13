@@ -20,9 +20,9 @@ export class Recipes {
 
   loadRecipes(){
 
-    if (this.shared) {
-      return Promise.resolve(this.shared);
-    }
+    //if (this.shared) {
+    //  return Promise.resolve(this.shared);
+    //}
 
     return new Promise(resolve => {
       this.http.get('https://viciousdelicious.herokuapp.com/api/recipes')
