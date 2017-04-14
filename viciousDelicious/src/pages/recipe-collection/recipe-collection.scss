@@ -1,6 +1,7 @@
 page-recipe-collection {
   .sortButton{
-    background: url(http://www.eatacd.com/images/EAC/Advanced-Search-Icon.gif) no-repeat;
+    //To change Icon Logo
+    background: url(https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678118-filter-128.png) no-repeat;
     background: {
       repeat: no-repeat;
       size:contain;
@@ -51,6 +52,7 @@ page-recipe-collection {
 Shared button in all pages.
 */
 .LstButton{
+  //To change Icon Logo
   background: url("https://cdn3.iconfinder.com/data/icons/ikooni-flat-online-shopping/128/shopping-08-512.png") no-repeat;
   background-size:contain;
   position: absolute;
