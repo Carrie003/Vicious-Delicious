@@ -16,16 +16,13 @@
 
   <ion-toolbar  *ngIf="sortClicked">
     <ion-segment>
-
-      <ion-segment-button>
-        lunch
-      </ion-segment-button>
-      <ion-segment-button>
-        dinner
-      </ion-segment-button>
-      <ion-segment-button>
+      <ion-segment-button  >
+        food
+      </ion-segment-button >
+      <ion-segment-button  >
         beverage
       </ion-segment-button>
+
     </ion-segment>
   </ion-toolbar>
 </ion-header>
@@ -33,9 +30,7 @@
 
 <ion-content padding class="bgpic">
 
-
-
-      <ion-card *ngFor="let recipe of recipeService.shared" class="Card">
+     <ion-card *ngFor="let recipe of recipeService.shared" class="Card">
         <div class="cardImage" [style.background-image]="'url(' + recipe.img + ')'" on-click = "GoToDetail(recipe)" >
         </div>
         <ion-card-content class="CardContent" on-click = "GoToDetail(recipe)">
@@ -45,16 +40,10 @@
           </p>
         </ion-card-content>
       </ion-card>
-
-  <!-- TEXT INDICATOR for end of recipe
-        <div class="row">
-        <div class="col">
-          <div class="text-center">
-            <br><h5 style="text-align: center;">End of Recipe Collection</h5>
-          </div>
-        </div>
+  <!-- TEXT INDICATOR for end of recipe -->
+      <div class="endRecipe">
+        <br><h5 style="text-align: center;">End of Recipe List</h5>
       </div>
-  -->
 
 
   <!--<ion-infinite-scroll (ionInfinite)="doInfinite($event)" ng-if="hasMoreData">-->

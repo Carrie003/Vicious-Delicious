@@ -26,23 +26,23 @@ body {
   background-size:cover;
 }
 
-.bg-vid {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: 100%;
-  z-index: -100;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  background: url(http://www.w3schools.com/tags/movie.mp4) no-repeat;
-  background-size: cover;
-}
+//.bg-vid {
+//  position: absolute;
+//  top: 50%;
+//  left: 50%;
+//  min-width: 100%;
+//  min-height: 100%;
+//  width: auto;
+//  height: 100%;
+//  z-index: -100;
+//  -webkit-transform: translateX(-50%) translateY(-50%);
+//  -moz-transform: translateX(-50%) translateY(-50%);
+//  -ms-transform: translateX(-50%) translateY(-50%);
+//  -o-transform: translateX(-50%) translateY(-50%);
+//  transform: translateX(-50%) translateY(-50%);
+//  background: url(http://www.w3schools.com/tags/movie.mp4) no-repeat;
+//  background-size: cover;
+//}
 
 #recButton {
   position:absolute;
@@ -58,4 +58,12 @@ body {
   border: 2px solid black;
   width: 90%;
   top: 80%;
+}
+
+#inpButton {
+  position: absolute;
+  background-color: transparent;
+  border: 2px solid black;
+  width: 90%;
+  top: 90%;
 }
