@@ -20,12 +20,8 @@ export class Recipes {
 
   loadRecipes(){
 
-    //if (this.shared) {
-    //  return Promise.resolve(this.shared);
-    //}
-
     return new Promise(resolve => {
-      this.http.get('http://141.140.193.179:3000/api/recipes')
+      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes')
         .map(res => res.json())
         .subscribe(shared => {
           this.shared = shared;
@@ -34,6 +30,30 @@ export class Recipes {
         });
     });
 
+  }
+
+  loadBeverage(){
+
+    return new Promise(resolve => {
+      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes/beverage')
+        .map(res => res.json())
+        .subscribe(shared => {
+          this.shared = shared;
+          resolve(this.shared);
+        });
+    });
+  }
+
+  loadFood(){
+
+    return new Promise(resolve => {
+      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes/food')
+        .map(res => res.json())
+        .subscribe(shared => {
+          this.shared = shared;
+          resolve(this.shared);
+        });
+    });
   }
 
   createRecipe(recipe){

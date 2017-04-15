@@ -16,11 +16,14 @@
 
   <ion-toolbar  *ngIf="sortClicked">
     <ion-segment>
-      <ion-segment-button  >
-        food
+      <ion-segment-button (ionSelect) = "foodSelected()">
+        Food
       </ion-segment-button >
-      <ion-segment-button  >
-        beverage
+      <ion-segment-button (ionSelect) = "beverageSelected()" >
+        Beverage
+      </ion-segment-button>
+      <ion-segment-button (ionSelect) = "allSelected()">
+        All
       </ion-segment-button>
 
     </ion-segment>

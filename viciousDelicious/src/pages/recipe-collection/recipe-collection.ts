@@ -33,14 +33,20 @@ export class RecipeCollectionPage {
 
     platform.ready().then(() => {
     this.recipeService.loadRecipes();
-    //this.testcollection=recipeService.shared; // this does not work
-    //console.log(JSON.stringify(this.testcollection));
-    //console.log(this.testcollection);
-    //console.log(recipeService.getSharedlst());
 
-    /*for (let i = 0; i < 3; i++){
-      this.collection.push(RecipeCollection[i]);
-    }*/});
+    });
+  }
+
+  beverageSelected(){
+    this.recipeService.loadBeverage()
+  }
+
+  foodSelected(){
+    this.recipeService.loadFood()
+  }
+
+  allSelected(){
+    this.recipeService.loadRecipes()
   }
 
 
