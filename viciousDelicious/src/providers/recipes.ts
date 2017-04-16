@@ -26,7 +26,6 @@ export class Recipes {
         .subscribe(shared => {
           this.shared = shared;
           resolve(this.shared);
-          /*console.log(JSON.stringify(this.shared));*/
         });
     });
 
@@ -51,6 +50,20 @@ export class Recipes {
         .map(res => res.json())
         .subscribe(shared => {
           this.shared = shared;
+          resolve(this.shared);
+        });
+    });
+  }
+
+
+  filterItems(searchTerm){
+    return new Promise(resolve => {
+      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes')
+        .map(res => res.json())
+        .subscribe(shared => {
+          this.shared = shared.filter((item) => {
+            return item.title.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+          });
           resolve(this.shared);
         });
     });

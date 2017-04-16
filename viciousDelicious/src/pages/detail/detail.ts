@@ -60,17 +60,17 @@ export class DetailPage {
       if (i.selected == false){
         this.allChosen = false;
       }
-      if (i.selected == true){
+      if (i.selected){
         this.allUnchosen = false;
       }
     }
 
-    if (this.allChosen == true){
+    if (this.allChosen){
       this.selectedAll = true;
       this.buttonName = "Unselect All";
     }
 
-    if (this.allUnchosen == true){
+    if (this.allUnchosen){
       this. selectedAll = false;
       this.buttonName = "Select All";
     }

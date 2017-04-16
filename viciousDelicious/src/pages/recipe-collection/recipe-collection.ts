@@ -27,13 +27,13 @@ import { Recipes }from"../../providers/recipes"
 export class RecipeCollectionPage {
 
   collection=[];
-  //testcollection:any;
+  searchTerm: string = '';
+
 
   constructor(private platform: Platform, public http: Http, public loading: LoadingController, public navCtrl: NavController, public navParams: NavParams, public cart:data, public recipeService:Recipes) {
 
     platform.ready().then(() => {
     this.recipeService.loadRecipes();
-
     });
   }
 
@@ -50,31 +50,37 @@ export class RecipeCollectionPage {
   }
 
 
-  /*doInfinite(infiniteScroll){
-    setTimeout(()=>{
-      for (let i = 0; i < RecipeCollection.length - this.collection.length; i++){
-        this.collection.push(RecipeCollection[i+this.collection.length]);
-      }
-      infiniteScroll.complete();
-    }, 500);
-  }*/
+  setFilteredItems(){
+    this.recipeService.filterItems(this.searchTerm);
+  }
 
 
   sortClicked = false;
+  searchClicked = false;
 
-  category(cate){
-    //this.recipeService.loadCategory(cate);
-    //this.recipeService.shared.push("a");
-  }
+
+
 
   sort(){
     if (this.sortClicked == false){
       this.sortClicked = true;
+      this.searchClicked = false
     }else{
       this.sortClicked = false;
     }
 
   }
+
+  search(){
+    if (this.searchClicked == false){
+      this.searchClicked = true;
+      this.sortClicked = false;
+    }else{
+      this.searchClicked = false;
+    }
+  }
+
+
 
   GoToDetail(recipe){
     this.navCtrl.push(DetailPage,{param1:recipe});
@@ -85,21 +91,9 @@ export class RecipeCollectionPage {
     this.cart.setDisplayList();
   }
 
-  /*hasMoreRecipes(){
-    if (this.collection.length == RecipeCollection.length){
-      return false;
-    }else{
-      return true;
-    }
-  }*/
+
 }
 
-//
-// RecipeCollection.sort(function(a, b) {
-//   var textA = a.title.toUpperCase();
-//   var textB = b.title.toUpperCase();
-//   return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-// });
 
 
 

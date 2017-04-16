@@ -9,6 +9,7 @@
   <ion-navbar>
     <ion-title>Recipes</ion-title>
     <button (click)="sort()" class="sortButton" ></button>
+    <button (click)="search()" class="searchButton"></button>
     <button (click)="GoToShoppingCart()" class="LstButton"></button>
   </ion-navbar>
 
@@ -28,6 +29,11 @@
 
     </ion-segment>
   </ion-toolbar>
+
+  <ion-toolbar *ngIf = "searchClicked">
+    <ion-searchbar [(ngModel)]="searchTerm" (ionInput) = "setFilteredItems()"></ion-searchbar>
+  </ion-toolbar>
+
 </ion-header>
 
 
@@ -43,17 +49,7 @@
           </p>
         </ion-card-content>
       </ion-card>
-  <!-- TEXT INDICATOR for end of recipe -->
-      <div class="endRecipe">
-        <br><h5 style="text-align: center;">End of Recipe List</h5>
-      </div>
 
 
-  <!--<ion-infinite-scroll (ionInfinite)="doInfinite($event)" ng-if="hasMoreData">-->
-    <!--<ion-infinite-scroll-content *ngIf="hasMoreRecipes()"-->
-      <!--&gt;-->
-    <!--</ion-infinite-scroll-content>-->
-
-  <!--</ion-infinite-scroll>-->
 
 </ion-content>

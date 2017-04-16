@@ -1,15 +1,28 @@
 page-recipe-collection {
   .sortButton{
-    background: url(http://fortiguard.com/images/icons/filter.png) no-repeat;
+    background: url(http://fortiguard.com/images/icons/filter.png);
     background: {
       repeat: no-repeat;
       size:contain;
     }
     position: absolute;
     top:50%;
-    left: 75%;
+    left: 65%;
     width: 35%;
     height:35%;
+  }
+
+  .searchButton{
+    background: url(http://www.flad.com/content/images/Search_Dark.png);
+    background: {
+      repeat: no-repeat;
+      size: contain;
+    }
+    position: absolute;
+    top:50%;
+    left:77%;
+    width: 35%;
+    height: 35%;
   }
 
   .CardContent{
@@ -44,7 +57,6 @@ page-recipe-collection {
   }
 
 
-  $infinite-scroll-loading-color: white;
 }
 
 /*
