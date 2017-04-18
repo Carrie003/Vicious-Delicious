@@ -33,26 +33,8 @@ export class RecipeCollectionPage {
 
     platform.ready().then(() => {
     this.recipeService.loadRecipes();
-    //this.testcollection=recipeService.shared; // this does not work
-    //console.log(JSON.stringify(this.testcollection));
-    //console.log(this.testcollection);
-    //console.log(recipeService.getSharedlst());
-
-    /*for (let i = 0; i < 3; i++){
-      this.collection.push(RecipeCollection[i]);
-    }*/});
+    });
   }
-
-
-  /*doInfinite(infiniteScroll){
-    setTimeout(()=>{
-      for (let i = 0; i < RecipeCollection.length - this.collection.length; i++){
-        this.collection.push(RecipeCollection[i+this.collection.length]);
-      }
-      infiniteScroll.complete();
-    }, 500);
-  }*/
-
 
   sortClicked = false;
 
@@ -79,14 +61,6 @@ export class RecipeCollectionPage {
     this.cart.setDisplayList();
   }
 
-  /*hasMoreRecipes(){
-    if (this.collection.length == RecipeCollection.length){
-      return false;
-    }else{
-      return true;
-    }
-  }*/
-}
 
 //
 // RecipeCollection.sort(function(a, b) {

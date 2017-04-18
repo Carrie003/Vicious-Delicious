@@ -1,14 +1,13 @@
-
-
 var express = require('express');
 var router = express.Router();
 
 var monk = require('monk');
+// Vicious Delicious database using Heroku
 var db = monk('viciousdelicious:cake50@ds155080.mlab.com:55080/heroku_xdjx3gtb');
 
-router.get('/api/recipes', function(req, res) {
+router.get('/api/recipes/categories/:food', function(req, res) {
     var collection = db.get('recipes');
-    collection.find({}, function(err, recipes){
+    collection.find({categories:food}, function(err, recipes){
         if (err) throw err;
         res.json(recipes);
     });

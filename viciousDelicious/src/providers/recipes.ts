@@ -17,6 +17,18 @@ export class Recipes {
     this.shared = null;
   }
 
+  loadFood(){
+    return new Promise(resolve => {
+      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes/categories/food')
+        .map(res => res.json())
+        .subscribe(shared => {
+          this.shared = shared;
+          resolve(this.shared);
+          /*console.log(JSON.stringify(this.shared));*/
+        });
+    });
+
+  }
 
   loadRecipes(){
 
@@ -26,6 +38,7 @@ export class Recipes {
 
     return new Promise(resolve => {
       this.http.get('https://viciousdelicious.herokuapp.com/api/recipes')
+        //
         .map(res => res.json())
         .subscribe(shared => {
           this.shared = shared;
@@ -57,3 +70,4 @@ export class Recipes {
 
   }
 }
+
