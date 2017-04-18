@@ -26,49 +26,71 @@ import { Recipes }from"../../providers/recipes"
 
 export class RecipeCollectionPage {
 
-  collection=[];
-  //testcollection:any;
+  collection = [];
+  searchTerm: string = '';
 
-  constructor(private platform: Platform, public http: Http, public loading: LoadingController, public navCtrl: NavController, public navParams: NavParams, public cart:data, public recipeService:Recipes) {
+
+  constructor(private platform: Platform, public http: Http, public loading: LoadingController, public navCtrl: NavController, public navParams: NavParams, public cart: data, public recipeService: Recipes) {
 
     platform.ready().then(() => {
-    this.recipeService.loadRecipes();
+      this.recipeService.loadRecipes();
     });
   }
 
-  sortClicked = false;
 
-  category(cate){
-    //this.recipeService.loadCategory(cate);
-    //this.recipeService.shared.push("a");
+  beverageSelected() {
+    this.recipeService.loadBeverage()
   }
 
-  sort(){
-    if (this.sortClicked == false){
+  foodSelected() {
+    this.recipeService.loadFood()
+  }
+
+  allSelected() {
+    this.recipeService.loadRecipes()
+  }
+
+
+
+  setFilteredItems() {
+    this.recipeService.filterItems(this.searchTerm);
+  }
+
+
+  sortClicked = false;
+  searchClicked = false;
+
+
+  sort() {
+    if (this.sortClicked == false) {
       this.sortClicked = true;
-    }else{
+      this.searchClicked = false
+    } else {
       this.sortClicked = false;
     }
 
   }
 
-  GoToDetail(recipe){
-    this.navCtrl.push(DetailPage,{param1:recipe});
+  search() {
+    if (this.searchClicked == false) {
+      this.searchClicked = true;
+      this.sortClicked = false;
+    } else {
+      this.searchClicked = false;
+    }
   }
 
-  GoToShoppingCart(){
+
+  GoToDetail(recipe) {
+    this.navCtrl.push(DetailPage, {param1: recipe});
+  }
+
+  GoToShoppingCart() {
     this.navCtrl.push(ShoppingPage);
     this.cart.setDisplayList();
   }
 
-
-//
-// RecipeCollection.sort(function(a, b) {
-//   var textA = a.title.toUpperCase();
-//   var textB = b.title.toUpperCase();
-//   return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-// });
-
+}
 
 
 

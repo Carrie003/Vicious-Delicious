@@ -17,24 +17,7 @@ export class Recipes {
     this.shared = null;
   }
 
-  loadFood(){
-    return new Promise(resolve => {
-      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes/categories/food')
-        .map(res => res.json())
-        .subscribe(shared => {
-          this.shared = shared;
-          resolve(this.shared);
-          /*console.log(JSON.stringify(this.shared));*/
-        });
-    });
-
-  }
-
   loadRecipes(){
-
-    //if (this.shared) {
-    //  return Promise.resolve(this.shared);
-    //}
 
     return new Promise(resolve => {
       this.http.get('https://viciousdelicious.herokuapp.com/api/recipes')
@@ -43,10 +26,47 @@ export class Recipes {
         .subscribe(shared => {
           this.shared = shared;
           resolve(this.shared);
-          /*console.log(JSON.stringify(this.shared));*/
         });
     });
 
+  }
+
+  loadBeverage(){
+
+    return new Promise(resolve => {
+      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes/beverage')
+        .map(res => res.json())
+        .subscribe(shared => {
+          this.shared = shared;
+          resolve(this.shared);
+        });
+    });
+  }
+
+  loadFood(){
+
+    return new Promise(resolve => {
+      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes/food')
+        .map(res => res.json())
+        .subscribe(shared => {
+          this.shared = shared;
+          resolve(this.shared);
+        });
+    });
+  }
+
+
+  filterItems(searchTerm){
+    return new Promise(resolve => {
+      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes')
+        .map(res => res.json())
+        .subscribe(shared => {
+          this.shared = shared.filter((item) => {
+            return item.title.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+          });
+          resolve(this.shared);
+        });
+    });
   }
 
   createRecipe(recipe){
