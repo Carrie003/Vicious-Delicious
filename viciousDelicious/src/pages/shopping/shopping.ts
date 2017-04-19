@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams} from 'ionic-angular';
 import {data} from "../data/data";
-import {Input, DoCheck, OnChanges, OnInit} from 'angular2/core';
 
 /*
   Generated class for the Shopping page.
