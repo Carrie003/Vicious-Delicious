@@ -1,5 +1,6 @@
 page-recipe-collection {
   .sortButton{
+
     background: url(http://fortiguard.com/images/icons/filter.png);
     background: {
       repeat: no-repeat;
@@ -63,6 +64,7 @@ page-recipe-collection {
 Shared button in all pages.
 */
 .LstButton{
+  //To change Icon Logo
   background: url("https://cdn3.iconfinder.com/data/icons/ikooni-flat-online-shopping/128/shopping-08-512.png") no-repeat;
   background-size:contain;
   position: absolute;
