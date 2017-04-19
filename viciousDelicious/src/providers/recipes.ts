@@ -75,7 +75,7 @@ export class Recipes {
         .subscribe(shared => {
           this.shared = shared.filter((item) => { //filter function, keep the item if the following return true
             return item.title.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
-            //Use indexOf() function to search, which returns -1 if the value is not found.
+            //Use indexOf() function to search for searchTerm, which returns -1 if the value is not found.
           });
           resolve(this.shared);
         });
