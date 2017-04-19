@@ -30,6 +30,12 @@
       <ion-label color="primary" stacked>Image Link</ion-label>
       <ion-input [(ngModel)]="img" placeholder="img"></ion-input>
     </ion-item>
+    <!--<button ion-button icon-left (click)="presentActionSheet()">-->
+      <!--<ion-icon name="camera"></ion-icon>Select Image-->
+    <!--</button>-->
+    <!--<button ion-button icon-left (click)="test()">-->
+      <!--<ion-icon name="camera"></ion-icon>TEST-->
+    <!--</button>-->
 
     <ion-item>
       <ion-label color="primary" stacked>Short Description(e.g. Homemade Dish)</ion-label>
@@ -268,15 +274,3 @@
 
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar color="primary">
-    <ion-buttons>
-      <button ion-button icon-left (click)="presentActionSheet()">
-        <ion-icon name="camera"></ion-icon>Select Image
-      </button>
-      <button ion-button icon-left (click)="uploadImage()" [disabled]="lastImage === null">
-        <ion-icon name="cloud-upload"></ion-icon>Upload
-      </button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-footer>
