@@ -1,4 +1,7 @@
-
+/**
+ *
+ * @type {any}
+ */
 
 var express = require('express');
 var router = express.Router();
@@ -6,6 +9,9 @@ var router = express.Router();
 var monk = require('monk');
 var db = monk('viciousdelicious:cake50@ds155080.mlab.com:55080/heroku_xdjx3gtb');
 
+/**
+ * Makes a call to gather all available recipes
+ */
 router.get('/api/recipes', function(req, res) {
     var collection = db.get('recipes');
     collection.find({}, function(err, recipes){
@@ -14,6 +20,10 @@ router.get('/api/recipes', function(req, res) {
     });
 });
 
+/**
+ * Gets recipe from the database and stores it in variable called collections
+ * TODO Needs futher comments to explain it's function
+ */
 router.post('/api/reviews', function(req, res) {
 
     var collection = db.get('recipes');
