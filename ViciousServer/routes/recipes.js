@@ -35,6 +35,9 @@ router.post('/api/reviews', function(req, res) {
 
 });
 
+/**
+ * Delete function is not 
+ */
 router.delete('/api/recipes/:recipe_id', function(req, res) {
 
     var collection = db.get('recipes');
