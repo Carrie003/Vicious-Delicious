@@ -26,31 +26,33 @@ import { Recipes }from"../../providers/recipes"
 
 export class RecipeCollectionPage {
 
-  collection=[];
+  collection = [];
   searchTerm: string = '';
 
 
-  constructor(private platform: Platform, public http: Http, public loading: LoadingController, public navCtrl: NavController, public navParams: NavParams, public cart:data, public recipeService:Recipes) {
+  constructor(private platform: Platform, public http: Http, public loading: LoadingController, public navCtrl: NavController, public navParams: NavParams, public cart: data, public recipeService: Recipes) {
 
     platform.ready().then(() => {
-    this.recipeService.loadRecipes();
+      this.recipeService.loadRecipes();
     });
   }
 
-  beverageSelected(){
+
+  beverageSelected() {
     this.recipeService.loadBeverage()
   }
 
-  foodSelected(){
+  foodSelected() {
     this.recipeService.loadFood()
   }
 
-  allSelected(){
+  allSelected() {
     this.recipeService.loadRecipes()
   }
 
 
-  setFilteredItems(){
+
+  setFilteredItems() {
     this.recipeService.filterItems(this.searchTerm);
   }
 
@@ -59,42 +61,36 @@ export class RecipeCollectionPage {
   searchClicked = false;
 
 
-
-
-  sort(){
-    if (this.sortClicked == false){
+  sort() {
+    if (this.sortClicked == false) {
       this.sortClicked = true;
       this.searchClicked = false
-    }else{
+    } else {
       this.sortClicked = false;
     }
 
   }
 
-  search(){
-    if (this.searchClicked == false){
+  search() {
+    if (this.searchClicked == false) {
       this.searchClicked = true;
       this.sortClicked = false;
-    }else{
+    } else {
       this.searchClicked = false;
     }
   }
 
 
-
-  GoToDetail(recipe){
-    this.navCtrl.push(DetailPage,{param1:recipe});
+  GoToDetail(recipe) {
+    this.navCtrl.push(DetailPage, {param1: recipe});
   }
 
-  GoToShoppingCart(){
+  GoToShoppingCart() {
     this.navCtrl.push(ShoppingPage);
     this.cart.setDisplayList();
   }
 
-
 }
-
-
 
 
 
