@@ -36,7 +36,11 @@ router.post('/api/reviews', function(req, res) {
 });
 
 /**
- * Delete function is not 
+ * Delete function is not in use at the moment
+ * Why? We do not want the user to have the power to delete any recipes, only the ones
+ * they have added themselves
+ *
+ * POTENTIAL FUTURE FEATURE
  */
 router.delete('/api/recipes/:recipe_id', function(req, res) {
 
