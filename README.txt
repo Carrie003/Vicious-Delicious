@@ -1,18 +1,20 @@
+VVV       ✨ VICIOUS DELICIOUS ✨        VVV
 
- VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-VVV                                  VVV
-VVV       VICIOUS DELICIOUS ✨       VVV
-VVV           RECIPE APP             VVV
-VVV                                  VVV
-VVV                                  VVV
- VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
  
-Created by                      Allen Quan
-                                Tianyou Li
-                                Jennifer Arnold
-                                Xinyu Yang
-                                
-Welcome to this project!
+Created by:
+Tianyou Li
+Xinyu Yang
+Jennifer Arnold
+Allen Quan
+
+----------------------------------------------------------------
+* User Testing and Feedback
+----------------------------------------------------------------
+
+
+
+Issues
+github.com/waschbar01/Vicious-Delicious/issues
 
 Notes:
 
