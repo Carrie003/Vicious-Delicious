@@ -27,15 +27,12 @@
     </ion-item>
 
     <ion-item>
-      <ion-label color="primary" stacked>Image Link</ion-label>
-      <ion-input [(ngModel)]="img" placeholder="img"></ion-input>
+      <ion-label color="primary" stacked>Image Link(Recommend Imgur/Imgbb)</ion-label>
+      <ion-input [(ngModel)]="img" placeholder="The image link will overwrite the image uploaded."></ion-input>
     </ion-item>
-    <!--<button ion-button icon-left (click)="presentActionSheet()">-->
-      <!--<ion-icon name="camera"></ion-icon>Select Image-->
-    <!--</button>-->
-    <!--<button ion-button icon-left (click)="test()">-->
-      <!--<ion-icon name="camera"></ion-icon>TEST-->
-    <!--</button>-->
+    <button ion-button icon-left (click)="presentActionSheet()">
+      <ion-icon name="camera"></ion-icon>Select Image
+    </button>
 
     <ion-item>
       <ion-label color="primary" stacked>Short Description(e.g. Homemade Dish)</ion-label>
@@ -111,6 +108,9 @@
         <ion-label color="primary" stacked> GIF Link </ion-label>
         <ion-input [(ngModel)]="video1" placeholder="video1"></ion-input>
       </ion-item>
+
+      <button ion-button full color="secondary" (click)="presentVideoActionSheet()">TEST</button>
+
 
 
       <ion-item>
@@ -269,8 +269,8 @@
 
   <button ion-button full color="secondary" (click)="save()">Save</button>
 
-  <!--<img src="{{pathForImage(lastImage)}}" style="width: 100%" [hidden]="lastImage === null">-->
-  <!--<h3 [hidden]="lastImage !== null">Please Select Image!</h3>-->
+  <img src="{{pathForImage(lastImage)}}" style="width: 100%" [hidden]="lastImage === null">
+  <h3 [hidden]="lastImage !== null">Please Select Image!</h3>
 
 </ion-content>
 

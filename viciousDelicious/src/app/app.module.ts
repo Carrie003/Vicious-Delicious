@@ -9,6 +9,7 @@ import {data} from '../pages/data/data';
 import {DetailPage} from "../pages/detail/detail";
 import {Recipes} from "../providers/recipes"
 import {InputPage} from "../pages/input/input"
+import { MediaCapture } from 'ionic-native';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,6 @@ import {InputPage} from "../pages/input/input"
     DetailPage,
     InputPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},data,Recipes]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},data,Recipes,MediaCapture]
 })
 export class AppModule {}

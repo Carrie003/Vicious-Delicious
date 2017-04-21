@@ -12,11 +12,15 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class Recipes {
 
-  shared: any;
-  gfy:any;
+  public shared: any;
+  public link: any;
+  public gifID:any;
+  public gifUrl:any;
 
   constructor(public http: Http) {
     this.shared = null;
+    this.link=null;
+    console.log("Initiating");
   }
 
 
@@ -105,56 +109,59 @@ export class Recipes {
   }
 
   imgurAPI(path){
-    let link=null;
-    let response=null;
     let headers = new Headers();
 
-    headers.append('Authorization', 'Bearer 878ad20c4f11e3f308cfb85838e19d26ad96e0ed');
-    //headers.append('Authorization', 'Client-ID 990bf56cfa4922a');
-    //this.http.post('https://api.gfycat.com/v1/gfycats', {headers: headers})
-    //  .subscribe(res => {
-    //    response=res;
-    //    console.log("get title");
-    //  });
+    //headers.append('Authorization', 'Bearer 878ad20c4f11e3f308cfb85838e19d26ad96e0ed');
+    headers.append('Authorization', 'Bearer 518ca848a95862b56d7c8ec501bb779822ee5791');
+    headers.append('Content-Type', 'application/json');
 
-    // this.http.post('https://filedrop.gfycat.com', {
-    //  title:response.gfyname,
-    //  fetchUrl: path,
-    //  captions: [
-    //    {
-    //      startSeconds:0,
-    //      duration: 5,
-    //      text:response.secret
-    //    }
-    //  ]
-    // })
-    //  .subscribe(res => {
-    //    console.log("Converting to GIF.");
-    //  });
-
-
-    this.http.post('https://api.imgur.com/3/image', {
-      headers:{
-        "Authorization":"client-id 990bf56cfa4922a",
-        'Content-Type': 'application/json'
-      },
-      image: path,
-      title: path,
-    })
-      .subscribe(res => {
-        console.log(res.json());
-        console.log("Posting Img to Imgur");
-        response=res;
-      });
-
-
-    //headers.append('Authorization', 'Bearer <<eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE0OTIyMDQ2NjgsImlzcyI6IjJfVlNGc19BIiwicm9sZXMiOlsiQ29udGVudF9SZWFkZXIiXX0.jZqPRhltX6_XLAepIYgsp_Fmud3jklIWkc3K9CQwmBw>>');
-    // this.http.get("https://api.imgur.com/3/image/"+response.id,{headers:headers})
-    //   .subscribe(res => {
-    //     link=res;
-    //     console.log("Get the GIF back.");
-    //     return link.link;
-    //   });
+    return new Promise(resolve => {
+      this.http.post('https://api.imgur.com/3/image', {image: path}, {headers: headers})
+        .map(res => res.json())
+        .subscribe(res => {
+          console.log("Posting Img to Imgur");
+          this.link = res.data.link;
+          console.log(res.data);
+          resolve(this.link);
+        });
+    }).then(function(value){console.log("API successfully get "+ value)});
 
   }
+
+
+
+  giphyAPIUpload(filepath){
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    //headers.append('Gifs-API-Key', 'gifs58f9534cbbdbf');
+    //headers.append('Authentication', 'api_key dc6zaTOxFJmzC');
+    //console.log("set headers");
+
+    new Promise(resolve => {this.http.post('http://upload.giphy.com/v1/gifs?api_key=dc6zaTOxFJmzC', {file:filepath}, {headers:headers})
+      .map(res => res.json())
+      .subscribe(res => {
+        console.log("Converting to GIF.");
+        //this.gifID=res.data.id;
+        console.log(res);
+        resolve(this.gifID);
+      });
+    }).then((id) => {
+      return new Promise(resolve => {this.http.get('http://api.giphy.com/v1/gifs/'+id+'?api_key=dc6zaTOxFJmzC', {headers:headers})
+        .map(res => res.json())
+        .subscribe(res => {
+          console.log("Get the GIF.");
+          this.gifUrl=res.data.url;
+          console.log(res);
+          resolve(this.gifUrl)
+        });
+      })
+    }, (err) => {
+      console.log('Error uploading video.');
+    });
+
+}
+
+
+
+
 }
