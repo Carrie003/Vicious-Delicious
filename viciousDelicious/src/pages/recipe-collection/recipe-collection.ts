@@ -19,8 +19,9 @@ import { Recipes }from"../../providers/recipes"
 
 @Component({
   selector: 'page-recipe-collection',
-  templateUrl: 'recipe-collection.html',
-  providers:[Recipes]
+  templateUrl: 'recipe-collection.html'
+  //providers:[Recipes]
+
 })
 
 

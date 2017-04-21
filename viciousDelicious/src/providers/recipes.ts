@@ -137,29 +137,30 @@ export class Recipes {
     //headers.append('Authentication', 'api_key dc6zaTOxFJmzC');
     //console.log("set headers");
 
-    new Promise(resolve => {this.http.post('http://upload.giphy.com/v1/gifs?api_key=dc6zaTOxFJmzC', {file:filepath}, {headers:headers})
+    return new Promise(resolve => {this.http.post('http://upload.giphy.com/v1/gifs?api_key=dc6zaTOxFJmzC', {file:filepath}, {headers:headers})
       .map(res => res.json())
       .subscribe(res => {
         console.log("Converting to GIF.");
-        //this.gifID=res.data.id;
+        this.gifID=res.data.id;
         console.log(res);
         resolve(this.gifID);
       });
-    }).then((id) => {
-      return new Promise(resolve => {this.http.get('http://api.giphy.com/v1/gifs/'+id+'?api_key=dc6zaTOxFJmzC', {headers:headers})
-        .map(res => res.json())
-        .subscribe(res => {
-          console.log("Get the GIF.");
-          this.gifUrl=res.data.url;
-          console.log(res);
-          resolve(this.gifUrl)
-        });
-      })
-    }, (err) => {
-      console.log('Error uploading video.');
     });
+  }
 
-}
+  giphyAPIget(id){
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return new Promise(resolve => {this.http.get('http://api.giphy.com/v1/gifs/'+id+'?api_key=dc6zaTOxFJmzC', {headers:headers})
+      .map(res => res.json())
+      .subscribe(res => {
+        console.log("Get the GIF.");
+        this.gifUrl=res.data.url;
+        console.log(res);
+        resolve(this.gifUrl)
+      });
+    });
+  }
 
 
 
