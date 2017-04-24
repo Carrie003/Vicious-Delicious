@@ -20,11 +20,16 @@
   <ion-card>
     <img [src]="recipeInfo.img"/>
     <div class="card-title" [innerHTML]="recipeInfo.title"></div>
-    <div class="card-subtitle" [innerHTML]="recipeInfo.subtitle1"></div>
+    <!--<div class="card-subtitle" [innerHTML]="recipeInfo.subtitle1"></div>-->
   </ion-card>
 
-  <ion-card class="information">
-    <div class="card-subtitle" [innerHTML]="recipeInfo.subtitle1"></div>
+  <ion-card class="Information">
+    <ion-card-header>
+      Background Information
+    </ion-card-header>
+    <ion-card-content>
+      <div class="card-subtitle1" [innerHTML]="recipeInfo.subtitle1"></div>
+    </ion-card-content>
   </ion-card>
 
 
