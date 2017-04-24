@@ -26,6 +26,19 @@ page-recipe-collection {
     height: 35%;
   }
 
+  .ingreSearchButton{
+    background: url(http://icons.iconarchive.com/icons/icons8/ios7/512/Food-Bunch-Ingredients-icon.png);
+    background:{
+      repeat: no-repeat;
+      size:contain;
+    }
+    position: absolute;
+    top: 50%;
+    left:25%;
+    width: 35%;
+    height: 35%;
+  }
+
   .CardContent{
     background:url("http://www.texturex.com/albums/Paper-Textures/paper%20texture%20linen%20emboss%20card%20stock%20photo%20white%20light.jpg");
     background-size:cover;

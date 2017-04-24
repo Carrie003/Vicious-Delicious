@@ -27,22 +27,27 @@
     </ion-item>
 
     <ion-item>
-      <ion-label color="primary" stacked>Image Link</ion-label>
-      <ion-input [(ngModel)]="img" placeholder="img"></ion-input>
+      <ion-label color="primary" stacked>Image Link(Recommend Imgur/Imgbb)</ion-label>
+      <ion-input [(ngModel)]="img" placeholder="This link overwrites the uploaded image."></ion-input>
     </ion-item>
+    <button ion-button icon-left (click)="presentActionSheet()">
+      <ion-icon name="camera"></ion-icon>Select Image
+    </button>
 
     <ion-item>
       <ion-label color="primary" stacked>Short Description(e.g. Homemade Dish)</ion-label>
-      <ion-input [(ngModel)]="subtitle2" placeholder="subtitle2"></ion-input>
+      <ion-input [(ngModel)]="subtitle2" placeholder="Homemade Dish"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label color="primary" stacked>Descriptions</ion-label>
-      <ion-input [(ngModel)]="subtitle1" placeholder="subtitle1"></ion-input>
+      <ion-label color="primary" stacked>Detailed Descriptions (Country, Region, Story)</ion-label>
+      <ion-input [(ngModel)]="subtitle1" placeholder="Delicious Korean dish made with rice cake..."></ion-input>
     </ion-item>
   </ion-list>
 
   <ion-list>
+
+    <ion-label color="primary" stacked>Put in up to 10 ingredients</ion-label>
 
     <ion-item>
       <ion-label color="primary" stacked>Ingredient 1</ion-label>
@@ -89,173 +94,152 @@
 
 
     <ion-list>
+      <ion-label color="primary" stacked>Instructions and Gif Link(Recommend Giphy/Gfycat)</ion-label>
 
       <ion-item>
         <ion-label color="primary" stacked> Step 1 </ion-label>
       </ion-item>
+      <!--<ion-item>-->
+        <!--<ion-label color="primary" stacked> title </ion-label>-->
+        <!--<ion-input [(ngModel)]="title1" placeholder="title1"></ion-input>-->
+      <!--</ion-item>-->
       <ion-item>
-        <ion-label color="primary" stacked> Title </ion-label>
-        <ion-input [(ngModel)]="title1" placeholder="title1"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label color="primary" stacked> Descriptions </ion-label>
-        <ion-input [(ngModel)]="description1" placeholder="description1"></ion-input>
+        <ion-label color="primary" stacked> Instructions </ion-label>
+        <ion-input [(ngModel)]="description1" placeholder="Instruction1"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="primary" stacked> GIF Link </ion-label>
-        <ion-input [(ngModel)]="video1" placeholder="video1"></ion-input>
+        <ion-input [(ngModel)]="video1" placeholder="GIF Link 1"></ion-input>
       </ion-item>
+
+      <!--<button ion-button icon-left (click)="presentVideoActionSheet()">-->
+        <!--<ion-icon name="camera"></ion-icon>Select Video 1-->
+      <!--</button>-->
+
 
 
       <ion-item>
         <ion-label color="primary" stacked> Step 2 </ion-label>
       </ion-item>
+
       <ion-item>
-        <ion-label color="primary" stacked> Title </ion-label>
-        <ion-input [(ngModel)]="title2" placeholder="title2"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label color="primary" stacked> Descriptions </ion-label>
-        <ion-input [(ngModel)]="description2" placeholder="description2"></ion-input>
+        <ion-label color="primary" stacked> Instructions </ion-label>
+        <ion-input [(ngModel)]="description2" placeholder="Instruction2"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="primary" stacked> GIF Link </ion-label>
-        <ion-input [(ngModel)]="video2" placeholder="video2"></ion-input>
+        <ion-input [(ngModel)]="video2" placeholder="GIF Link 2"></ion-input>
       </ion-item>
 
 
       <ion-item>
         <ion-label color="primary" stacked> Step 3 </ion-label>
       </ion-item>
+
       <ion-item>
-        <ion-label color="primary" stacked> Title </ion-label>
-        <ion-input [(ngModel)]="title3" placeholder="title3"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label color="primary" stacked> Descriptions </ion-label>
-        <ion-input [(ngModel)]="description3" placeholder="description3"></ion-input>
+        <ion-label color="primary" stacked> Instructions </ion-label>
+        <ion-input [(ngModel)]="description3" placeholder="Instruction3"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="primary" stacked> GIF Link </ion-label>
-        <ion-input [(ngModel)]="video3" placeholder="video3"></ion-input>
+        <ion-input [(ngModel)]="video3" placeholder="GIF Link 3"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label color="primary" stacked> Step 4 </ion-label>
       </ion-item>
+
       <ion-item>
-        <ion-label color="primary" stacked> Title </ion-label>
-        <ion-input [(ngModel)]="title4" placeholder="title4"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label color="primary" stacked> Descriptions </ion-label>
-        <ion-input [(ngModel)]="description4" placeholder="description4"></ion-input>
+        <ion-label color="primary" stacked> Instructions </ion-label>
+        <ion-input [(ngModel)]="description4" placeholder="Instruction4"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="primary" stacked> GIF Link </ion-label>
-        <ion-input [(ngModel)]="video4" placeholder="video4"></ion-input>
+        <ion-input [(ngModel)]="video4" placeholder="GIF Link 4"></ion-input>
       </ion-item>
 
 
       <ion-item>
         <ion-label color="primary" stacked> Step 5 </ion-label>
       </ion-item>
+
       <ion-item>
-        <ion-label color="primary" stacked> Title </ion-label>
-        <ion-input [(ngModel)]="title5" placeholder="title5"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label color="primary" stacked> Descriptions </ion-label>
-        <ion-input [(ngModel)]="description5" placeholder="description5"></ion-input>
+        <ion-label color="primary" stacked> Instructions </ion-label>
+        <ion-input [(ngModel)]="description5" placeholder="Instruction5"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="primary" stacked> GIF Link </ion-label>
-        <ion-input [(ngModel)]="video5" placeholder="video5"></ion-input>
+        <ion-input [(ngModel)]="video5" placeholder="GIF Link 5"></ion-input>
       </ion-item>
 
 
       <ion-item>
         <ion-label color="primary" stacked> Step 6 </ion-label>
       </ion-item>
+
       <ion-item>
-        <ion-label color="primary" stacked> Title </ion-label>
-        <ion-input [(ngModel)]="title6" placeholder="title6"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label color="primary" stacked> Descriptions </ion-label>
-        <ion-input [(ngModel)]="description6" placeholder="description6"></ion-input>
+        <ion-label color="primary" stacked> Instructions </ion-label>
+        <ion-input [(ngModel)]="description6" placeholder="Instruction6"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="primary" stacked> GIF Link </ion-label>
-        <ion-input [(ngModel)]="video6" placeholder="video6"></ion-input>
+        <ion-input [(ngModel)]="video6" placeholder="GIF Link 6"></ion-input>
       </ion-item>
 
 
       <ion-item>
         <ion-label color="primary" stacked> Step 7 </ion-label>
       </ion-item>
+
       <ion-item>
-        <ion-label color="primary" stacked> Title </ion-label>
-        <ion-input [(ngModel)]="title7" placeholder="title7"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label color="primary" stacked> Descriptions </ion-label>
-        <ion-input [(ngModel)]="description7" placeholder="description7"></ion-input>
+        <ion-label color="primary" stacked> Instructions </ion-label>
+        <ion-input [(ngModel)]="description7" placeholder="Instruction7"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="primary" stacked> GIF Link </ion-label>
-        <ion-input [(ngModel)]="video7" placeholder="video7"></ion-input>
+        <ion-input [(ngModel)]="video7" placeholder="GIF Link 7"></ion-input>
       </ion-item>
 
 
       <ion-item>
         <ion-label color="primary" stacked> Step 8 </ion-label>
       </ion-item>
+
       <ion-item>
-        <ion-label color="primary" stacked> Title </ion-label>
-        <ion-input [(ngModel)]="title8" placeholder="title8"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label color="primary" stacked> Descriptions </ion-label>
-        <ion-input [(ngModel)]="description8" placeholder="description8"></ion-input>
+        <ion-label color="primary" stacked> Instructions </ion-label>
+        <ion-input [(ngModel)]="description8" placeholder="Instruction8"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="primary" stacked> GIF Link </ion-label>
-        <ion-input [(ngModel)]="video8" placeholder="video8"></ion-input>
+        <ion-input [(ngModel)]="video8" placeholder="GIF Link 8"></ion-input>
       </ion-item>
 
 
       <ion-item>
         <ion-label color="primary" stacked> Step 9 </ion-label>
       </ion-item>
+
       <ion-item>
-        <ion-label color="primary" stacked> Title </ion-label>
-        <ion-input [(ngModel)]="title9" placeholder="title9"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label color="primary" stacked> Descriptions </ion-label>
-        <ion-input [(ngModel)]="description9" placeholder="description9"></ion-input>
+        <ion-label color="primary" stacked> Instructions </ion-label>
+        <ion-input [(ngModel)]="description9" placeholder="Instruction9"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="primary" stacked> GIF Link </ion-label>
-        <ion-input [(ngModel)]="video9" placeholder="video9"></ion-input>
+        <ion-input [(ngModel)]="video9" placeholder="GIF Link 9"></ion-input>
       </ion-item>
 
 
       <ion-item>
         <ion-label color="primary" stacked> Step 10 </ion-label>
       </ion-item>
+      
       <ion-item>
-        <ion-label color="primary" stacked> Title </ion-label>
-        <ion-input [(ngModel)]="title10" placeholder="title10"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label color="primary" stacked> Descriptions </ion-label>
-        <ion-input [(ngModel)]="description10" placeholder="description10"></ion-input>
+        <ion-label color="primary" stacked> Instructions </ion-label>
+        <ion-input [(ngModel)]="description10" placeholder="Instruction10"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="primary" stacked> GIF Link </ion-label>
-        <ion-input [(ngModel)]="video10" placeholder="video10"></ion-input>
+        <ion-input [(ngModel)]="video10" placeholder="GIF Link 10"></ion-input>
       </ion-item>
 
     </ion-list>
@@ -263,20 +247,6 @@
 
   <button ion-button full color="secondary" (click)="save()">Save</button>
 
-  <img src="{{pathForImage(lastImage)}}" style="width: 100%" [hidden]="lastImage === null">
-  <h3 [hidden]="lastImage !== null">Please Select Image!</h3>
 
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar color="primary">
-    <ion-buttons>
-      <button ion-button icon-left (click)="presentActionSheet()">
-        <ion-icon name="camera"></ion-icon>Select Image
-      </button>
-      <button ion-button icon-left (click)="uploadImage()" [disabled]="lastImage === null">
-        <ion-icon name="cloud-upload"></ion-icon>Upload
-      </button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-footer>

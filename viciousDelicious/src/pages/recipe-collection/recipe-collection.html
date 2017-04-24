@@ -11,9 +11,13 @@
     <button (click)="sort()" class="sortButton" ></button>
     <button (click)="search()" class="searchButton"></button>
     <button (click)="GoToShoppingCart()" class="LstButton"></button>
+    <button (click)="searchByIngredient()" class="ingreSearchButton"></button>
   </ion-navbar>
 
 
+  <ion-toolbar *ngIf="ingreSearchClicked">
+    <ion-searchbar [(ngModel)]="ingreSearchTerm" (ionInput) = "setFilteredIngre()" placeholder="Search by ingredients"></ion-searchbar>
+  </ion-toolbar>
 
   <ion-toolbar  *ngIf="sortClicked">
     <ion-segment>
@@ -33,7 +37,7 @@
   </ion-toolbar>
 
   <ion-toolbar *ngIf = "searchClicked">
-    <ion-searchbar [(ngModel)]="searchTerm" (ionInput) = "setFilteredItems()"></ion-searchbar>
+    <ion-searchbar [(ngModel)]="searchTerm" (ionInput) = "setFilteredItems()" placeholder="Search by recipe name" ></ion-searchbar>
   </ion-toolbar>
 
 </ion-header>
