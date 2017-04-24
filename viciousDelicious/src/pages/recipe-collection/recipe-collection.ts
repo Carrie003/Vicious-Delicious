@@ -28,6 +28,7 @@ export class RecipeCollectionPage {
 
   collection = [];
   searchTerm: string = '';
+  ingreSearchTerm: string = '';
 
 
   constructor(private platform: Platform, public http: Http, public loading: LoadingController, public navCtrl: NavController, public navParams: NavParams, public cart: data, public recipeService: Recipes) {
@@ -50,21 +51,24 @@ export class RecipeCollectionPage {
     this.recipeService.loadRecipes()
   }
 
-
-
   setFilteredItems() {
     this.recipeService.filterItems(this.searchTerm);
   }
 
+  setFilteredIngre(){
+    this.recipeService.filterByIngre(this.ingreSearchTerm);
+  }
 
   sortClicked = false;
   searchClicked = false;
+  ingreSearchClicked = false;
 
 
   sort() {
     if (this.sortClicked == false) {
       this.sortClicked = true;
       this.searchClicked = false
+      this.ingreSearchClicked = false;
     } else {
       this.sortClicked = false;
     }
@@ -75,9 +79,21 @@ export class RecipeCollectionPage {
     if (this.searchClicked == false) {
       this.searchClicked = true;
       this.sortClicked = false;
+      this.ingreSearchClicked = false;
     } else {
       this.searchClicked = false;
     }
+  }
+
+  searchByIngredient(){
+    if (this.ingreSearchClicked == false){
+      this.ingreSearchClicked = true;
+      this.searchClicked = false;
+      this.sortClicked = false;
+    }else{
+      this.ingreSearchClicked = false;
+    }
+
   }
 
 
