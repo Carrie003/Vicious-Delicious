@@ -46,43 +46,33 @@ export class InputPage {
   ingredient10:any;
 
 
-  title1:any;
   description1:any;
   video1:any;
 
-  title2:any;
   description2:any;
   video2:any;
 
-  title3:any;
   description3:any;
   video3:any;
 
-  title4:any;
   description4:any;
   video4:any;
 
-  title5:any;
   description5:any;
   video5:any;
 
-  title6:any;
   description6:any;
   video6:any;
 
-  title7:any;
   description7:any;
   video7:any;
 
-  title8:any;
   description8:any;
   video8:any;
 
-  title9:any;
   description9:any;
   video9:any;
 
-  title10:any;
   description10:any;
   video10:any;
 
@@ -99,16 +89,16 @@ export class InputPage {
     this.ingredient9=null;
     this.ingredient10=null;
 
-    this.title1=null;
-    this.title2=null;
-    this.title3=null;
-    this.title4=null;
-    this.title5=null;
-    this.title6=null;
-    this.title7=null;
-    this.title8=null;
-    this.title9=null;
-    this.title10=null;
+    this.description1=null;
+    this.description2=null;
+    this.description3=null;
+    this.description4=null;
+    this.description5=null;
+    this.description6=null;
+    this.description7=null;
+    this.description8=null;
+    this.description9=null;
+    this.description10=null;
   }
 
 
@@ -125,49 +115,49 @@ export class InputPage {
     }
 
     let slides=[ {
-        title: this.title1,
+        title: "Step 1",
         description: this.description1,
         video: this.video1
       },{
-        title: this.title2,
+        title: "Step 2",
         description: this.description2,
         video: this.video2
       },{
-        title: this.title3,
+        title: "Step 3",
         description: this.description3,
         video: this.video3
       },{
-        title: this.title4,
+        title: "Step 4",
         description: this.description4,
         video: this.video4
       },{
-        title: this.title5,
+        title: "Step 5",
         description: this.description5,
         video: this.video5
       },{
-        title: this.title6,
+        title: "Step 6",
         description: this.description6,
         video: this.video6
       },{
-        title: this.title7,
+        title: "Step 7",
         description: this.description7,
         video: this.video7
       },{
-        title: this.title8,
+        title: "Step 8",
         description: this.description8,
         video: this.video8
       },{
-        title: this.title9,
+        title: "Step 9",
         description: this.description9,
         video: this.video9
       },{
-        title: this.title10,
+        title: "Step 10",
         description: this.description10,
         video: this.video10
       }];
 
     for (let slide of slides){
-      if (slide.title==null){
+      if (slide.description==null){
         slides=slides.slice(0,slides.indexOf(slide));
         break;
       }
