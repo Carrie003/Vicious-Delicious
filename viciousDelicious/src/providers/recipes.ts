@@ -70,11 +70,29 @@ export class Recipes {
         .map(res => res.json())
         .subscribe(shared => {
           this.shared = shared.filter((item) => {
-            return item.title.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+            return (item.title.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1);
           });
           resolve(this.shared);
         });
     });
+  }
+
+  filterByIngre(ingreSearchTerm){
+    return new Promise(resolve => {
+      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes')
+        .map(res => res.json())
+        .subscribe(shared => {
+          this.shared = shared.filter((item) => {
+            for(let ingredient of item.ingredients){
+              if (ingredient.toLowerCase().indexOf(ingreSearchTerm.toLowerCase()) >-1){
+                return true;
+              }
+            }
+            return false;
+          });
+          resolve(this.shared);
+        })
+    })
   }
 
   createRecipe(recipe){
