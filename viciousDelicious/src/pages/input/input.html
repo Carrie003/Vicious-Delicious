@@ -92,6 +92,7 @@
 
 
     <ion-list>
+      <ion-label color="primary" stacked>Gif Link(Recommend Giphy)</ion-label>
 
       <ion-item>
         <ion-label color="primary" stacked> Step 1 </ion-label>
@@ -109,9 +110,9 @@
         <ion-input [(ngModel)]="video1" placeholder="video1"></ion-input>
       </ion-item>
 
-      <button ion-button icon-left (click)="presentVideoActionSheet()">
-        <ion-icon name="camera"></ion-icon>Select Video 1
-      </button>
+      <!--<button ion-button icon-left (click)="presentVideoActionSheet()">-->
+        <!--<ion-icon name="camera"></ion-icon>Select Video 1-->
+      <!--</button>-->
 
 
 
@@ -271,8 +272,6 @@
 
   <button ion-button full color="secondary" (click)="save()">Save</button>
 
-  <img src="{{pathForImage(lastImage)}}" style="width: 100%" [hidden]="lastImage === null">
-  <h3 [hidden]="lastImage !== null">Please Select Image!</h3>
 
 </ion-content>
 

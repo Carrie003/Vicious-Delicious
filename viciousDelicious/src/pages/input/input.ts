@@ -23,7 +23,7 @@ export class InputPage {
   lastImage: string = null;
   loading: Loading;
   public base64Image: string;
-  public base64Video: string;
+  //public base64Video: string;
 
   img:any=null;
   title:any;
@@ -32,8 +32,6 @@ export class InputPage {
   ingredients:any;
   slides:any;
 
-
-  gif1:any;
 
 
   ingredient1:any;
@@ -129,7 +127,7 @@ export class InputPage {
     let slides=[ {
         title: this.title1,
         description: this.description1,
-        video: this.recipeService.gifUrl
+        video: this.video1
       },{
         title: this.title2,
         description: this.description2,
@@ -175,13 +173,13 @@ export class InputPage {
       }
     }
 
-    let lstgif=[this.video1,this.video2,this.video3,this.video4,this.video5,this.video6,this.video7,this.video8,this.video9,this.video10];
-
-    for (let i=0;i<10;i++){
-      if(lstgif[i]){
-        slides[i].video=lstgif[i];
-      }
-    }
+    // let lstgif=[this.video1,this.video2,this.video3,this.video4,this.video5,this.video6,this.video7,this.video8,this.video9,this.video10];
+    //
+    // for (let i=0;i<10;i++){
+    //   if(lstgif[i]){
+    //     slides[i].video=lstgif[i];
+    //   }
+    // }
 
 
     let recipe = {
@@ -190,7 +188,8 @@ export class InputPage {
       subtitle1:this.subtitle1,
       subtitle2:this.subtitle2,
       ingredients:ingredients,
-      slides:slides
+      slides:slides,
+      token:"AllenJenniferTianyouXinyu"
     };
 
      if(this.img){
@@ -264,69 +263,70 @@ export class InputPage {
 
   }
 
-  public presentVideoActionSheet() {
-    let actionSheet = this.actionSheetCtrl.create({
-      title: 'Select Video Source',
-      buttons: [
-        {
-          text: 'Load from Library',
-          handler: () => {
-            this.takeVideo(Camera.PictureSourceType.PHOTOLIBRARY);
-          }
-        },
-        // {
-        //   text: 'Use Camera',
-        //   handler: () => {
-        //     this.takeVideo(Camera.PictureSourceType.CAMERA);
-        //   }
-        // },
-        {
-          text: 'Cancel',
-          role: 'cancel'
-        }
-      ]
-    });
-    actionSheet.present();
-  }
+  // public presentVideoActionSheet() {
+  //   let actionSheet = this.actionSheetCtrl.create({
+  //     title: 'Select Video Source',
+  //     buttons: [
+  //       {
+  //         text: 'Load from Library',
+  //         handler: () => {
+  //           this.takeVideo(Camera.PictureSourceType.PHOTOLIBRARY);
+  //         }
+  //       },
+  //       // {
+  //       //   text: 'Use Camera',
+  //       //   handler: () => {
+  //       //     this.takeVideo(Camera.PictureSourceType.CAMERA);
+  //       //   }
+  //       // },
+  //       {
+  //         text: 'Cancel',
+  //         role: 'cancel'
+  //       }
+  //     ]
+  //   });
+  //   actionSheet.present();
+  // }
 
-   public takeVideo(sourceType) {
-    // Create options for the Camera Dialog
-    var options = {
-      quality: 100,
-      sourceType: sourceType,
-      mediaType:Camera.MediaType.VIDEO,
-      destinationType: Camera.DestinationType.DATA_URL,
-      saveToPhotoAlbum: false,
-      correctOrientation: true
-    };
-
-    // Get the data of an image
-    Camera.getPicture(options).then((videoPath) => {
-      this.presentToast(videoPath);
-      //this.base64Video = videoPath;
-      //Special handling for Android library
-      // if (this.platform.is('android') && sourceType === Camera.PictureSourceType.PHOTOLIBRARY) {
-      //    FilePath.resolveNativePath(videoPath)
-      //      .then(filePath => {
-      //       let correctPath = filePath.substr(0, filePath.lastIndexOf('/') + 1);
-      //       let currentName = videoPath.substring(videoPath.lastIndexOf('/') + 1, videoPath.lastIndexOf('?'));
-      //       this.copyFileToLocalDir(correctPath, currentName, this.createVideoName());
-      //       //this.recipeService.giphyAPIUpload(correctPath);
-      //     });
-      // } else {
-      //   var currentName = videoPath.substr(videoPath.lastIndexOf('/') + 1);
-      //   var correctPath = videoPath.substr(0, videoPath.lastIndexOf('/') + 1);
-      //   this.copyFileToLocalDir(correctPath, currentName, this.createVideoName());
-      //   //this.recipeService.giphyAPIUpload(correctPath);
-      //  }
-      this.recipeService.giphyAPIUpload(videoPath);
-      this.recipeService.giphyAPIget(this.recipeService.gifID);
-      //this.presentToast('Uploading successful.');
-    }, (err) => {
-      this.presentToast('There is an error uploading the image.');
-    });
-
-   }
+   // public takeVideo(sourceType) {
+   //  // Create options for the Camera Dialog
+   //  var options = {
+   //    quality: 100,
+   //    sourceType: sourceType,
+   //    mediaType:Camera.MediaType.VIDEO,
+   //    destinationType: Camera.DestinationType.FILE_URI,
+   //    saveToPhotoAlbum: false,
+   //    correctOrientation: true
+   //  };
+   //
+   //  // Get the data of an image
+   //  Camera.getPicture(options).then((videoPath) => {
+   //    videoPath="@"+videoPath.substr(7);
+   //    //this.presentToast(videoPath);
+   //    //Special handling for Android library
+   //    // if (this.platform.is('android') && sourceType === Camera.PictureSourceType.PHOTOLIBRARY) {
+   //    //    FilePath.resolveNativePath(videoPath)
+   //    //      .then(filePath => {
+   //    //       let correctPath = filePath.substr(0, filePath.lastIndexOf('/') + 1);
+   //    //       let currentName = videoPath.substring(videoPath.lastIndexOf('/') + 1, videoPath.lastIndexOf('?'));
+   //    //       this.copyFileToLocalDir(correctPath, currentName, this.createVideoName());
+   //    //       //this.recipeService.giphyAPIUpload(correctPath);
+   //    //     });
+   //    // } else {
+   //    //   var currentName = videoPath.substr(videoPath.lastIndexOf('/') + 1);
+   //    //   var correctPath = videoPath.substr(0, videoPath.lastIndexOf('/') + 1);
+   //    //   this.copyFileToLocalDir(correctPath, currentName, this.createVideoName());
+   //    //   //this.recipeService.giphyAPIUpload(correctPath);
+   //    //  }
+   //    this.recipeService.giphyAPIUpload(videoPath);
+   //    this.presentToast(this.recipeService.gifID);
+   //    this.recipeService.giphyAPIget(this.recipeService.gifID);
+   //    //this.presentToast('Uploading successful.');
+   //  }, (err) => {
+   //    this.presentToast('There is an error uploading the image.');
+   //  });
+   //
+   // }
 
 // Create a new name for the image
   private createFileName() {
@@ -335,14 +335,14 @@ export class InputPage {
       newFileName =  n + ".jpg";
     return newFileName;
   }
-
-  // Create a new name for the video
-  private createVideoName() {
-    var d = new Date(),
-      n = d.getTime(),
-      newFileName =  n + ".mp4";
-    return newFileName;
-  }
+//
+//   // Create a new name for the video
+//   private createVideoName() {
+//     var d = new Date(),
+//       n = d.getTime(),
+//       newFileName =  n + ".MOV";
+//     return newFileName;
+//   }
 
 // Copy the image to a local folder
   private copyFileToLocalDir(namePath, currentName, newFileName) {
@@ -373,10 +373,8 @@ export class InputPage {
   }
 
   // public test(){
-  //   console.log("test1");
-  //   this.recipeService.test("Sample.mp4");
-  //
-  //   //console.log(this.gif1);
+  //   let test="/Users/user/Vicious-Delicious/viciousDelicious/src/pages/input/2-0.mp4";
+  //   this.recipeService.giphyAPIUpload(test);
   // }
 
 
