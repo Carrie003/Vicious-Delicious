@@ -107,12 +107,21 @@ export class DetailPage {
       }
     }
 
+    /**
+     * TODO: Refactor
+     */
     if(this.temporary.length==0){
-      this.message = "Please select some ingredients;";
+      add.setTitle("No ingredients added!");
+      this.message = "Please select some ingredients.";
     }else{
       for (let i of this.temporary){
-        this.message += i.name;
-        this.message += "; ";
+        if (i.length == this.temporary.length) {
+          this.message += i.name;
+        }
+        else {
+          this.message += i.name;
+          this.message += ", ";
+        }
       }
     }
     add.setMessage(this.message);
