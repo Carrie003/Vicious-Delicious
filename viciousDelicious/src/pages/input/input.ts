@@ -32,6 +32,7 @@ export class InputPage {
   subtitle2:any;
   ingredients:any;
   slides:any;
+  veg:any;
 
 
 
@@ -108,6 +109,7 @@ export class InputPage {
 
     let ingredients=[this.ingredient1,this.ingredient2,this.ingredient3,this.ingredient4,this.ingredient5,this.ingredient6,this.ingredient7,this.ingredient8,this.ingredient9,this.ingredient10];
 
+
     for (let ingre of ingredients){
       if (ingre==null){
         ingredients=ingredients.slice(0,ingredients.indexOf(ingre));
@@ -168,6 +170,7 @@ export class InputPage {
     let recipe = {
       title: this.title,
       img: this.recipeService.link,
+      category:this.veg,
       subtitle1:this.subtitle1,
       subtitle2:this.subtitle2,
       ingredients:ingredients,

@@ -26,6 +26,14 @@
     </ion-item>
 
     <ion-item>
+      <ion-label>Non/Vegetarian</ion-label>
+      <ion-select [(ngModel)]="veg">
+        <ion-option value="Vegetarian">Vegetarian</ion-option>
+        <ion-option value="Nonvegetarian">Nonvegetarian</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
       <ion-label color="primary" stacked>Image Link(Recommend Imgur/Imgbb)</ion-label>
       <ion-input [(ngModel)]="img" placeholder="This link overwrites the uploaded image."></ion-input>
     </ion-item>
