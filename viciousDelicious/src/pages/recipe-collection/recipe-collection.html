@@ -34,8 +34,8 @@
     </ion-segment>
   </ion-toolbar>
 
-  <ion-toolbar *ngIf = "searchClicked">
-    <ion-searchbar [(ngModel)]="searchTerm" (ionInput) = "setFilteredItems()" placeholder="Search by recipe name" ></ion-searchbar>
+  <ion-toolbar *ngIf = "titleSearchClicked">
+    <ion-searchbar [(ngModel)]="titleSearchTerm" (ionInput) = "setFilteredItems()" placeholder="Search by recipe name" ></ion-searchbar>
   </ion-toolbar>
 
 </ion-header>

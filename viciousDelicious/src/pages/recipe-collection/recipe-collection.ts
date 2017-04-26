@@ -28,7 +28,7 @@ import { Recipes }from"../../providers/recipes"
 export class RecipeCollectionPage {
 
   collection = [];
-  searchTerm: string = '';
+  titleSearchTerm: string = '';
   ingreSearchTerm: string = '';
 
 
@@ -54,7 +54,7 @@ export class RecipeCollectionPage {
 
 
   setFilteredItems() {
-    this.recipeService.filterItems(this.searchTerm);
+    this.recipeService.filterItems(this.titleSearchTerm);
   }
 
   setFilteredIngre(){
@@ -62,14 +62,14 @@ export class RecipeCollectionPage {
   }
 
   sortClicked = false;
-  searchClicked = false;
+  titleSearchClicked = false;
   ingreSearchClicked = false;
 
 
   sort() {
     if (this.sortClicked == false) {
       this.sortClicked = true;
-      this.searchClicked = false
+      this.titleSearchClicked = false
       this.ingreSearchClicked = false;
     } else {
       this.sortClicked = false;
@@ -78,19 +78,19 @@ export class RecipeCollectionPage {
   }
 
   searchByTitle() {
-    if (this.searchClicked == false) {
-      this.searchClicked = true;
+    if (this.titleSearchClicked == false) {
+      this.titleSearchClicked = true;
       this.sortClicked = false;
       this.ingreSearchClicked = false;
     } else {
-      this.searchClicked = false;
+      this.titleSearchClicked = false;
     }
   }
 
   searchByIngredient(){
     if (this.ingreSearchClicked == false){
       this.ingreSearchClicked = true;
-      this.searchClicked = false;
+      this.titleSearchClicked = false;
       this.sortClicked = false;
     }else{
       this.ingreSearchClicked = false;
