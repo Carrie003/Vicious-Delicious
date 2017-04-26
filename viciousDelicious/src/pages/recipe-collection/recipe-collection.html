@@ -1,15 +1,14 @@
 <!--
-  Generated template for the RecipeCollection page.
+  Recipe collection: This page displays the recipes.
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
+  It displays each of the recipes as an ionic card, which has an image and a short description of the recipe.
 -->
 <ion-header>
 
   <ion-navbar>
     <ion-title>Recipes</ion-title>
     <button (click)="sort()" class="sortButton" ></button>
-    <button (click)="search()" class="searchButton"></button>
+    <button (click)="searchByTitle()" class="searchButton"></button>
     <button (click)="GoToShoppingCart()" class="LstButton"></button>
     <button (click)="searchByIngredient()" class="ingreSearchButton"></button>
   </ion-navbar>
@@ -22,22 +21,21 @@
   <ion-toolbar  *ngIf="sortClicked">
     <ion-segment>
 
-      <ion-segment-button (ionSelect) = "foodSelected()">
-        Food
+      <ion-segment-button (ionSelect) = "vegetarian()">
+        Vegetarian
       </ion-segment-button >
-      <ion-segment-button (ionSelect) = "beverageSelected()" >
-        Beverage
+      <ion-segment-button (ionSelect) = "nonvegetarian()" >
+        Non-vegetarian
       </ion-segment-button>
-      <ion-segment-button (ionSelect) = "allSelected()">
+      <ion-segment-button (ionSelect) = "allrecipes()">
         All
-
       </ion-segment-button>
 
     </ion-segment>
   </ion-toolbar>
 
-  <ion-toolbar *ngIf = "searchClicked">
-    <ion-searchbar [(ngModel)]="searchTerm" (ionInput) = "setFilteredItems()" placeholder="Search by recipe name" ></ion-searchbar>
+  <ion-toolbar *ngIf = "titleSearchClicked">
+    <ion-searchbar [(ngModel)]="titleSearchTerm" (ionInput) = "setFilteredItems()" placeholder="Search by recipe name" ></ion-searchbar>
   </ion-toolbar>
 
 </ion-header>

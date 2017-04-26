@@ -14,12 +14,12 @@ export class Recipes {
 
   public shared: any;
   public link: any;
-  public gifID:any;
-  public gifUrl:any;
+  public link1:any;
 
   constructor(public http: Http) {
     this.shared = null;
     this.link=null;
+    this.link1=null;
     console.log("Initiating");
   }
 
@@ -39,10 +39,10 @@ export class Recipes {
 
   }//}
 
-  loadBeverage(){
+  loadVegetarian(){
 
     return new Promise(resolve => {
-      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes/beverage')
+      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes/vegetarian')
         .map(res => res.json())
         .subscribe(shared => {
           this.shared = shared;
@@ -51,10 +51,10 @@ export class Recipes {
     });
   }
 
-  loadFood(){
+  loadNonVegetarian(){
 
     return new Promise(resolve => {
-      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes/food')
+      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes/nonvegetarian')
         .map(res => res.json())
         .subscribe(shared => {
           this.shared = shared;
@@ -118,18 +118,10 @@ export class Recipes {
 
   }
 
-  // deleteRecipe(id){
-  //
-  //   this.http.delete('https://viciousdelicious.herokuapp.com/api/recipes' + id).subscribe((res) => {
-  //     console.log(res.json());
-  //   });
-  //
-  // }
 
   imgurAPI(path){
     let headers = new Headers();
 
-    //headers.append('Authorization', 'Bearer 878ad20c4f11e3f308cfb85838e19d26ad96e0ed');
     headers.append('Authorization', 'Bearer 518ca848a95862b56d7c8ec501bb779822ee5791');
     headers.append('Content-Type', 'application/json');
 
@@ -148,19 +140,26 @@ export class Recipes {
 
 
 
+
+
   // giphyAPIUpload(filepath){
   //   let headers = new Headers();
   //   headers.append('Content-Type', 'application/json');
   //   //headers.append('Gifs-API-Key', 'gifs58f9534cbbdbf');
   //   //headers.append('Authentication', 'api_key dc6zaTOxFJmzC');
   //   //console.log("set headers");
+  //   //?api_key=dc6zaTOxFJmzC
   //
-  //   return new Promise(resolve => {this.http.post('http://upload.giphy.com/v1/gifs?api_key=dc6zaTOxFJmzC', {file:filepath}, {headers:headers})
+  //   return new Promise(resolve =>
+  //   {this.http.post('http://upload.giphy.com/v1/gifs?api_key=dc6zaTOxFJmzC',
+  //     {source_post_url:filepath},
+  //     {headers:headers})
   //     .map(res => res.json())
   //     .subscribe(res => {
   //       console.log("Converting to GIF.");
-  //       this.gifID=res.data.id;
   //       console.log(res);
+  //       //this.gifID=res.data.id;
+  //       //console.log(res);
   //       resolve(this.gifID);
   //     });
   //   });
@@ -173,13 +172,12 @@ export class Recipes {
   //     .map(res => res.json())
   //     .subscribe(res => {
   //       console.log("Get the GIF.");
-  //       this.gifUrl=res.data.url;
+  //       this.gifUrl=res.data.images.original.url;
   //       console.log(res);
   //       resolve(this.gifUrl)
   //     });
   //   });
   // }
-
 
 
 

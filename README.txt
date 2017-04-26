@@ -7,14 +7,26 @@ To access the server code, visit our back-end repository: https://github.com/was
 
 ___
 Authors
+
 Tianyou Li
 Xinyu Yang
 Jennifer Arnold
 Allen Quan
-___
-#Issues
+---
+* User Testing and Feedback
+
+Link to google feedback form
+
+----------------------------------------------------------------
+* Notes for BUILDING
+----------------------------------------------------------------
+A token.js authentication file is required to build the app. This is for API access for image hosting.
+
+Please e-mail viciousdelicious@ [PENDING]
+
+----------------------------------------------------------------
+* Report Issues
+----------------------------------------------------------------
+Issues
+
 github.com/waschbar01/Vicious-Delicious/issues
-
-Notes:
-
-Android - run from .../cordova/ to include the splashscreen

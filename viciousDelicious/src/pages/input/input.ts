@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams,ModalController,ActionSheetController,Platform,ToastController,LoadingController, Loading } from 'ionic-angular';
 import { ViewController } from 'ionic-angular';
-import {MediaCapture,Camera,File, Transfer, FilePath} from 'ionic-native';
-import { Recipes }from"../../providers/recipes"
+import { MediaCapture,Camera,File, Transfer, FilePath } from 'ionic-native';
+import { Recipes } from "../../providers/recipes";
+import { tokenfile } from "../token/tokenfile";
+
+
 
 /*
   Generated class for the Input page.
@@ -15,7 +18,6 @@ declare var cordova: any;
 @Component({
   selector: 'page-input',
   templateUrl: 'input.html'
-  //providers:[Recipes]
 })
 
 export class InputPage {
@@ -23,7 +25,6 @@ export class InputPage {
   lastImage: string = null;
   loading: Loading;
   public base64Image: string;
-  //public base64Video: string;
 
   img:any=null;
   title:any;
@@ -31,6 +32,7 @@ export class InputPage {
   subtitle2:any;
   ingredients:any;
   slides:any;
+  veg:any;
 
 
 
@@ -77,7 +79,7 @@ export class InputPage {
   video10:any;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController,public modalCtrl: ModalController,public actionSheetCtrl: ActionSheetController,public platform: Platform,public toastCtrl: ToastController,public loadingCtrl: LoadingController,public recipeService:Recipes) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController,public modalCtrl: ModalController,public actionSheetCtrl: ActionSheetController,public platform: Platform,public toastCtrl: ToastController, public recipeService:Recipes, public tok:tokenfile) {
     this.ingredient1=null;
     this.ingredient2=null;
     this.ingredient3=null;
@@ -106,6 +108,7 @@ export class InputPage {
   save(): void {
 
     let ingredients=[this.ingredient1,this.ingredient2,this.ingredient3,this.ingredient4,this.ingredient5,this.ingredient6,this.ingredient7,this.ingredient8,this.ingredient9,this.ingredient10];
+
 
     for (let ingre of ingredients){
       if (ingre==null){
@@ -163,23 +166,16 @@ export class InputPage {
       }
     }
 
-    // let lstgif=[this.video1,this.video2,this.video3,this.video4,this.video5,this.video6,this.video7,this.video8,this.video9,this.video10];
-    //
-    // for (let i=0;i<10;i++){
-    //   if(lstgif[i]){
-    //     slides[i].video=lstgif[i];
-    //   }
-    // }
-
 
     let recipe = {
       title: this.title,
       img: this.recipeService.link,
+      category:this.veg,
       subtitle1:this.subtitle1,
       subtitle2:this.subtitle2,
       ingredients:ingredients,
       slides:slides,
-      token:"AllenJenniferTianyouXinyu"
+      token:this.tok.token
     };
 
      if(this.img){
@@ -233,19 +229,6 @@ export class InputPage {
     Camera.getPicture(options).then((imagePath) => {
       this.base64Image = imagePath;
       this.recipeService.imgurAPI(this.base64Image);
-      //Special handling for Android library
-      if (this.platform.is('android') && sourceType === Camera.PictureSourceType.PHOTOLIBRARY) {
-        FilePath.resolveNativePath(imagePath)
-          .then(filePath => {
-            let correctPath = filePath.substr(0, filePath.lastIndexOf('/') + 1);
-            let currentName = imagePath.substring(imagePath.lastIndexOf('/') + 1, imagePath.lastIndexOf('?'));
-            this.copyFileToLocalDir(correctPath, currentName, this.createFileName());
-          });
-      } else {
-        var currentName = imagePath.substr(imagePath.lastIndexOf('/') + 1);
-        var correctPath = imagePath.substr(0, imagePath.lastIndexOf('/') + 1);
-        this.copyFileToLocalDir(correctPath, currentName, this.createFileName());
-      }
       this.presentToast('Uploading successful.');
     }, (err) => {
       this.presentToast('There is an error uploading the image.');
@@ -277,54 +260,50 @@ export class InputPage {
   //   });
   //   actionSheet.present();
   // }
-
-   // public takeVideo(sourceType) {
-   //  // Create options for the Camera Dialog
-   //  var options = {
-   //    quality: 100,
-   //    sourceType: sourceType,
-   //    mediaType:Camera.MediaType.VIDEO,
-   //    destinationType: Camera.DestinationType.FILE_URI,
-   //    saveToPhotoAlbum: false,
-   //    correctOrientation: true
-   //  };
-   //
-   //  // Get the data of an image
-   //  Camera.getPicture(options).then((videoPath) => {
-   //    videoPath="@"+videoPath.substr(7);
-   //    //this.presentToast(videoPath);
-   //    //Special handling for Android library
-   //    // if (this.platform.is('android') && sourceType === Camera.PictureSourceType.PHOTOLIBRARY) {
-   //    //    FilePath.resolveNativePath(videoPath)
-   //    //      .then(filePath => {
-   //    //       let correctPath = filePath.substr(0, filePath.lastIndexOf('/') + 1);
-   //    //       let currentName = videoPath.substring(videoPath.lastIndexOf('/') + 1, videoPath.lastIndexOf('?'));
-   //    //       this.copyFileToLocalDir(correctPath, currentName, this.createVideoName());
-   //    //       //this.recipeService.giphyAPIUpload(correctPath);
-   //    //     });
-   //    // } else {
-   //    //   var currentName = videoPath.substr(videoPath.lastIndexOf('/') + 1);
-   //    //   var correctPath = videoPath.substr(0, videoPath.lastIndexOf('/') + 1);
-   //    //   this.copyFileToLocalDir(correctPath, currentName, this.createVideoName());
-   //    //   //this.recipeService.giphyAPIUpload(correctPath);
-   //    //  }
-   //    this.recipeService.giphyAPIUpload(videoPath);
-   //    this.presentToast(this.recipeService.gifID);
-   //    this.recipeService.giphyAPIget(this.recipeService.gifID);
-   //    //this.presentToast('Uploading successful.');
-   //  }, (err) => {
-   //    this.presentToast('There is an error uploading the image.');
-   //  });
-   //
-   // }
+  //
+  //  public takeVideo(sourceType) {
+  //   // Create options for the Camera Dialog
+  //   var options = {
+  //     quality: 100,
+  //     sourceType: sourceType,
+  //     //mediaType:Camera.MediaType.VIDEO,
+  //     destinationType: Camera.DestinationType.DATA_URL,
+  //     saveToPhotoAlbum: false,
+  //     correctOrientation: true
+  //   };
+  //
+  //   // Get the data of an image
+  //   Camera.getPicture(options).then((videoPath) => {
+  //     this.recipeService.test(videoPath);
+  //     //Special handling for Android library
+  //     if (this.platform.is('android') && sourceType === Camera.PictureSourceType.PHOTOLIBRARY) {
+  //        FilePath.resolveNativePath(videoPath)
+  //          .then(filePath => {
+  //           let correctPath = filePath.substr(0, filePath.lastIndexOf('/') + 1);
+  //           let currentName = filePath.substring(filePath.lastIndexOf('/') + 1, filePath.lastIndexOf('?'));
+  //           this.copyFileToLocalDir(correctPath, currentName, this.createVideoName());
+  //           //this.recipeService.giphyAPIUpload(correctPath);
+  //         });
+  //     } else {
+  //       var currentName = videoPath.substr(videoPath.lastIndexOf('/') + 1);
+  //       var correctPath = videoPath.substr(0, videoPath.lastIndexOf('/') + 1);
+  //       this.copyFileToLocalDir(correctPath, currentName, this.createVideoName());
+  //       //this.recipeService.giphyAPIUpload(correctPath);
+  //      }
+  //     this.presentToast('Successful.');
+  //   }, (err) => {
+  //     this.presentToast('There is an error uploading the image.');
+  //   });
+  //
+  //  }
 
 // Create a new name for the image
-  private createFileName() {
-    var d = new Date(),
-      n = d.getTime(),
-      newFileName =  n + ".jpg";
-    return newFileName;
-  }
+//   private createFileName() {
+//     var d = new Date(),
+//       n = d.getTime(),
+//       newFileName =  n + ".jpg";
+//     return newFileName;
+//   }
 //
 //   // Create a new name for the video
 //   private createVideoName() {
@@ -335,14 +314,14 @@ export class InputPage {
 //   }
 
 // Copy the image to a local folder
-  private copyFileToLocalDir(namePath, currentName, newFileName) {
-    File.copyFile(namePath, currentName, cordova.file.dataDirectory, newFileName).then(success => {
-      this.lastImage = newFileName;
-      this.presentToast('Successful.');
-    }, error => {
-      //this.presentToast('Error while storing file.');
-    });
-  }
+//   private copyFileToLocalDir(namePath, currentName, newFileName) {
+//     File.copyFile(namePath, currentName, cordova.file.dataDirectory, newFileName).then(success => {
+//       this.lastImage = newFileName;
+//       //this.presentToast('Successful.');
+//     }, error => {
+//       this.presentToast('Error while storing file.');
+//     });
+//   }
 
   private presentToast(text) {
     let toast = this.toastCtrl.create({
@@ -354,18 +333,15 @@ export class InputPage {
   }
 
 //Always get the accurate path to your apps folder
-  public pathForImage(img) {
-    if (img === null) {
-      return '';
-    } else {
-      return cordova.file.dataDirectory + img;
-    }
-  }
+//   public pathForImage(img) {
+//     if (img === null) {
+//       return '';
+//     } else {
+//       return cordova.file.dataDirectory + img;
+//     }
+//   }
 
-  // public test(){
-  //   let test="/Users/user/Vicious-Delicious/viciousDelicious/src/pages/input/2-0.mp4";
-  //   this.recipeService.giphyAPIUpload(test);
-  // }
+
 
 
 

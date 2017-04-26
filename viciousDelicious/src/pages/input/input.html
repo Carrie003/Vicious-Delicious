@@ -1,8 +1,7 @@
 <!--
-  Generated template for the Input page.
+  Input: This is the page used for uploading recipes.
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
+
 -->
 <ion-header>
 
@@ -24,6 +23,14 @@
     <ion-item>
       <ion-label color="primary" stacked>Title</ion-label>
       <ion-input [(ngModel)]="title" placeholder="Oolong Milk Tea with Bubbles"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Non/Vegetarian</ion-label>
+      <ion-select [(ngModel)]="veg">
+        <ion-option value="Vegetarian">Vegetarian</ion-option>
+        <ion-option value="Nonvegetarian">Nonvegetarian</ion-option>
+      </ion-select>
     </ion-item>
 
     <ion-item>
@@ -94,28 +101,19 @@
 
 
     <ion-list>
-      <ion-label color="primary" stacked>Instructions and Gif Link(Recommend Giphy/Gfycat)</ion-label>
+      <ion-label color="primary" stacked>Instructions and Gif Link(Save from Giphy and put on Imgur to get link)</ion-label>
 
       <ion-item>
         <ion-label color="primary" stacked> Step 1 </ion-label>
       </ion-item>
-      <!--<ion-item>-->
-        <!--<ion-label color="primary" stacked> title </ion-label>-->
-        <!--<ion-input [(ngModel)]="title1" placeholder="title1"></ion-input>-->
-      <!--</ion-item>-->
       <ion-item>
         <ion-label color="primary" stacked> Instructions </ion-label>
         <ion-input [(ngModel)]="description1" placeholder="Instruction1"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="primary" stacked> GIF Link </ion-label>
-        <ion-input [(ngModel)]="video1" placeholder="GIF Link 1"></ion-input>
+        <ion-input [(ngModel)]="video1" placeholder="http://i.imgur.com/link1.gif"></ion-input>
       </ion-item>
-
-      <!--<button ion-button icon-left (click)="presentVideoActionSheet()">-->
-        <!--<ion-icon name="camera"></ion-icon>Select Video 1-->
-      <!--</button>-->
-
 
 
       <ion-item>
@@ -128,7 +126,7 @@
       </ion-item>
       <ion-item>
         <ion-label color="primary" stacked> GIF Link </ion-label>
-        <ion-input [(ngModel)]="video2" placeholder="GIF Link 2"></ion-input>
+        <ion-input [(ngModel)]="video2" placeholder="http://i.imgur.com/link2.gif"></ion-input>
       </ion-item>
 
 
@@ -142,7 +140,7 @@
       </ion-item>
       <ion-item>
         <ion-label color="primary" stacked> GIF Link </ion-label>
-        <ion-input [(ngModel)]="video3" placeholder="GIF Link 3"></ion-input>
+        <ion-input [(ngModel)]="video3" placeholder="http://i.imgur.com/link3.gif"></ion-input>
       </ion-item>
 
       <ion-item>
@@ -155,7 +153,7 @@
       </ion-item>
       <ion-item>
         <ion-label color="primary" stacked> GIF Link </ion-label>
-        <ion-input [(ngModel)]="video4" placeholder="GIF Link 4"></ion-input>
+        <ion-input [(ngModel)]="video4" placeholder="http://i.imgur.com/link4.gif"></ion-input>
       </ion-item>
 
 
@@ -169,7 +167,7 @@
       </ion-item>
       <ion-item>
         <ion-label color="primary" stacked> GIF Link </ion-label>
-        <ion-input [(ngModel)]="video5" placeholder="GIF Link 5"></ion-input>
+        <ion-input [(ngModel)]="video5" placeholder="http://i.imgur.com/link5.gif"></ion-input>
       </ion-item>
 
 
@@ -183,7 +181,7 @@
       </ion-item>
       <ion-item>
         <ion-label color="primary" stacked> GIF Link </ion-label>
-        <ion-input [(ngModel)]="video6" placeholder="GIF Link 6"></ion-input>
+        <ion-input [(ngModel)]="video6" placeholder="http://i.imgur.com/link6.gif"></ion-input>
       </ion-item>
 
 
@@ -197,7 +195,7 @@
       </ion-item>
       <ion-item>
         <ion-label color="primary" stacked> GIF Link </ion-label>
-        <ion-input [(ngModel)]="video7" placeholder="GIF Link 7"></ion-input>
+        <ion-input [(ngModel)]="video7" placeholder="http://i.imgur.com/link7.gif"></ion-input>
       </ion-item>
 
 
@@ -211,7 +209,7 @@
       </ion-item>
       <ion-item>
         <ion-label color="primary" stacked> GIF Link </ion-label>
-        <ion-input [(ngModel)]="video8" placeholder="GIF Link 8"></ion-input>
+        <ion-input [(ngModel)]="video8" placeholder="http://i.imgur.com/link8.gif"></ion-input>
       </ion-item>
 
 
@@ -225,24 +223,25 @@
       </ion-item>
       <ion-item>
         <ion-label color="primary" stacked> GIF Link </ion-label>
-        <ion-input [(ngModel)]="video9" placeholder="GIF Link 9"></ion-input>
+        <ion-input [(ngModel)]="video9" placeholder="http://i.imgur.com/link9.gif"></ion-input>
       </ion-item>
 
 
       <ion-item>
         <ion-label color="primary" stacked> Step 10 </ion-label>
       </ion-item>
-      
+
       <ion-item>
         <ion-label color="primary" stacked> Instructions </ion-label>
         <ion-input [(ngModel)]="description10" placeholder="Instruction10"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="primary" stacked> GIF Link </ion-label>
-        <ion-input [(ngModel)]="video10" placeholder="GIF Link 10"></ion-input>
+        <ion-input [(ngModel)]="video10" placeholder="http://i.imgur.com/link10.gif"></ion-input>
       </ion-item>
 
     </ion-list>
+
 
 
   <button ion-button full color="secondary" (click)="save()">Save</button>
