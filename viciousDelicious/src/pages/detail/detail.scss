@@ -8,7 +8,7 @@ page-detail {
 
     .card-title {
       position: absolute;
-      top: 36%;
+      top: 45%;
       font-size: 2.0em;
       width: 100%;
       font-weight: bold;
@@ -26,10 +26,27 @@ page-detail {
       margin-top: 50px;
       font-family: 'Raleway', sans-serif;
     }
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #fff;
+      margin-top: 50px;
+      font-family: 'Raleway', sans-serif;
+    }
+
+
+    .Information{
+      background:url("http://www.texturex.com/albums/Paper-Textures/paper%20texture%20linen%20emboss%20card%20stock%20photo%20white%20light.jpg");
+      background-size:cover;
+      font-family: 'Raleway', sans-serif;
+    }
 
     .IngredCard{
       background:url("http://www.texturex.com/albums/Paper-Textures/paper%20texture%20linen%20emboss%20card%20stock%20photo%20white%20light.jpg");
       background-size:cover;
+      font-family: 'Raleway', sans-serif;
     }
 
     //.DetailButton{
@@ -47,20 +64,25 @@ page-detail {
       background-size:contain;
       background-position: right;
       background-color: #b1cdfb;
-      font-family: "Lucida Grande", Geneva, Verdana, Arial, Helvetica, sans-serif;
+      //font-family: "Lucida Grande", Geneva, Verdana, Arial, Helvetica, sans-serif;
+      font-family: 'Raleway', sans-serif;
       color:black;
       left: 10%;
       border-radius: 10px;
       width:80%;
     }
 
+    /**
+    CSS Information about the cart
+     */
     #cart{
-      background:url("https://cdn3.iconfinder.com/data/icons/shop-outline/512/shopping_list-512.png") no-repeat;
+      // Change link below to change icon of cart
+      background:url("https://cdn1.iconfinder.com/data/icons/online-shopping-5/128/shopping_buy_promotion_list_online_shopping_copy-512.png") no-repeat;
       background-size:contain;
       background-position: right;
       background-color: #b1cdfb;
-      font-family: "Lucida Grande", Geneva, Verdana, Arial, Helvetica, sans-serif;
-      color:black;
+      //font-family: "Lucida Grande", Geneva, Verdana, Arial, Helvetica, sans-serif;
+      font-family: 'Raleway', sans-serif;      color:black;
       cursor: pointer;
       left: 10%;
       border-radius: 10px;
