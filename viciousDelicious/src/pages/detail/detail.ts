@@ -48,7 +48,6 @@ export class DetailPage {
   temporary = []; //A temporary list to hold the ingredients that are currently selected.
   message = "";
   buttonName = "Select All";
-  selectedAll = false;
 
   allChosen = true;
   allUnchosen = true;
@@ -66,32 +65,37 @@ export class DetailPage {
     }
 
     if (this.allChosen){
-      this.selectedAll = true;
       this.buttonName = "Unselect All";
     }
 
     if (this.allUnchosen){
-      this. selectedAll = false;
       this.buttonName = "Select All";
     }
+  }
 
+  buttonClicked(name){
+    if (name == "Select All"){
+      this.selectAll();
+      this.buttonName = "Unselect All";
+    }
+    else{
+      this.unselectAll();
+      this.buttonName = "Select All";
+    }
   }
 
   selectAll(){
-    if (this.selectedAll == false){
-      for (let i of this.ingredients) {
-        i.selected = true;
-        this.buttonName = "Unselect All";
-      }
-      this.selectedAll = true;
-    }else{
-      for (let i of this.ingredients){
-        i.selected = false;
-        this.buttonName = "Select All";
-      }
-      this.selectedAll = false;
+    for (let i of this.ingredients){
+      i.selected = true;
     }
   }
+
+  unselectAll(){
+    for (let i of this.ingredients){
+      i.selected = false;
+    }
+  }
+
 
   addToCart(){
   /**
@@ -115,12 +119,13 @@ export class DetailPage {
       this.message = "Please select some ingredients.";
     }else{
       for (let i of this.temporary){
-        if (i.length == this.temporary.length) {
+        if (this.temporary[0] == i) {
           this.message += i.name;
         }
         else {
-          this.message += i.name;
           this.message += ", ";
+          this.message += i.name;
+
         }
       }
     }
@@ -134,6 +139,7 @@ export class DetailPage {
         }
         this.temporary=[];
         this.message="";
+        this.buttonName = "Select All";
       }
     });
 
@@ -151,6 +157,7 @@ export class DetailPage {
 
         this.temporary=[];
         this.message="";
+        this.buttonName = "Select All";
       }
     });
 

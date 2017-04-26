@@ -40,17 +40,18 @@ export class RecipeCollectionPage {
   }
 
 
-  beverageSelected() {
-    this.recipeService.loadBeverage()
+  vegetarian() {
+    this.recipeService.loadVegetarian();
   }
 
-  foodSelected() {
-    this.recipeService.loadFood()
+  nonvegetarian() {
+    this.recipeService.loadNonVegetarian();
   }
 
-  allSelected() {
-    this.recipeService.loadRecipes()
+  allrecipes(){
+    this.recipeService.loadRecipes();
   }
+
 
   setFilteredItems() {
     this.recipeService.filterItems(this.searchTerm);
@@ -76,7 +77,7 @@ export class RecipeCollectionPage {
 
   }
 
-  search() {
+  searchByTitle() {
     if (this.searchClicked == false) {
       this.searchClicked = true;
       this.sortClicked = false;

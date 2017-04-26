@@ -39,10 +39,10 @@ export class Recipes {
 
   }//}
 
-  loadBeverage(){
+  loadVegetarian(){
 
     return new Promise(resolve => {
-      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes/beverage')
+      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes/vegetarian')
         .map(res => res.json())
         .subscribe(shared => {
           this.shared = shared;
@@ -51,10 +51,10 @@ export class Recipes {
     });
   }
 
-  loadFood(){
+  loadNonVegetarian(){
 
     return new Promise(resolve => {
-      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes/food')
+      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes/nonvegetarian')
         .map(res => res.json())
         .subscribe(shared => {
           this.shared = shared;
