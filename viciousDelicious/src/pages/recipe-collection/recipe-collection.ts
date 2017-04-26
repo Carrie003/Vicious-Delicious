@@ -77,7 +77,7 @@ export class RecipeCollectionPage {
 
   }
 
-  search() {
+  searchByTitle() {
     if (this.searchClicked == false) {
       this.searchClicked = true;
       this.sortClicked = false;
