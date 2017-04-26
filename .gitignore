@@ -14,6 +14,7 @@ npm-debug.log*
 
 .idea/workspace.xml
 viciousDelicious/.idea/workspace.xml
+viciousDelicious/src/pages/token/tokenfile.ts
 .sass-cache/
 .tmp/
 .versions/
