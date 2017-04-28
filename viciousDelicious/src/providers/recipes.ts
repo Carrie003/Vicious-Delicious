@@ -25,9 +25,7 @@ export class Recipes {
 
 
   loadRecipes(){
-
     //if(!this.shared){
-
       return new Promise(resolve => {
       this.http.get('https://viciousdelicious.herokuapp.com/api/recipes')
         .map(res => res.json())
@@ -40,7 +38,6 @@ export class Recipes {
   }//}
 
   loadVegetarian(){
-
     return new Promise(resolve => {
       this.http.get('https://viciousdelicious.herokuapp.com/api/recipes/vegetarian')
         .map(res => res.json())
@@ -52,9 +49,31 @@ export class Recipes {
   }
 
   loadNonVegetarian(){
-
     return new Promise(resolve => {
       this.http.get('https://viciousdelicious.herokuapp.com/api/recipes/nonvegetarian')
+        .map(res => res.json())
+        .subscribe(shared => {
+          this.shared = shared;
+          resolve(this.shared);
+        });
+    });
+  }
+
+  loadFoodOnly(){
+
+    return new Promise(resolve => {
+      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes/food')
+        .map(res => res.json())
+        .subscribe(shared => {
+          this.shared = shared;
+          resolve(this.shared);
+        });
+    });
+  }
+
+  loadBeverageOnly(){
+    return new Promise(resolve => {
+      this.http.get('https://viciousdelicious.herokuapp.com/api/recipes/beverage')
         .map(res => res.json())
         .subscribe(shared => {
           this.shared = shared;
@@ -178,7 +197,6 @@ export class Recipes {
   //     });
   //   });
   // }
-
 
 
 }

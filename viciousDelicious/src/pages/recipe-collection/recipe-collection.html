@@ -21,14 +21,17 @@
   <ion-toolbar  *ngIf="sortClicked">
     <ion-segment>
 
+      <ion-segment-button (ionSelect) = "allrecipes()">
+        All
+      </ion-segment-button>
       <ion-segment-button (ionSelect) = "vegetarian()">
         Vegetarian
       </ion-segment-button >
-      <ion-segment-button (ionSelect) = "nonvegetarian()" >
-        Non-vegetarian
+      <ion-segment-button (ionSelect) = "food()" >
+        Food
       </ion-segment-button>
-      <ion-segment-button (ionSelect) = "allrecipes()">
-        All
+      <ion-segment-button (ionSelect) = "beverage()" >
+        Beverage
       </ion-segment-button>
 
     </ion-segment>
@@ -53,7 +56,6 @@
           </p>
         </ion-card-content>
       </ion-card>
-
-
-
+      <div class="endRecipe">
+  <br><p style="text-align: center;">End of Recipe List</p></div>
 </ion-content>

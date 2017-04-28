@@ -31,7 +31,6 @@ export class RecipeCollectionPage {
   titleSearchTerm: string = '';
   ingreSearchTerm: string = '';
 
-
   constructor(private platform: Platform, public http: Http, public loading: LoadingController, public navCtrl: NavController, public navParams: NavParams, public cart: data, public recipeService: Recipes) {
 
     platform.ready().then(() => {
@@ -46,6 +45,14 @@ export class RecipeCollectionPage {
 
   nonvegetarian() {
     this.recipeService.loadNonVegetarian();
+  }
+
+  food() {
+    this.recipeService.loadFoodOnly();
+  }
+
+  beverage() {
+    this.recipeService.loadBeverageOnly();
   }
 
   allrecipes(){
@@ -108,6 +115,13 @@ export class RecipeCollectionPage {
     this.cart.setDisplayList();
   }
 
+  changeText() {
+    var elem = document.getElementById("endRecipe");
+    // show loading
+    setTimeout(function() {
+      elem.innerHTML = "Test";
+    }, 10000);
+  }
 }
 
 
