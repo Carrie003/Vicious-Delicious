@@ -33,6 +33,7 @@ export class InputPage {
   ingredients:any;
   slides:any;
   veg:any;
+  food:any;
 
 
 
@@ -170,7 +171,7 @@ export class InputPage {
     let recipe = {
       title: this.title,
       img: this.recipeService.link,
-      category:this.veg,
+      category:[this.veg,this.food],
       subtitle1:this.subtitle1,
       subtitle2:this.subtitle2,
       ingredients:ingredients,

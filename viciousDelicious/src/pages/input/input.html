@@ -34,6 +34,14 @@
     </ion-item>
 
     <ion-item>
+      <ion-label>Food/Beverage</ion-label>
+      <ion-select [(ngModel)]="food">
+        <ion-option value="Food">Food</ion-option>
+        <ion-option value="Beverage">Beverage</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
       <ion-label color="primary" stacked>Image Link(Recommend Imgur/Imgbb)</ion-label>
       <ion-input [(ngModel)]="img" placeholder="This link overwrites the uploaded image."></ion-input>
     </ion-item>

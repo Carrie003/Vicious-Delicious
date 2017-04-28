@@ -126,15 +126,6 @@ export class Recipes {
 
       });
 
-    // return new Promise(resolve => {
-    //   this.http.get('https://viciousdelicious.herokuapp.com/api/recipes',{headers: headers})
-    //     .map(res => res.json())
-    //     .subscribe(shared => {
-    //       this.shared = shared;
-    //       resolve(this.shared);
-    //     });
-    // });
-
   }
 
 
