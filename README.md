@@ -9,10 +9,10 @@ To access the server code, visit our back-end repository: https://github.com/was
 ___
 Authors
 
-*Tianyou Li
-*Xinyu Yang
-*Jennifer Arnold
-*Allen Quan
+* Tianyou Li
+* Xinyu Yang
+* Jennifer Arnold
+* Allen Quan
 
 ## User Testing and Feedback
 Users can submit feedback about app features and appearance here:
