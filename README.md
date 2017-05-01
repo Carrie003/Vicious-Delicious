@@ -9,10 +9,10 @@ To access the server code, visit our back-end repository: https://github.com/was
 ___
 Authors
 
-* Tianyou Li
-* Xinyu Yang
-* Jennifer Arnold
-* Allen Quan
+- Tianyou Li
+- Xinyu Yang
+- Jennifer Arnold
+- Allen Quan
 
 ## User Testing and Feedback
 Users can submit feedback about app features and appearance here:
@@ -41,7 +41,10 @@ Please e-mail viciousdeliciousapp@gmail.com for app development requests.
 
 # Building the App
 
-If you are installing on an iOS application, you will need a Mac.
+If you are installing on an iOS application, you will need the following requirement 
+- Xcode Version 7 or higher
+- iOS 9 
+- Apple ID Account 
 
 1. Download or update Xcode on your Mac.
 2. Open viciousDelicious.xcodeproj on Xcode
@@ -49,3 +52,6 @@ If you are installing on an iOS application, you will need a Mac.
 4. Select your phone to run
 5. Phone may ask for permission to install application, please say yes.
 6. Application should be installed
+
+If you have a code sign in error, please go to the following link to troubleshoot this issue:
+http://ionicframework.com/docs/intro/deploying/
