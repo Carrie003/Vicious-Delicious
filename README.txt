@@ -20,10 +20,32 @@ Link to google feedback form
 ----------------------------------------------------------------
 * Notes for BUILDING
 ----------------------------------------------------------------
+Application was built with:
+- Ionic 2
+- AngularJS
+- HTML
+- Typescript
+- Javascript
+- CSS
+- Heroku
+- mongoDB
+
 A token.js authentication file is required to build the app. This is for API access for image hosting.
 
 Please e-mail viciousdelicious@ [PENDING]
 
+----------------------------------------------------------------
+* Report Installing
+----------------------------------------------------------------
+
+If you are installing on an iOS application, you will need a Mac.
+
+1. Download or update Xcode on your Mac.
+2. Open viciousDelicious.xcodeproj on Xcode
+3. Plug in and unlock your phone
+4. Select your phone to run
+5. Phone may ask for permission to install application, please say yes.
+6. Applicaiton should be installed
 ----------------------------------------------------------------
 * Report Issues
 ----------------------------------------------------------------
