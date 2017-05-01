@@ -3,6 +3,7 @@
 Vicious Delicious is a recipe discovery app designed to help you learn about, and share, tasty recipes. It is a cross-platform appplication that can run on iOS and Android.
 
 To access the full code of the application, visit the project page: https://github.com/waschbar01/Vicious-Delicious
+
 To access the server code, visit our back-end repository: https://github.com/waschbar01/Vicious-Server
 
 ___
