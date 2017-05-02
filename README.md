@@ -19,9 +19,7 @@ Users can submit feedback about app features and appearance here:
 https://goo.gl/forms/QjTjw7MKM4iZQcn82
 
 If you encounter any bugs or glitches, you can report them here:
-github.com/waschbar01/Vicious-Delicious/issues
-
-You can also contact us directly by e-mailing viciousdeliciousapp@gmail.com
+http://github.com/waschbar01/Vicious-Delicious/issues
 
 ## Notes
 
@@ -37,7 +35,7 @@ Application was built with:
 
 A token.js authentication file is required to build the app. This is for API access for image hosting.
 
-Please e-mail viciousdeliciousapp@gmail.com for app development requests.
+Please e-mail viciousdeliciousapp@gmail.com for requests or inquiries.
 
 # Building the App
 
