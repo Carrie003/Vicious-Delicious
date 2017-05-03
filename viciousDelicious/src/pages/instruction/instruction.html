@@ -1,8 +1,7 @@
 <!--
-  Generated template for the Instruction page.
+  Recipe Instructions Page. These contain ion slides.
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
+  These are the slides that show each step of the recipe with images or gifs. At the end of the slides the user gets a congratulations page.
 -->
 <ion-header>
 
@@ -17,6 +16,7 @@
 <ion-content class="bgpic">
 
   <ion-slides pager>
+    <!-- Slide that contains Image/GIF and a description of the slide (step details) -->
     <ion-slide *ngFor="let slide of slides" >
       <img [src]="slide.video" class="slide-image">
       <ion-content class="slide">
@@ -25,6 +25,7 @@
       </ion-content>>
     </ion-slide>
 
+    <!-- Congratulations Page -->
     <ion-slide>
       <img [src]="recipeInfo.img" class="slide-image"/>
       <ion-content class="slide">

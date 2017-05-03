@@ -29,27 +29,14 @@ ingredients, cards, background information
       margin-top: 50px;
       font-family: 'Raleway', sans-serif;
     }
-    .card-subtitle {
-      font-size: 1.0em;
-      position: absolute;
-      top: 52%;
-      width: 100%;
-      color: #fff;
-      margin-top: 50px;
-      font-family: 'Raleway', sans-serif;
-    }
-
 
     .Information{
-      //background:url("http://www.texturex.com/albums/Paper-Textures/paper%20texture%20linen%20emboss%20card%20stock%20photo%20white%20light.jpg");
-      background-image:url("../assets/img/paperTexture.jpg");
+      background-image:url("../assets/img/paperTexture.jpg"); // Stored in local assets to prevent loading lag.
       background-size:cover;
       font-family: 'Raleway', sans-serif;
     }
 
     .IngredCard{
-      //
-      //background:url("http://www.texturex.com/albums/Paper-Textures/paper%20texture%20linen%20emboss%20card%20stock%20photo%20white%20light.jpg");
       background-image:url("../assets/img/paperTexture.jpg");
       //background-color: lightblue;
       background-size:cover;

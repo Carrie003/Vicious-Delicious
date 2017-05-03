@@ -103,8 +103,7 @@ export class DetailPage {
    **/
     let add = this.alertCtrl.create();
     //The alarm popup to notify the user of the ingredients that are selected.
-    add.setTitle("Adding these ingredients?");
-
+    add.setTitle("Add these ingredients?");
     for (let i of this.ingredients){
       if (i.selected == true){
         this.temporary.push(i);
