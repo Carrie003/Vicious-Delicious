@@ -68,12 +68,12 @@ Otherwise if building the entire application from source code, you will need to 
 ### Installation steps using the source code
 1. Install https://nodejs.org/en/
 2. Install the cordova application framework using the CLI command `npm install -g cordova`
-3. Install ionic using the CLI command
+3. Install ionic using the CLI command `npm install -g ionic`
 4. Download or clone the Vicious Delicious repository
 5. Add the relevant platform (note iOS cannot be installed on windows) using CLI command `ionic platform add ios/android`
 
-Desktop browser testing is the fastest way to use the application, run it using CLI command: `ionic serve --lab`
+Desktop browser testing is the fastest way to use the application: `ionic serve --lab`
 
 An emulator can also be used for simulation testing purposes: `ionic build ios/android` and `ionic emulate ios/android`
 
-To deploy it to a phone, use the CLI command: `ionic run ios/android`
+To deploy it to a phone: `ionic run ios/android`
