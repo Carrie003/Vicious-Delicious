@@ -7,18 +7,18 @@
 
   <ion-navbar>
     <ion-title>Add a Recipe!</ion-title>
+    <button (click)="tutorial()" class="tutorial" ></button>
   </ion-navbar>
 
 </ion-header>
 
 
-
 <ion-content>
-
-  <ion-buttons end>
-    <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+  <ion-buttons>
+    <button ion-button icon-only (click)="close()" id="close"><ion-icon name="close"></ion-icon></button>
   </ion-buttons>
-  <ion-list>
+
+    <ion-list>
 
     <ion-item>
       <ion-label color="primary" stacked>Title</ion-label>
@@ -109,7 +109,7 @@
 
 
     <ion-list>
-      <ion-label color="primary" stacked>Instructions and Gif Link(Save from Giphy and put on Imgur to get link)</ion-label>
+      <ion-label color="primary" stacked>Instructions and Gif Link(Recommend Giphy and Imgur)</ion-label>
 
       <ion-item>
         <ion-label color="primary" stacked> Step 1 </ion-label>

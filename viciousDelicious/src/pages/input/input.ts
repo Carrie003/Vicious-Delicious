@@ -4,6 +4,7 @@ import { ViewController } from 'ionic-angular';
 import { MediaCapture,Camera,File, Transfer, FilePath } from 'ionic-native';
 import { Recipes } from "../../providers/recipes";
 import { tokenfile } from "../token/tokenfile";
+import {TutorialPage} from "../tutorial/tutorial"
 
 
 
@@ -237,93 +238,6 @@ export class InputPage {
 
   }
 
-  // public presentVideoActionSheet() {
-  //   let actionSheet = this.actionSheetCtrl.create({
-  //     title: 'Select Video Source',
-  //     buttons: [
-  //       {
-  //         text: 'Load from Library',
-  //         handler: () => {
-  //           this.takeVideo(Camera.PictureSourceType.PHOTOLIBRARY);
-  //         }
-  //       },
-  //       // {
-  //       //   text: 'Use Camera',
-  //       //   handler: () => {
-  //       //     this.takeVideo(Camera.PictureSourceType.CAMERA);
-  //       //   }
-  //       // },
-  //       {
-  //         text: 'Cancel',
-  //         role: 'cancel'
-  //       }
-  //     ]
-  //   });
-  //   actionSheet.present();
-  // }
-  //
-  //  public takeVideo(sourceType) {
-  //   // Create options for the Camera Dialog
-  //   var options = {
-  //     quality: 100,
-  //     sourceType: sourceType,
-  //     //mediaType:Camera.MediaType.VIDEO,
-  //     destinationType: Camera.DestinationType.DATA_URL,
-  //     saveToPhotoAlbum: false,
-  //     correctOrientation: true
-  //   };
-  //
-  //   // Get the data of an image
-  //   Camera.getPicture(options).then((videoPath) => {
-  //     this.recipeService.test(videoPath);
-  //     //Special handling for Android library
-  //     if (this.platform.is('android') && sourceType === Camera.PictureSourceType.PHOTOLIBRARY) {
-  //        FilePath.resolveNativePath(videoPath)
-  //          .then(filePath => {
-  //           let correctPath = filePath.substr(0, filePath.lastIndexOf('/') + 1);
-  //           let currentName = filePath.substring(filePath.lastIndexOf('/') + 1, filePath.lastIndexOf('?'));
-  //           this.copyFileToLocalDir(correctPath, currentName, this.createVideoName());
-  //           //this.recipeService.giphyAPIUpload(correctPath);
-  //         });
-  //     } else {
-  //       var currentName = videoPath.substr(videoPath.lastIndexOf('/') + 1);
-  //       var correctPath = videoPath.substr(0, videoPath.lastIndexOf('/') + 1);
-  //       this.copyFileToLocalDir(correctPath, currentName, this.createVideoName());
-  //       //this.recipeService.giphyAPIUpload(correctPath);
-  //      }
-  //     this.presentToast('Successful.');
-  //   }, (err) => {
-  //     this.presentToast('There is an error uploading the image.');
-  //   });
-  //
-  //  }
-
-// Create a new name for the image
-//   private createFileName() {
-//     var d = new Date(),
-//       n = d.getTime(),
-//       newFileName =  n + ".jpg";
-//     return newFileName;
-//   }
-//
-//   // Create a new name for the video
-//   private createVideoName() {
-//     var d = new Date(),
-//       n = d.getTime(),
-//       newFileName =  n + ".MOV";
-//     return newFileName;
-//   }
-
-// Copy the image to a local folder
-//   private copyFileToLocalDir(namePath, currentName, newFileName) {
-//     File.copyFile(namePath, currentName, cordova.file.dataDirectory, newFileName).then(success => {
-//       this.lastImage = newFileName;
-//       //this.presentToast('Successful.');
-//     }, error => {
-//       this.presentToast('Error while storing file.');
-//     });
-//   }
-
   private presentToast(text) {
     let toast = this.toastCtrl.create({
       message: text,
@@ -333,17 +247,12 @@ export class InputPage {
     toast.present();
   }
 
-//Always get the accurate path to your apps folder
-//   public pathForImage(img) {
-//     if (img === null) {
-//       return '';
-//     } else {
-//       return cordova.file.dataDirectory + img;
-//     }
-//   }
+  public tutorial(){
+    let modal = this.modalCtrl.create(TutorialPage);
 
+    modal.present();
 
-
+  }
 
 
 }

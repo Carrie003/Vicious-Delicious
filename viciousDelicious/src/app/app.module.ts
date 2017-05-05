@@ -11,6 +11,7 @@ import {Recipes} from "../providers/recipes"
 import {InputPage} from "../pages/input/input"
 import { MediaCapture } from 'ionic-native';
 import {tokenfile} from "../pages/token/tokenfile"
+import {TutorialPage} from "../pages/tutorial/tutorial"
 
 @NgModule({
   declarations: [
@@ -20,8 +21,8 @@ import {tokenfile} from "../pages/token/tokenfile"
     InstructionPage,
     ShoppingPage,
     DetailPage,
-    InputPage
-
+    InputPage,
+    TutorialPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -34,7 +35,8 @@ import {tokenfile} from "../pages/token/tokenfile"
     InstructionPage,
     ShoppingPage,
     DetailPage,
-    InputPage
+    InputPage,
+    TutorialPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},data,Recipes,MediaCapture,tokenfile]
 })

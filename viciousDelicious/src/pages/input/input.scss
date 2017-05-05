@@ -1,3 +1,17 @@
 page-input {
 
+  .tutorial{
+    background: url("../../assets/img/QuestionMark.png");
+    background: {
+      repeat: no-repeat;
+      size:contain;
+    }
+    position: absolute;
+    top:50%;
+    left: 90%;
+    width: 35%;
+    height:35%;
+  }
+
+
 }
