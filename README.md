@@ -41,7 +41,7 @@ Please e-mail viciousdeliciousapp@gmail.com for requests or inquiries.
 
 If you are installing on an iOS application, you will need the following requirement 
 - Xcode Version 7 or higher
-- iOS 9 
+- iOS 9+
 - Apple ID Account 
 
 1. Download or update Xcode on your Mac.
@@ -53,3 +53,27 @@ If you are installing on an iOS application, you will need the following require
 
 If you have a code sign in error, please go to the following link to troubleshoot this issue:
 http://ionicframework.com/docs/intro/deploying/
+
+If you have an android device, you can opt to install with the convenient APK provided
+
+https://www.dropbox.com/s/smw0klevt95uk4o/vicious-delicious-android-release-SIGNED.apk?dl=0
+
+Last updated: 5/5/2017
+
+Otherwise if building the entire application from source code, you will need to have the following installed
+- Java JDK
+- Android Studio
+- Updated Android SDK tools
+
+### Installation steps using the source code
+1. Install https://nodejs.org/en/
+2. Install the cordova application framework using the CLI command `npm install -g cordova`
+3. Install ionic using the CLI command `npm install -g ionic`
+4. Download or clone the Vicious Delicious repository
+5. Add the relevant platform (note iOS cannot be installed on windows) using CLI command `ionic platform add ios/android`
+
+Desktop browser testing is the fastest way to use the application: `ionic serve --lab`
+
+An emulator can also be used for simulation testing purposes: `ionic build ios/android` and `ionic emulate ios/android`
+
+To deploy it to a phone: `ionic run ios/android`
