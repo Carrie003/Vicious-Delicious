@@ -28,12 +28,16 @@ export class HomePage {
     this.cart.setDisplayList();
   }
 
+  /**
+   * Make InputPage and call the createRecipe function in the provider when user clicks save button.
+   **/
+
+
   GoToInput(){
     let modal = this.modalCtrl.create(InputPage);
 
     modal.onDidDismiss(recipe => {
       if(recipe){
-        //this.recipes.push(recipe);
         this.recipeService.createRecipe(recipe);
       }
     });

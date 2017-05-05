@@ -35,7 +35,7 @@ export class RecipeCollectionPage {
 
     platform.ready().then(() => {
       this.recipeService.loadRecipes();
-    });
+    }); // load the recipe from the server every time the user opens this page.
   }
 
 

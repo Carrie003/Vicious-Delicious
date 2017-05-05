@@ -106,6 +106,9 @@ export class InputPage {
   }
 
 
+  /**
+   * When user clicks save, gather all the information in a dictionary and give this dictionary back to homepage.
+   **/
 
   save(): void {
 
@@ -171,7 +174,7 @@ export class InputPage {
 
     let recipe = {
       title: this.title,
-      img: this.recipeService.link,
+      img: this.recipeService.link, // Not null if the user uploaded or took picture.
       category:[this.veg,this.food],
       subtitle1:this.subtitle1,
       subtitle2:this.subtitle2,
@@ -182,15 +185,22 @@ export class InputPage {
 
      if(this.img){
        recipe.img=this.img;
-    }
+    }  // Will overwrite the link above.
 
     this.viewCtrl.dismiss(recipe);
   }
+
+  /**
+   * Close this page.
+   **/
 
   close(): void {
     this.viewCtrl.dismiss();
   }
 
+  /**
+   * Let the user choose between taking picture and uploading from library.
+   **/
 
   public presentActionSheet() {
     let actionSheet = this.actionSheetCtrl.create({
@@ -217,6 +227,10 @@ export class InputPage {
     actionSheet.present();
   }
 
+  /**
+   * Take picture and pass the 64base encoded version to the provider where the imgurAPI function will be called to upload the picture to Imgur.
+   **/
+
   public takePicture(sourceType) {
     // Create options for the Camera Dialog
     var options = {
@@ -231,12 +245,14 @@ export class InputPage {
     Camera.getPicture(options).then((imagePath) => {
       this.base64Image = imagePath;
       this.recipeService.imgurAPI(this.base64Image);
+      // After this, this.recipeService.link will not be null.
       this.presentToast('Uploading successful.');
     }, (err) => {
       this.presentToast('There is an error uploading the image.');
     });
 
   }
+
 
   private presentToast(text) {
     let toast = this.toastCtrl.create({
@@ -246,6 +262,11 @@ export class InputPage {
     });
     toast.present();
   }
+
+
+  /**
+   * Go to tutorial page.
+   **/
 
   public tutorial(){
     let modal = this.modalCtrl.create(TutorialPage);

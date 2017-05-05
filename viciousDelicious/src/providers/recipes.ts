@@ -23,9 +23,11 @@ export class Recipes {
     console.log("Initiating");
   }
 
+  /**
+   * Use promise to get all the recipes from database through our server.
+   **/
 
   loadRecipes(){
-    //if(!this.shared){
       return new Promise(resolve => {
       this.http.get('https://viciousdelicious.herokuapp.com/api/recipes')
         .map(res => res.json())
@@ -35,7 +37,8 @@ export class Recipes {
         });
     });
 
-  }//}
+  }
+
 
   loadVegetarian(){
     return new Promise(resolve => {
@@ -114,6 +117,10 @@ export class Recipes {
     })
   }
 
+  /**
+   * Post a Json file to our database through our server.
+   **/
+
   createRecipe(recipe){
 
     let headers = new Headers();
@@ -127,6 +134,10 @@ export class Recipes {
       });
 
   }
+
+  /**
+   * Make a post request to Imgur API to upload the picture and get the direct link.
+   **/
 
 
   imgurAPI(path){
@@ -147,47 +158,4 @@ export class Recipes {
     }).then(function(value){console.log("API successfully get "+ value)});
 
   }
-
-
-
-
-
-  // giphyAPIUpload(filepath){
-  //   let headers = new Headers();
-  //   headers.append('Content-Type', 'application/json');
-  //   //headers.append('Gifs-API-Key', 'gifs58f9534cbbdbf');
-  //   //headers.append('Authentication', 'api_key dc6zaTOxFJmzC');
-  //   //console.log("set headers");
-  //   //?api_key=dc6zaTOxFJmzC
-  //
-  //   return new Promise(resolve =>
-  //   {this.http.post('http://upload.giphy.com/v1/gifs?api_key=dc6zaTOxFJmzC',
-  //     {source_post_url:filepath},
-  //     {headers:headers})
-  //     .map(res => res.json())
-  //     .subscribe(res => {
-  //       console.log("Converting to GIF.");
-  //       console.log(res);
-  //       //this.gifID=res.data.id;
-  //       //console.log(res);
-  //       resolve(this.gifID);
-  //     });
-  //   });
-  // }
-  //
-  // giphyAPIget(id){
-  //   let headers = new Headers();
-  //   headers.append('Content-Type', 'application/json');
-  //   return new Promise(resolve => {this.http.get('http://api.giphy.com/v1/gifs/'+id+'?api_key=dc6zaTOxFJmzC', {headers:headers})
-  //     .map(res => res.json())
-  //     .subscribe(res => {
-  //       console.log("Get the GIF.");
-  //       this.gifUrl=res.data.images.original.url;
-  //       console.log(res);
-  //       resolve(this.gifUrl)
-  //     });
-  //   });
-  // }
-
-
 }
