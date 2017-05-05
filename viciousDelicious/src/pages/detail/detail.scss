@@ -9,7 +9,7 @@ ingredients, cards, background information
       text-align: center;
     }
 
-    .card-title {
+    .card-title-1 {
       position: absolute;
       top: 45%;
       font-size: 2.0em;
@@ -29,28 +29,16 @@ ingredients, cards, background information
       margin-top: 50px;
       font-family: 'Raleway', sans-serif;
     }
-    .card-subtitle {
-      font-size: 1.0em;
-      position: absolute;
-      top: 52%;
-      width: 100%;
-      color: #fff;
-      margin-top: 50px;
-      font-family: 'Raleway', sans-serif;
-    }
-
 
     .Information{
-      //background:url("http://www.texturex.com/albums/Paper-Textures/paper%20texture%20linen%20emboss%20card%20stock%20photo%20white%20light.jpg");
-      background-image:url("../assets/img/paperTexture.jpg");
+      background-image:url("../assets/img/paperTexture.jpg"); // Stored in local assets to prevent loading lag.
       background-size:cover;
       font-family: 'Raleway', sans-serif;
     }
 
     .IngredCard{
-      //
-      //background:url("http://www.texturex.com/albums/Paper-Textures/paper%20texture%20linen%20emboss%20card%20stock%20photo%20white%20light.jpg");
       background-image:url("../assets/img/paperTexture.jpg");
+      //background-color: lightblue;
       background-size:cover;
       font-family: 'Raleway', sans-serif;
     }
@@ -67,12 +55,12 @@ ingredients, cards, background information
 
     #cook{
       background:url("https://cdn1.iconfinder.com/data/icons/food-solid-icons-volume-4-1/128/171-512.png") no-repeat;
-      background-size:contain;
-      background-position: right;
-      background-color: #b1cdfb;
+      //background-size:contain;
+      //background-position: right;
+      background-color: blue;
       //font-family: "Lucida Grande", Geneva, Verdana, Arial, Helvetica, sans-serif;
       font-family: 'Raleway', sans-serif;
-      color:black;
+      color:white;
       left: 10%;
       border-radius: 10px;
       width:80%;
@@ -83,12 +71,13 @@ ingredients, cards, background information
      */
     #cart{
       // Change link below to change icon of cart
-      background:url("https://cdn1.iconfinder.com/data/icons/online-shopping-5/128/shopping_buy_promotion_list_online_shopping_copy-512.png") no-repeat;
-      background-size:contain;
-      background-position: right;
-      background-color: #b1cdfb;
+      //background:url("https://cdn1.iconfinder.com/data/icons/online-shopping-5/128/shopping_buy_promotion_list_online_shopping_copy-512.png") no-repeat;
+      //background-size:contain;
+      //background-position: right;
+      background-color: mediumseagreen;
       //font-family: "Lucida Grande", Geneva, Verdana, Arial, Helvetica, sans-serif;
-      font-family: 'Raleway', sans-serif;      color:black;
+      font-family: 'Raleway', sans-serif;
+      color:white;
       cursor: pointer;
       left: 10%;
       border-radius: 10px;
