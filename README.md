@@ -54,8 +54,10 @@ If you are installing on an iOS application, you will need the following require
 If you have a code sign in error, please go to the following link to troubleshoot this issue:
 http://ionicframework.com/docs/intro/deploying/
 
-If you have an android device, you can opt to install it easily with the apk provided
+If you have an android device, you can opt to install with the convenient APK provided
+
 https://www.dropbox.com/s/smw0klevt95uk4o/vicious-delicious-android-release-SIGNED.apk?dl=0
+
 Last updated: 5/5/2017
 
 Otherwise if building the entire application from source code, you will need to have the following installed
@@ -63,7 +65,7 @@ Otherwise if building the entire application from source code, you will need to 
 - Android Studio
 - Updated Android SDK tools
 
-Installation steps using the source code
+### Installation steps using the source code
 1. Install https://nodejs.org/en/
 2. Install the cordova application framework using the CLI command `npm install -g cordova`
 3. Install ionic using the CLI command
