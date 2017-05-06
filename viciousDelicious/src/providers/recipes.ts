@@ -143,7 +143,7 @@ export class Recipes {
   imgurAPI(path){
     let headers = new Headers();
 
-    headers.append('Authorization', 'Bearer 518ca848a95862b56d7c8ec501bb779822ee5791');
+    headers.append('Authorization', 'Bearer 9debb721887090dcb600878ac7d14b751c6272ea');
     headers.append('Content-Type', 'application/json');
 
     return new Promise(resolve => {

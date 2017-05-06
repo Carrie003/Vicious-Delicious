@@ -242,10 +242,24 @@ export class InputPage {
     };
 
     // Get the data of an image
+
     Camera.getPicture(options).then((imagePath) => {
       this.base64Image = imagePath;
       this.recipeService.imgurAPI(this.base64Image);
-      // After this, this.recipeService.link will not be null.
+
+      //Special handling for Android library
+      if (this.platform.is('android') && sourceType === Camera.PictureSourceType.PHOTOLIBRARY) {
+        FilePath.resolveNativePath(imagePath)
+          .then(filePath => {
+            let correctPath = filePath.substr(0, filePath.lastIndexOf('/') + 1);
+            let currentName = imagePath.substring(imagePath.lastIndexOf('/') + 1, imagePath.lastIndexOf('?'));
+            this.copyFileToLocalDir(correctPath, currentName, this.createFileName());
+          });
+      } else {
+        var currentName = imagePath.substr(imagePath.lastIndexOf('/') + 1);
+        var correctPath = imagePath.substr(0, imagePath.lastIndexOf('/') + 1);
+        this.copyFileToLocalDir(correctPath, currentName, this.createFileName());
+      }
       this.presentToast('Uploading successful.');
     }, (err) => {
       this.presentToast('There is an error uploading the image.');
@@ -254,13 +268,46 @@ export class InputPage {
   }
 
 
-  private presentToast(text) {
+  private presentToast(text){
     let toast = this.toastCtrl.create({
       message: text,
       duration: 3000,
       position: 'top'
     });
     toast.present();
+  }
+
+  //Always get the accurate path to your apps folder
+  public pathForImage(img) {
+    if (img === null) {
+      return '';
+    } else {
+      return cordova.file.dataDirectory + img;
+    }
+  }
+
+  // Create a new name for the image
+  private createFileName() {
+    var d = new Date(),
+      n = d.getTime(),
+      newFileName =  n + ".jpg";
+    return newFileName;
+  }
+
+  // Create a new name for the video
+  private createVideoName() {
+    var d = new Date(),
+      n = d.getTime(),
+      newFileName =  n + ".MOV";
+    return newFileName;
+  }
+
+// Copy the image to a local folder
+  private copyFileToLocalDir(namePath, currentName, newFileName) {
+    File.copyFile(namePath, currentName, cordova.file.dataDirectory, newFileName).then(success => {
+      this.lastImage = newFileName;
+    }, error => {
+    });
   }
 
 
