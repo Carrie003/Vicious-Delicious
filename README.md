@@ -6,14 +6,6 @@ To access the full code of the application, visit the project page: https://gith
 
 To access the server code, visit our back-end repository: https://github.com/waschbar01/Vicious-Server
 
-___
-Authors
-
-- Tianyou Li
-- Xinyu Yang
-- Jennifer Arnold
-- Allen Quan
-
 ## User Testing and Feedback
 Users can submit feedback about app features and appearance here:
 https://goo.gl/forms/QjTjw7MKM4iZQcn82
@@ -54,18 +46,17 @@ If you are installing on an iOS application, you will need the following require
 If you have a code sign in error, please go to the following link to troubleshoot this issue:
 http://ionicframework.com/docs/intro/deploying/
 
-If you have an android device, you can opt to install with the convenient APK provided
-
+If you have an android device, you can opt to install with the convenient APK provided:
 https://www.dropbox.com/s/smw0klevt95uk4o/vicious-delicious-android-release-SIGNED.apk?dl=0
 
-Last updated: 5/5/2017
+APK last updated: 5/5/2017
 
-Otherwise if building the entire application from source code, you will need to have the following installed
+### Installation steps using the source code
+If building the entire application from source code, you will need to have the following installed
 - Java JDK
 - Android Studio
 - Updated Android SDK tools
 
-### Installation steps using the source code
 1. Install https://nodejs.org/en/
 2. Install the cordova application framework using the CLI command `npm install -g cordova`
 3. Install ionic using the CLI command `npm install -g ionic`
